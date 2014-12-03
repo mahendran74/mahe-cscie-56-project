@@ -8,7 +8,7 @@ class Task {
 	Integer percentageComplete
 	Status status
 
-	User user
+	User assignedTo
 	
     static constraints = {
     }

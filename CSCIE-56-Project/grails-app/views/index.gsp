@@ -92,7 +92,14 @@
         <img class="img-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAADIAQMAAAAwS4omAAAAA1BMVEUsPlC8g8jXAAAAG0lEQVRIie3BMQEAAADCoPVPbQwfoAAAAIC3AQ+gAAEq5xQCAAAAAElFTkSuQmCC" alt="Generic placeholder image" style="width: 140px; height: 140px;"/>
         <h2>Administrator</h2>
          <p>
-            1. Add new users. 2. Edit user details like a. First name b. Last name c. Email address. 2.Change user's privileges and provide users with administrator access. 3. Activate/deactivate users. 4. Reset passwords of users.
+            1. Add new users. <br>
+            2. Edit user details like <br>
+            	a. First name <br>
+            	b. Last name <br>
+            	c. Email address. <br>
+            2.Change user's privileges and provide users with administrator access. <br>
+            3. Activate/deactivate users. <br>
+            4. Reset passwords of users.
         </p>
       </div>
       <!-- /.col-lg-4 -->
@@ -120,8 +127,9 @@
     <div class="modal fade" id="loginWindow" tabindex="-1" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
-          <form method='POST' action='/users/p_signup' id="loginForm">
-            <div class="modal-header modal-header-success">
+          <!-- form method='POST' action='/auth/signIn' id="loginForm" -->
+          <g:form  controller="auth" action="signIn" method="post">
+          	<div class="modal-header modal-header-success">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title" id="loginModalLabel">Login</h4>
             </div>
@@ -130,18 +138,19 @@
                 <strong>Oh snap!</strong>
               </div>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" id="inputEmail" name="username" value="${username}" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" name="password" value="" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="remember-me"> Remember me
+            <g:checkBox name="rememberMe" value="${rememberMe}" /> Remember me
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 
             </div>
-          </form>
+          <!-- /form -->
+          </g:form>
         </div>
       </div>
     </div>

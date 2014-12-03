@@ -5,13 +5,22 @@ class User {
 	String firstName
 	String lastName
 	String middleIntitial
-	String email
-	String password
-	String token
+	String username
+	String passwordHash
 	boolean active
+	
+	static hasMany = [roles: Role, permissions: String]
 
     static constraints = {
-		email blank: false, unique: true
-		password blank: false
+		username nullable: false, blank: false, unique: true
+		passwordHash blank: false
     }
+	
+	static boolean isAdmin() {
+		this.roles.any {it.roleName == RoleType.ROLE_ADMIN}
+	}
+	
+	static boolean isPM() {
+		this.roles.any {it.roleName == RoleType.ROLE_PM }
+	}
 }

@@ -8,6 +8,8 @@ class Project {
 	Date endDate
 	Status status
 	
+	User projectManager
+	
 	static hasMany = [groups:Group]
 	
     static constraints = {
