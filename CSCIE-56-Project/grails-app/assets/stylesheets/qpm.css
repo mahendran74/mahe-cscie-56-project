@@ -1,0 +1,75 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+#calendar {
+  padding-top: 20px;
+}
+
+.qpm-panel {
+	height : 275px;
+	overflow: auto;
+}
+
+.panel-button {
+	margin-top: -3px;
+}
+
+.admin-interface {
+	background-color: #2c3e50;
+}
+
+.admin-icon {
+	color: #2c3e50;
+}
+
+.admin-interface a{
+		color: #ecf0f1 !important;
+		background-color: #2c3e50!important;
+}
+
+.admin-interface a:hover{
+		color: #ffffff !important;
+		background-color: #2c3e50!important;
+}
+
+.pm-interface {
+	background-color: #376E6C;
+}
+
+.pm-icon {
+	color: #376E6C;
+}
+
+.pm-interface a{
+		color: #ecf0f1 !important;
+		background-color: #376E6C!important;
+}
+
+.pm-interface a:hover{
+		color: #ffffff !important;
+		background-color: #376E6C!important;
+}
+
+.tm-interface {
+	background-color: #6E2C50;
+}
+
+.tm-icon {
+	color: #6E2C50;
+}
+
+.tm-interface a{
+		color: #ecf0f1 !important;
+		background-color: #6E2C50 !important;
+}
+
+.tm-interface a:hover{
+		color: #ffffff !important;
+		background-color: #6E2C50 !important;
+}
+
+.qpm-error-message {
+  background-color: #f2dede !important;
+}
