@@ -43,9 +43,9 @@ class AuthController {
 			if (SecurityUtils.subject.hasRole(RoleType.ROLE_ADMIN.name())){
 				redirect(controller: 'admin', action: 'home')
 			} else if (SecurityUtils.subject.hasRole(RoleType.ROLE_PM.name())){
-				redirect(controller: 'pm', action: 'home')
+				redirect(controller: 'PM', action: 'home')
 			} else if (SecurityUtils.subject.hasRole(RoleType.ROLE_TM.name()))
-				redirect(controller: 'tm', action: 'home')
+				redirect(controller: 'TM', action: 'home')
             //log.info "Redirecting to '${targetUri}'."
             //redirect(uri: targetUri)
         }

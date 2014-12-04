@@ -22,11 +22,16 @@ class BootStrap {
 		// Create the roles
 		def adminRole = Role.findByName('ROLE_ADMIN') ?:
 			new Role(name: 'ROLE_ADMIN').save(flush: true, failOnError: true)
+			adminRole.addToPermissions("*:*")
+			adminRole.save(flush: true)
 		def pmRole = Role.findByName('ROLE_PM') ?:
 			new Role(name: 'ROLE_PM').save(flush: true, failOnError: true)
+			pmRole.addToPermissions("pm:*")
+			pmRole.save(flush: true)
 		def tmRole = Role.findByName('ROLE_TM') ?:
 			new Role(name: 'ROLE_TM').save(flush: true, failOnError: true)
-
+			tmRole.addToPermissions("tm:*")
+			tmRole.save(flush: true)
 		// Create an admin user
 		def adminUser = User.findByUsername('admin@test.com') ?:
 			new User(firstName: 'Admin', 
