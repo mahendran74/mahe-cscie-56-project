@@ -135,7 +135,7 @@
             </div>
             <div class="modal-body">
               <div class="alert alert-danger" id="alertLogin">
-                <strong>Oh snap!</strong>
+                <strong>${flash.message}</strong>
               </div>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" name="username" value="${username}" class="form-control" placeholder="Email address" required autofocus>
@@ -174,24 +174,32 @@
               </div>
 
               <div class="form-group">
-                <label for="first_name">First Name</label>
-                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" value=""
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" value=""
                  data-msg-required="Please enter your first name." 
                  data-msg-maxlength="Your first name cannot be more than 255 characters." 
                  data-rule-required="true" 
                  data-rule-maxlength="255" />
               </div>
               <div class="form-group">
-                <label for="last_name">Last Name</label>
-                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" value="" 
+                <label for="middleIntitial">Middle Initial</label>
+                <input type="text" class="form-control" id="middleIntitial" name="middleIntitial" placeholder="MI" value=""
+                 data-msg-required="Please enter your middle initial." 
+                 data-msg-maxlength="Your first name cannot be more than 1 character." 
+                 data-rule-required="false" 
+                 data-rule-maxlength="1" />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" value="" 
                  data-msg-required="Please enter your last name." 
                  data-msg-maxlength="Your last name cannot be more than 255 characters." 
                  data-rule-required="true" 
                  data-rule-maxlength="255" />
               </div>
               <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="Email" value=""  
+                <label for="username">Email Address</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Email" value=""  
                  data-msg-email="Please enter a valid email." 
                  data-msg-required="Please enter a valid email." 
                  data-msg-maxlength="Your email cannot be more than 255 characters" 
@@ -353,6 +361,12 @@
 
   </div>
   <!-- /.container -->
+  <!-- We inline the values (ids, action links, resource links) we want to use in our JS file -->
+  <script>
+    var gspVars = {
+	  checkEmailUrl: '${createLink(controller:"user", action: "checkEmail")}',
+    }
+  </script>
   <asset:javascript src="qpm-home.js"/>
   <asset:javascript src="jquery-validate.js"/>
 </body>

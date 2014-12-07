@@ -15,12 +15,4 @@ class User {
 		username nullable: false, blank: false, unique: true
 		passwordHash blank: false
     }
-	
-	static boolean isAdmin() {
-		this.roles.any {it.roleName == RoleType.ROLE_ADMIN}
-	}
-	
-	static boolean isPM() {
-		this.roles.any {it.roleName == RoleType.ROLE_PM }
-	}
 }

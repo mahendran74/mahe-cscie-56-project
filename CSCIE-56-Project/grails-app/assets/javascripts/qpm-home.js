@@ -1,3 +1,11 @@
+$(document).ready(function(){
+//	  e.preventDefault();
+	if($.trim($('#alertLogin').text()) != "") {
+	  $('#alertLogin').show();
+	  $('#loginWindow').modal('show');
+	}
+});
+
 // Sign Up click
 $('#signUp').on('click', function(e) {
   e.preventDefault();
@@ -5,7 +13,7 @@ $('#signUp').on('click', function(e) {
   $('#signUpWindow').modal('show');
 });
 
-//Sign Up click
+//Login click
 $('#login').on('click', function(e) {
   e.preventDefault();
   $('#alertLogin').hide();
@@ -23,12 +31,13 @@ jQuery.validator.addMethod("notUsed",
    var response;
    $.ajax({
      type : "post",
-     url : "/users/check_email/" + value,
+     url : gspVars.checkEmailUrl + "/" + value,
      async: false,
      success : function(data) {
        response = data;
      }
    });
+   console.log("response " + response)
    if (response == "Email is available")
      return true;
    else

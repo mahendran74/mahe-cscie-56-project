@@ -16,7 +16,7 @@ class SecurityFilters {
         others(uri: "/**") {
             before = {
                 // Ignore direct views (e.g. the default main index page).
-                if (!controllerName || controllerName == 'assets') return true
+                if (!controllerName || controllerName == 'assets' || controllerName == "user") return true
 
                 // Access control by convention.
                 accessControl()

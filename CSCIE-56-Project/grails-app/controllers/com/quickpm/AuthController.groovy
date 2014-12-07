@@ -12,7 +12,8 @@ class AuthController {
     def index = { redirect(action: "login", params: params) }
 
     def login = {
-        return [ username: params.username, rememberMe: (params.rememberMe != null), targetUri: params.targetUri ]
+		flash.message = "Please login."
+		redirect(uri: "/")
     }
 
     def signIn = {
@@ -36,7 +37,7 @@ class AuthController {
         
         try{
             // Perform the actual login. An AuthenticationException
-            // will be thrown if the username is unrecognised or the
+            // will be thrown if the username is unrecognized or the
             // password is incorrect.
             SecurityUtils.subject.login(authToken)
 			log.info "Authenticated"
@@ -46,8 +47,7 @@ class AuthController {
 				redirect(controller: 'PM', action: 'home')
 			} else if (SecurityUtils.subject.hasRole(RoleType.ROLE_TM.name()))
 				redirect(controller: 'TM', action: 'home')
-            //log.info "Redirecting to '${targetUri}'."
-            //redirect(uri: targetUri)
+
         }
         catch (AuthenticationException ex){
             // Authentication failed, so display the appropriate message
@@ -61,14 +61,8 @@ class AuthController {
             if (params.rememberMe) {
                 m["rememberMe"] = true
             }
-
-            // Remember the target URI too.
-            if (params.targetUri) {
-                m["targetUri"] = params.targetUri
-            }
-
             // Now redirect back to the login page.
-            redirect(action: "login", params: m)
+            redirect(uri:'/', params: m)
         }
     }
 
@@ -82,6 +76,7 @@ class AuthController {
     }
 
     def unauthorized = {
-        render "You do not have permission to access this page."
+        flash.message = "Please login."
+		redirect(uri: "/")
     }
 }

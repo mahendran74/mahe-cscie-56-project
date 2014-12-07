@@ -45,17 +45,19 @@
           <li><a href="#contact" id="contact">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?=$user->first_name?>  <?=$user->last_name?> <b class="caret"></b></a>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> ${(userInstance?.firstName)}  ${(userInstance?.lastName)} <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li class="dropdown-header">Switch Role To ...</li>
-              <?php if(array_key_exists( 1, $roles)): ?>
-              <li class="admin-interface"><a href="/admin/home"><span class="glyphicon glyphicon-user"></span> Administrator </a></li>
-              <?php endif;?>
-              <?php if(array_key_exists( 2, $roles)): ?>
-              <li class="pm-interface"><a href="/pm/home"><span class="glyphicon glyphicon-user"></span> Project Manager </a></li>
-              <?php endif;?>
+              <shiro:hasAnyRole in="['ROLE_ADMIN', 'ROLE_PM']">
+                <li class="dropdown-header">Switch Role To ...</li>
+                <shiro:hasAnyRole in="['ROLE_ADMIN']">
+                  <li class="admin-interface"><g:link controller="admin" action="home"><span class="glyphicon glyphicon-user"></span> Administrator </g:link></li>
+                </shiro:hasAnyRole>
+                <shiro:hasAnyRole in="['ROLE_ADMIN', 'ROLE_PM']">
+                  <li class="pm-interface"><g:link controller="PM" action="home"><span class="glyphicon glyphicon-user"></span> Project Manager </g:link></li>
+                </shiro:hasAnyRole>
+              </shiro:hasAnyRole>
               <li class="divider"></li>
-              <li><a href="/users/logout"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+              <li><g:link controller="auth" action="signOut"><span class="glyphicon glyphicon-log-out"></span> Log Out</g:link></li>
             </ul></li>
         </ul>
       </div>
