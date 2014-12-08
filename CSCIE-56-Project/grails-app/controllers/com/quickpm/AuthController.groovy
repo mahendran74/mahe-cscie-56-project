@@ -2,6 +2,7 @@ package com.quickpm
 
 import org.apache.shiro.SecurityUtils
 import org.apache.shiro.authc.AuthenticationException
+import org.apache.shiro.authc.DisabledAccountException
 import org.apache.shiro.authc.UsernamePasswordToken
 import org.apache.shiro.web.util.SavedRequest
 import org.apache.shiro.web.util.WebUtils
@@ -41,6 +42,7 @@ class AuthController {
             // password is incorrect.
             SecurityUtils.subject.login(authToken)
 			log.info "Authenticated"
+	
 			if (SecurityUtils.subject.hasRole(RoleType.ROLE_ADMIN.name())){
 				redirect(controller: 'admin', action: 'home')
 			} else if (SecurityUtils.subject.hasRole(RoleType.ROLE_PM.name())){
@@ -49,6 +51,12 @@ class AuthController {
 				redirect(controller: 'TM', action: 'home')
 
         }
+		catch (DisabledAccountException ex) {
+			def m = [ email: params.username ]
+			flash.message = ex.message
+			// Now redirect back to the login page.
+			redirect(uri:'/', params: m)
+		}
         catch (AuthenticationException ex){
             // Authentication failed, so display the appropriate message
             // on the login page.

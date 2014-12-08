@@ -3,6 +3,7 @@ package com.quickpm
 import org.apache.shiro.authc.AccountException
 import org.apache.shiro.authc.IncorrectCredentialsException
 import org.apache.shiro.authc.UnknownAccountException
+import org.apache.shiro.authc.DisabledAccountException
 import org.apache.shiro.authc.SimpleAccount
 import org.apache.shiro.authz.permission.WildcardPermission
 
@@ -30,7 +31,11 @@ class DbRealm {
         }
 
         log.info "Found user '${user.username}' in DB"
-
+		
+		if (!user.active) {
+			throw new DisabledAccountException("The user is disabled")
+		}
+		
         // Now check the user's password against the hashed value stored
         // in the database.
         def account = new SimpleAccount(username, user.passwordHash, "DbRealm")

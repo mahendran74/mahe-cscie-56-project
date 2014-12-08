@@ -76,6 +76,21 @@ class BootStrap {
 		// Add roles to the pm user
 		assert tmUser.addToRoles(tmRole)
 				.save(flush: true, failOnError: true)
+		
+		// Create an tm user disabled
+		def tmUserDisabled = User.findByUsername('tmd@test.com') ?:
+			new User(firstName: 'TM',
+					lastName: 'UserDisabled',
+					middleIntitial: 'I',
+					username: 'tmd@test.com',
+					passwordHash: new Sha512Hash("password").toHex(),
+					active: false)
+					.save(flush: true, failOnError: true)
+		
+		// Add roles to the pm user
+		assert tmUserDisabled.addToRoles(tmRole)
+				.save(flush: true, failOnError: true)
+				
     }
     def destroy = {
     }

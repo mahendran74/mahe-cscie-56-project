@@ -9,9 +9,13 @@ class AdminController {
     def index() { }
 	
 	def home() {
-		Subject currentUser = SecurityUtils.getSubject()
-		def loggedInUsername = currentUser.principal
-		User userInstance = User.findAllByUsername(loggedInUsername).get(0)
-		respond userInstance
+		Subject subject = SecurityUtils.getSubject()
+		def loggedInUsername = subject.principal
+		User currentUser = User.findByUsername(loggedInUsername)
+		
+		//Get all user except the admin
+		def userList = User.findAllByUsernameNotEqual(loggedInUsername)
+		
+		[currentUser: currentUser, userList: userList]
 	}
 }

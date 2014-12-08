@@ -62,11 +62,11 @@ $('.deactivate-user').on(
             if (result) {
               $.ajax({
                 type : 'post',
-                url : '/users/deactivate/' + user_id,
+                url : gspVars.deactivateUrl + "/" + user_id,
                 success : function(data) {
                   console.log(data);
                   bootbox.alert(data, function(result) {
-                    window.location = "/admin/home";
+                    window.location = gspVars.adminHomeUrl;
                   });
                 }
               });
@@ -82,11 +82,11 @@ $('.activate-user').on('click', function(e) {
     if (result) {
       $.ajax({
         type : 'post',
-        url : '/users/activate/' + user_id,
+        url : gspVars.activateUrl + "/" + user_id,
         success : function(data) {
           console.log(data);
           bootbox.alert(data, function(result) {
-            window.location = "/admin/home";
+            window.location = gspVars.adminHomeUrl;
           });
         }
       });
@@ -122,18 +122,20 @@ $('.edit-user').on(
     'click',
     function(e) {
       e.preventDefault();
-      var user_id = $(this).attr('id').substring(1);
+      var user_id = $(this).attr('id');
       $.ajax({
         type : 'post',
-        url : '/users/get_user/' + user_id,
+        datatype : 'json',
+        url : gspVars.getUserUrl + "/" + user_id,
         success : function(data) {
-          var user = jQuery.parseJSON(data);
-          $('#addNewUserWindow #user_id').val(user.user_id);
-          $('#addNewUserWindow #first_name').val(user.first_name);
-          $('#addNewUserWindow #last_name').val(user.last_name);
-          $('#addNewUserWindow #email').val(user.email);          
-          $('#addNewUserWindow #confirm_email').val(user.email);
-          if (user.roles.indexOf("1") > 0)
+          console.log(data)
+          //var user = jQuery.parseJSON(data);
+          $('#addNewUserWindow #user_id').val(data.id);
+          $('#addNewUserWindow #first_name').val(data.firstName);
+          $('#addNewUserWindow #last_name').val(data.lastName);
+          $('#addNewUserWindow #email').val(data.username);          
+          //$('#addNewUserWindow #confirm_email').val(user.email);
+          if (data.roles.indexOf("1") > 0)
             $('#addNewUserWindow #admin_access').prop("checked", true);
           else
             $('#addNewUserWindow #admin_access').prop("checked", false);
@@ -151,7 +153,7 @@ $("#email").change(function() {
 
   $.ajax({
     type : "post",
-    url : "/users/check_email/" + email,
+    url : gspVars.checkEmailUrl + "/" + email,
     success : function(data) {
       // alert(data);
       if (data == 1) {
@@ -219,7 +221,7 @@ $("#addNewUserForm").validate(
           success : function(data) {
             console.log(data);
             bootbox.alert(data, function(result) {
-              window.location = "/admin/home";
+              window.location = gspVars.adminHomeUrl;
             });
           }
         });
