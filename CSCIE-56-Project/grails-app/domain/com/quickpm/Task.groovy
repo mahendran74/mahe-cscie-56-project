@@ -7,9 +7,13 @@ class Task {
 	Date endDate
 	Integer percentageComplete
 	Status status
-
+	Task dependsOn
 	User assignedTo
+	Group taskGroup
 	
     static constraints = {
+		taskGroup nullable: true, blank: true
+		dependsOn nullable: true, blank: true
+		assignedTo nullable: true, blank: true
     }
 }

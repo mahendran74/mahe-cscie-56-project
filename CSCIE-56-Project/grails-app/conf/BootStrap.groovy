@@ -45,6 +45,7 @@ class BootStrap {
 		def pmRole = Role.findByName('ROLE_PM') ?:
 			new Role(name: 'ROLE_PM').save(flush: true, failOnError: true)
 			pmRole.addToPermissions("pm:*")
+			pmRole.addToPermissions("tm:*")
 			pmRole.save(flush: true)
 		def tmRole = Role.findByName('ROLE_TM') ?:
 			new Role(name: 'ROLE_TM').save(flush: true, failOnError: true)
@@ -60,10 +61,8 @@ class BootStrap {
 					active: true)
 					.save(flush: true, failOnError: true)
 
-		// Add roles to the admin user
+		// Add roles to  the admin user
 		assert adminUser.addToRoles(adminRole)
-				.addToRoles(pmRole)
-				.addToRoles(tmRole)
 				.save(flush: true, failOnError: true)
 				
 				// Create an admin user
@@ -94,7 +93,6 @@ class BootStrap {
 
 		// Add roles to the pm user
 		assert pmUser.addToRoles(pmRole)
-				.addToRoles(tmRole)
 				.save(flush: true, failOnError: true)
 		
 		// Create an tm user

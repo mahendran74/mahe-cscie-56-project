@@ -7,10 +7,9 @@ class Project {
 	Date startDate
 	Date endDate
 	Status status
-	
 	User projectManager
 	
-	static hasMany = [groups:Group]
+	static hasMany = [groups:Group, tasks:Task, milestones:Milestone]
 	
     static constraints = {
     }
