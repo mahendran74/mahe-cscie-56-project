@@ -8,6 +8,14 @@ $('#search').keyup(function() {
   }).hide();
 });
 
+$(document).ready(function(){
+//	  e.preventDefault();
+	if($.trim($('#alertLogin').text()) != "") {
+	  $('#alertLogin').show();
+	  $('#loginWindow').modal('show');
+	}
+});
+
 //About click
 $('#about').on('click', function(e) {
   e.preventDefault();
@@ -185,6 +193,49 @@ jQuery.validator.addMethod("notUsed",
   else
     return false;
 },'Email already used. Please provide another email.');
+
+// Change password submit
+$("#changePasswordForm").validate(
+	    {
+	      showErrors : function(errorMap, errorList) {
+
+	        // Clean up any tooltips for valid elements
+	        $.each(this.validElements(), function(index, element) {
+	          var $element = $(element);
+	          $element.data("title", "").removeClass("has-error")
+	              .tooltip("destroy");
+	        });
+
+	        // Create new tooltips for invalid elements
+	        $.each(errorList, function(index, error) {
+	          var $element = $(error.element);
+	          $element.tooltip("destroy").data("title", error.message).addClass(
+	              "has-error").tooltip({
+	            'placement' : 'bottom'
+	          });
+	        });
+	      },
+
+	      submitHandler : function(form) {
+	        var formData = $(form).serialize();
+	        var submit_url = gspVars.changePasswordUrl; // change password
+	        if ($('#id').val() != "" && $('#username').val() == "") {
+	          submit_url = gspVars.resetPasswordUrl; // reset password
+	        }
+	        $.ajax({
+	          type : 'post',
+	          url : submit_url,
+	          data : formData,
+	          success : function(data) {
+	            console.log(data);
+	            bootbox.alert(data, function(result) {
+	              window.location = gspVars.adminHomeUrl;
+	            });
+	          }
+	        });
+	        return false;
+	      }
+	    });
 
 // New user submit
 $("#addNewUserForm").validate(
