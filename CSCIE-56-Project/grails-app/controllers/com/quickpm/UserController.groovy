@@ -1,6 +1,10 @@
 package com.quickpm
 
 import grails.converters.*
+import org.apache.shiro.authc.AuthenticationException
+import org.apache.shiro.authc.UsernamePasswordToken
+import org.apache.shiro.SecurityUtils
+
 class UserController {
 
     def signUp() {
@@ -31,6 +35,16 @@ class UserController {
 	}
 	
 	def getUser(Integer id) {
-		render User.get(id) as JSON
+		render User.findById(id) as JSON
+	}
+	
+	def changePassword() {
+		def authToken = new UsernamePasswordToken(params.username, params.oldPassword as String)
+		try {
+			SecurityUtils.subject.login(authToken)
+		} catch (AuthenticationException e) {
+			flash.message = message(code: "login.failed")
+			
+		}
 	}
 }

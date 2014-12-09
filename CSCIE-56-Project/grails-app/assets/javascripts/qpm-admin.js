@@ -20,22 +20,6 @@ $('#contact').on('click', function(e) {
   $('#contactWindow').modal('show');
 });
 
-//$('.left-button').tooltip({
-//  'placement' : 'bottom'
-//});
-//$('.right-button').tooltip({
-//  'placement' : 'bottom'
-//});
-//$('.admin-icon').tooltip({
-//  'placement' : 'top'
-//});
-//$('.pm-icon').tooltip({
-//  'placement' : 'top'
-//});
-//$('.tm-icon').tooltip({
-//  'placement' : 'top'
-//});
-
 $(function() {
   $('#addNewUser').on('click', function(e) {
     e.preventDefault();
@@ -78,7 +62,7 @@ $('.deactivate-user').on(
 $('.activate-user').on('click', function(e) {
   e.preventDefault();
   var user_id = $(this).attr('id');
-  bootbox.confirm("Are you sure you to activate this user ?", function(result) {
+  bootbox.confirm("Are you sure you want to activate this user ?", function(result) {
     if (result) {
       $.ajax({
         type : 'post',
@@ -98,24 +82,42 @@ $('.activate-user').on('click', function(e) {
 $('.reset-password').on(
     'click',
     function(e) {
-      e.preventDefault();
-      var user_id = $(this).attr('id').substring(1);
-      bootbox.confirm("Are you sure you want to reset the password ?",
-          function(result) {
-            if (result) {
-              $.ajax({
-                type : 'post',
-                url : '/users/set_temp_token/' + user_id,
-                success : function(data) {
-                  console.log(data);
-                  bootbox.alert(data, function(result) {
-                    window.location = "/admin/home";
-                  });
-                }
-              });
-            }
-          });
+        e.preventDefault();
+        $('#changePasswordWindow #id').val($(this).attr('id'));
+        $('#changePasswordWindow #username').val('');
+        $('#changePasswordWindow #password').val('');
+        $('#changePasswordWindow #confirmPassword').val('');          
+        $('#changePasswordWindow #oldPasswordDiv').hide();
+        $('#changePasswordLabel').text("Reset Password");
+        $('#alertChangePassword').hide();
+        $('#changePasswordWindow').modal('show');
     });
+
+$('.change-password').on(
+	    'click',
+	    function(e) {
+	        e.preventDefault();
+	        $('#changePasswordWindow #id').val('');
+	        $('#changePasswordWindow #username').val($(this).attr('id'));
+	        $('#changePasswordWindow #password').val('');
+	        $('#changePasswordWindow #confirmPassword').val('');
+	        $('#changePasswordWindow #oldPassword').val('');
+	        $('#changePasswordWindow #oldPasswordDiv').show();
+	        $('#changePasswordLabel').text("Change Password");
+	        $('#alertChangePassword').hide();
+	        $('#changePasswordWindow').modal('show');
+	    });
+
+function checkForRole(data, value) {
+    var found = false;
+    for (var i = 0; i < data.length; i++) {
+        var element = data[i];
+        if (element.name == value) {
+           found = true;
+       } 
+    }
+    return found;
+}
 
 //Edit user
 $('.edit-user').on(
@@ -128,14 +130,12 @@ $('.edit-user').on(
         datatype : 'json',
         url : gspVars.getUserUrl + "/" + user_id,
         success : function(data) {
-          console.log(data)
-          //var user = jQuery.parseJSON(data);
           $('#addNewUserWindow #user_id').val(data.id);
           $('#addNewUserWindow #first_name').val(data.firstName);
           $('#addNewUserWindow #last_name').val(data.lastName);
           $('#addNewUserWindow #email').val(data.username);          
-          //$('#addNewUserWindow #confirm_email').val(user.email);
-          if (data.roles.indexOf("1") > 0)
+
+          if (checkForRole(data.roles, "ROLE_ADMIN"))
             $('#addNewUserWindow #admin_access').prop("checked", true);
           else
             $('#addNewUserWindow #admin_access').prop("checked", false);

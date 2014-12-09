@@ -40,33 +40,47 @@
             class="icon-bar"></span> <span class="icon-bar"></span> <span
             class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/admin/home">Quick PM <small><small>Administrator</small></small></a>
+        <a class="navbar-brand" href="${createLink(controller:"admin", action: "home")}">Quick PM <small><small>Administrator</small></small></a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="/admin/home">Home</a></li>
+          <li class="active"><a href="${createLink(controller:"admin", action: "home")}">Home</a></li>
           <li><a href="#about" id="about">About</a></li>
           <li><a href="#contact" id="contact">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown"><a href="#" class="dropdown-toggle"
-            data-toggle="dropdown"><span
-              class="glyphicon glyphicon-user"></span> ${(currentUser?.firstName)}
-              ${(currentUser?.lastName)} <b class="caret"></b></a>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-user"></span> ${(currentUser?.firstName)} ${(currentUser?.lastName)} 
+              <b class="caret"></b>
+            </a>
             <ul class="dropdown-menu">
+              <li>
+                <a href="#" id="${userInstance?.username }" class="change-password" data-toggle="tooltip" title="Change Password">
+                  <span class="glyphicon glyphicon-lock"></span> Change Password 
+                </a>
+              </li>
               <li class="dropdown-header">Switch Role To ...</li>
               <shiro:hasAnyRole in="['ROLE_ADMIN', 'ROLE_PM']">
-                <li class="pm-interface"><g:link controller="PM"
-                    action="home">
-                    <span class="glyphicon glyphicon-user"></span> Project Manager </g:link></li>
+                <li class="pm-interface">
+                  <g:link controller="PM" action="home">
+                    <span class="glyphicon glyphicon-user"></span> Project Manager 
+                  </g:link>
+                </li>
               </shiro:hasAnyRole>
-              <li class="tm-interface"><g:link controller="TM"
-                  action="home">
-                  <span class="glyphicon glyphicon-user"></span> Team Member</g:link></li>
+              <li class="tm-interface">
+                <g:link controller="TM" action="home">
+                  <span class="glyphicon glyphicon-user"></span> Team Member
+                </g:link>
+              </li>
               <li class="divider"></li>
-              <li><g:link controller="auth" action="signOut">
-                  <span class="glyphicon glyphicon-log-out"></span> Log Out </g:link></li>
-            </ul></li>
+              <li>
+                <g:link controller="auth" action="signOut">
+                  <span class="glyphicon glyphicon-log-out"></span> Log Out 
+                </g:link>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <!-- /.nav-collapse -->
@@ -79,7 +93,7 @@
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <h4 class="panel-title">
-              Users <span class="badge">3</span>
+              Users <span class="badge">${userList.size()}</span>
             </h4>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -140,13 +154,13 @@
                   <td><span class="label label-danger">Inactive</span></td>
                 </g:else>
                 <td>
-                  <g:if test="${(userInstance?.roles?.contains(['ROLE_ADMIN']))}">
+                  <g:if test="${(userInstance?.roles?.any { it.name == 'ROLE_ADMIN' })}">
                     <span class="glyphicon glyphicon-user admin-icon" data-toggle="tooltip" title="Administrator"></span>
                   </g:if> 
-                  <g:if test="${(userInstance?.roles?.contains(['ROLE_PM']))}">
+                  <g:if test="${(userInstance?.roles?.any { it.name == 'ROLE_PM' })}">
                     <span class="glyphicon glyphicon-user pm-icon" data-toggle="tooltip" title="Project Manager"></span>
                   </g:if>
-                  <g:if test="${(userInstance?.roles?.contains(['ROLE_TM']))}">
+                  <g:if test="${(userInstance?.roles?.any { it.name == 'ROLE_TM' })}">
                     <span class="glyphicon glyphicon-user tm-icon" data-toggle="tooltip" title="Team Member"></span>
                   </g:if>
                 </td>
@@ -198,6 +212,70 @@
   </div>
   <!-- /container -->
 
+  <!-- START CHANGE PASSWORD MODAL -->
+
+  <!-- Change Password Modal -->
+  <div class="modal fade" id="changePasswordWindow" tabindex="-1"
+    data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form method='POST' action='' id="changePasswordForm">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="changePasswordLabel">Change Password</h4>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger" id="alertChangePassword">
+              <strong>Oh snap!</strong>
+            </div>
+              <div class="form-group" id="oldPasswordDiv">
+                <label for="oldPassword">Old Password</label>
+                <input type="password" class="form-control" id="oldPassword" name="OldPassword" placeholder="Old password" value=""
+                 data-msg-required="Please enter the old password." 
+                 data-msg-maxlength="Your password cannot be more than 20 characters." 
+                 data-msg-minlength="Your password cannot be less than 5 characters." 
+                 data-rule-required="true" 
+                 data-rule-maxlength="20"
+                 data-rule-minlength="5" />
+              </div>
+              <div class="form-group">
+                <label for="password">New Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" value=""
+                 data-msg-required="Please enter the new password." 
+                 data-msg-maxlength="Your password cannot be more than 20 characters." 
+                 data-msg-minlength="Your password cannot be less than 5 characters." 
+                 data-rule-required="true" 
+                 data-rule-maxlength="20"
+                 data-rule-minlength="5" />
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Comfirm password" value=""
+                 data-msg-required="Please confirm your new password." 
+                 data-msg-maxlength="Your password cannot be more than 20 characters." 
+                 data-msg-minlength="Your password cannot be less than 5 characters."
+                 data-msg-equalTo="The password confirmation has to match the password above."
+                 data-rule-required="true" 
+                 data-rule-maxlength="20"
+                 data-rule-minlength="5"
+                 data-rule-equalTo="#password" />
+              </div>
+          </div>
+          <div class="modal-footer">
+            <input type="hidden" id="id" name="id">
+            <input type="hidden" id="username" name="username">
+            <button type="reset" class="btn btn-default"
+              data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success btn-primary"
+              id="addUserButton">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- /END CHANGE PASSWORD MODAL -->
+
   <!-- START NEW USER MODAL -->
 
   <!-- New User Modal -->
@@ -208,15 +286,15 @@
         <form method='POST' action='' id="addNewUserForm">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title" id="addNewUserModalLabel">Add
-              New User</h4>
+            <h4 class="modal-title" id="addNewUserModalLabel">Add New User</h4>
           </div>
           <div class="modal-body">
             <div class="alert alert-danger" id="alertAddNewUser">
               <strong>Oh snap!</strong>
             </div>
             <div class="form-group">
-              <label for="first_name">First Name</label> <input
+              <label for="first_name">First Name</label> 
+              <input
                 type="text" class="form-control" id="first_name"
                 name="first_name" placeholder="First Name" value=""
                 data-msg-required="Please enter a first name."
@@ -224,7 +302,8 @@
                 data-rule-required="true" data-rule-maxlength="255" />
             </div>
             <div class="form-group">
-              <label for="last_name">Last Name</label> <input
+              <label for="last_name">Last Name</label> 
+              <input
                 type="text" class="form-control" id="last_name"
                 name="last_name" placeholder="Last Name" value=""
                 data-msg-required="Please enter a last name."
@@ -232,7 +311,8 @@
                 data-rule-required="true" data-rule-maxlength="255" />
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label> <input
+              <label for="email">Email Address</label> 
+              <input
                 type="text" class="form-control" id="email" name="email"
                 placeholder="Email" value=""
                 data-msg-email="Please enter a valid email."
@@ -243,7 +323,8 @@
               <div id="message"></div>
             </div>
             <div class="form-group">
-              <label for="confirm_email">Confirm Email Address</label> <input
+              <label for="confirm_email">Confirm Email Address</label> 
+              <input
                 type="text" class="form-control" id="confirm_email"
                 name="confirm_email" placeholder="Confirm Email"
                 value=""
@@ -255,13 +336,10 @@
                 data-rule-maxlength="255" data-rule-equalTo="#email" />
             </div>
             <div class="form-group">
-              <div class="col-sm-offset-0 col-sm-10">
-                <div class="checkbox">
-                  <label for="admin_access"> <input
-                    type="checkbox" id="admin_access"
-                    name="admin_access"> <strong>Administrator</strong>
-                  </label>
-                </div>
+              <div class="checkbox">
+                <label for="admin_access"> 
+                  <input type="checkbox" id="admin_access" name="admin_access">Administrator access 
+                </label>
               </div>
             </div>
           </div>

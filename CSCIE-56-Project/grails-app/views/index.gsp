@@ -127,7 +127,6 @@
     <div class="modal fade" id="loginWindow" tabindex="-1" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
-          <!-- form method='POST' action='/auth/signIn' id="loginForm" -->
           <g:form  controller="auth" action="signIn" method="post">
           	<div class="modal-header modal-header-success">
               <button type="button" class="close" data-dismiss="modal">&times;</button>

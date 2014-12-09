@@ -2,6 +2,7 @@ import com.quickpm.Role
 import com.quickpm.RoleType
 import com.quickpm.User
 import org.apache.shiro.crypto.hash.Sha512Hash
+import grails.converters.*
 
 class BootStrap {
     def init = { servletContext ->
@@ -19,6 +20,23 @@ class BootStrap {
 //		testUser.addToRoles(adminRole)
 //		testUser.save(flush: true)
 		
+		JSON.registerObjectMarshaller(User) {
+			def output = [:]
+			output['id'] = it.id
+			output['firstName'] = it.firstName
+			output['lastName'] = it.lastName
+			output['middleInitial'] = it.middleInitial
+			output['active'] = it.active
+			output['username'] = it.username
+			output['roles'] = it.roles
+			return output;
+		}
+		JSON.registerObjectMarshaller(Role) {
+			def output = [:]
+			output['id'] = it.id
+			output['name'] = it.name
+			return output;
+		}
 		// Create the roles
 		def adminRole = Role.findByName('ROLE_ADMIN') ?:
 			new Role(name: 'ROLE_ADMIN').save(flush: true, failOnError: true)
@@ -36,7 +54,7 @@ class BootStrap {
 		def adminUser = User.findByUsername('admin@test.com') ?:
 			new User(firstName: 'Admin', 
 					lastName: 'User', 
-					middleIntitial: 'I',
+					middleInitial: 'I',
 					username: 'admin@test.com',
 					passwordHash: new Sha512Hash("password").toHex(),
 					active: true)
@@ -47,12 +65,28 @@ class BootStrap {
 				.addToRoles(pmRole)
 				.addToRoles(tmRole)
 				.save(flush: true, failOnError: true)
-
+				
+				// Create an admin user
+				def adminUser1 = User.findByUsername('admin1@test.com') ?:
+					new User(firstName: 'Admin1',
+							lastName: 'User',
+							middleInitial: 'I',
+							username: 'admin1@test.com',
+							passwordHash: new Sha512Hash("password").toHex(),
+							active: true)
+							.save(flush: true, failOnError: true)
+		
+				// Add roles to the admin user
+				assert adminUser1.addToRoles(adminRole)
+						.addToRoles(pmRole)
+						.addToRoles(tmRole)
+						.save(flush: true, failOnError: true)
+						
 		// Create an pm user
 		def pmUser = User.findByUsername('pm@test.com') ?:
 			new User(firstName: 'PM', 
 					lastName: 'User', 
-					middleIntitial: 'I',
+					middleInitial: 'I',
 					username: 'pm@test.com',
 					passwordHash: new Sha512Hash("password").toHex(),
 					active: true)
@@ -67,7 +101,7 @@ class BootStrap {
 		def tmUser = User.findByUsername('tm@test.com') ?:
 			new User(firstName: 'TM',
 					lastName: 'User',
-					middleIntitial: 'I',
+					middleInitial: 'I',
 					username: 'tm@test.com',
 					passwordHash: new Sha512Hash("password").toHex(),
 					active: true)
@@ -81,7 +115,7 @@ class BootStrap {
 		def tmUserDisabled = User.findByUsername('tmd@test.com') ?:
 			new User(firstName: 'TM',
 					lastName: 'UserDisabled',
-					middleIntitial: 'I',
+					middleInitial: 'I',
 					username: 'tmd@test.com',
 					passwordHash: new Sha512Hash("password").toHex(),
 					active: false)
@@ -90,7 +124,7 @@ class BootStrap {
 		// Add roles to the pm user
 		assert tmUserDisabled.addToRoles(tmRole)
 				.save(flush: true, failOnError: true)
-				
+			
     }
     def destroy = {
     }

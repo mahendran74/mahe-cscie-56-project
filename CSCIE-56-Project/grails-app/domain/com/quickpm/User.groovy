@@ -4,7 +4,7 @@ class User {
 	
 	String firstName
 	String lastName
-	String middleIntitial
+	String middleInitial
 	String username
 	String passwordHash
 	boolean active
@@ -15,4 +15,8 @@ class User {
 		username nullable: false, blank: false, unique: true
 		passwordHash blank: false
     }
+	
+	def isAdmin() {
+		
+	}
 }
