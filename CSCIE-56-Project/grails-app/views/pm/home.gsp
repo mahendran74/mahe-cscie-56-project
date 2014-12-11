@@ -79,6 +79,9 @@
                   <a href="#" id="addNewProject" class="btn btn-xs btn-success" data-toggle="tooltip" title="Add New Project"> 
                     <span class="glyphicon glyphicon-tasks"></span>
                   </a>
+                  <a id="addNewUser" class="btn btn-xs btn-success right-button" data-toggle="tooltip" title="New User">
+                    <span class="glyphicon glyphicon-user"></span>
+                  </a>
                 </div>
               </div>
             </div>

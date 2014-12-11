@@ -10,6 +10,12 @@ $(document).ready(function(){
 $('#signUp').on('click', function(e) {
   e.preventDefault();
   $('#alertSignUp').hide();
+  $('#signUpWindow #firstName').val('');
+  $('#signUpWindow #middleInitial').val('');
+  $('#signUpWindow #lastName').val('');
+  $('#signUpWindow #username').val('');
+  $('#signUpWindow #password').val('');
+  $('#signUpWindow #confirm_password').val('');
   $('#signUpWindow').modal('show');
 });
 
@@ -85,7 +91,22 @@ $("#signUpForm").validate(
         });
       },
       submitHandler : function(form) {
-        form.submit();
+        //form.submit();
+        //return false;
+        var formData = $(form).serialize();
+        var submit_url = gspVars.signUpUserUrl; 
+        $.ajax({
+          type : 'post',
+          url : submit_url,
+          data : formData,
+          success : function(data) {
+            console.log(data);
+            bootbox.alert(data, function(result) {
+            	$('#signUpWindow').modal('hide');
+              //window.location = gspVars.adminHomeUrl;
+            });
+          }
+        });
         return false;
       }
     });

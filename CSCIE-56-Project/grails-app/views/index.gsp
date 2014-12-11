@@ -127,8 +127,8 @@
     <div class="modal fade" id="loginWindow" tabindex="-1" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
-          <g:form  controller="auth" action="signIn" method="post">
-          	<div class="modal-header modal-header-success">
+          <g:form controller="auth" action="signIn" method="post">
+            <div class="modal-header modal-header-success">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title" id="loginModalLabel">Login</h4>
             </div>
@@ -136,19 +136,22 @@
               <div class="alert alert-danger" id="alertLogin">
                 <strong>${flash.message}</strong>
               </div>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" name="username" value="${username}" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" name="password" value="" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-          <label>
-            <g:checkBox name="rememberMe" value="${rememberMe}" /> Remember me
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input type="email" id="inputEmail" 
+                name="username" value="${username}" 
+                class="form-control" placeholder="Email address" 
+                required autofocus>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="inputPassword" 
+                name="password" value="" class="form-control" 
+                placeholder="Password" required>
+              <div class="checkbox">
+                <label>
+                  <g:checkBox name="rememberMe" value="${rememberMe}" /> Remember me
+                </label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
             </div>
-          <!-- /form -->
           </g:form>
         </div>
       </div>
@@ -162,7 +165,7 @@
     <div class="modal fade" id="signUpWindow" tabindex="-1" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog">
         <div class="modal-content">
-          <form method='POST' action='/users/p_signup' id="signUpForm">
+          <form method='POST' action='' id="signUpForm">
             <div class="modal-header modal-header-success">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title" id="signUpModalLabel">Sign Up</h4>
@@ -182,7 +185,7 @@
               </div>
               <div class="form-group">
                 <label for="middleIntitial">Middle Initial</label>
-                <input type="text" class="form-control" id="middleIntitial" name="middleIntitial" placeholder="MI" value=""
+                <input type="text" class="form-control" id="middleInitial" name="middleInitial" placeholder="MI" value=""
                  data-msg-required="Please enter your middle initial." 
                  data-msg-maxlength="Your first name cannot be more than 1 character." 
                  data-rule-required="false" 
@@ -259,6 +262,7 @@
   <script>
     var gspVars = {
 	  checkEmailUrl: '${createLink(controller:"user", action: "checkEmail")}',
+    signUpUserUrl: '${createLink(controller:"user", action: "signUp")}'
     }
   </script>
   <asset:javascript src="qpm-home.js"/>

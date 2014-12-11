@@ -59,13 +59,13 @@
               <shiro:hasAnyRole in="['ROLE_ADMIN', 'ROLE_PM']">
                 <li class="pm-interface">
                   <g:link controller="PM" action="home">
-                    <span class="glyphicon glyphicon-user"></span> Project Manager 
+                    <span class="glyphicon glyphicon-user"></span>  Project Manager 
                   </g:link>
                 </li>
               </shiro:hasAnyRole>
               <li class="tm-interface">
                 <g:link controller="TM" action="home">
-                  <span class="glyphicon glyphicon-user"></span> Team Member
+                  <span class="glyphicon glyphicon-user"></span>  Team Member
                 </g:link>
               </li>
               <li>
@@ -115,38 +115,20 @@
         <table class="table table-hover" id="userList">
           <thead>
             <tr>
-              <th>
-                ${message(code: 'user.firstName.label', default: 'First Name')}
-              </th>
-              <th>
-                ${message(code: 'user.lastName.label', default: 'Last Name')}
-              </th>
-              <th>
-                ${message(code: 'user.email.label', default: 'Email')}
-              </th>
-              <th>
-                ${message(code: 'user.active.label', default: 'Status')}
-              </th>
-              <th>
-                ${message(code: 'user.roles.label', default: 'Roles')}
-              </th>
-              <th>
-                ${message(code: 'user.actions.label', default: 'Actions')}
-              </th>
+              <th>${message(code: 'user.firstName.label', default: 'First Name')}</th>
+              <th>${message(code: 'user.lastName.label', default: 'Last Name')}</th>
+              <th>${message(code: 'user.email.label', default: 'Email')}</th>
+              <th>${message(code: 'user.active.label', default: 'Status')}</th>
+              <th>${message(code: 'user.roles.label', default: 'Roles')}</th>
+              <th>${message(code: 'user.actions.label', default: 'Actions')}</th>
             </tr>
           </thead>
           <tbody>
             <g:each in="${userList}" status="i" var="userInstance">
               <tr>
-                <td>
-                  ${fieldValue(bean: userInstance, field: "firstName")}
-                </td>
-                <td>
-                  ${fieldValue(bean: userInstance, field: "lastName")}
-                </td>
-                <td>
-                  ${fieldValue(bean: userInstance, field: "username")}
-                </td>
+                <td>${fieldValue(bean: userInstance, field: "firstName")}</td>
+                <td>${fieldValue(bean: userInstance, field: "lastName")}</td>
+                <td>${fieldValue(bean: userInstance, field: "username")}</td>
                 <g:if test="${fieldValue(bean: userInstance, field: "active") == 'true'}">
                   <td><span class="label label-success">Active</span></td>
                 </g:if>
@@ -293,19 +275,27 @@
               <strong>Oh snap!</strong>
             </div>
             <div class="form-group">
-              <label for="first_name">First Name</label> 
+              <label for="firstName">First Name</label> 
               <input
-                type="text" class="form-control" id="first_name"
-                name="first_name" placeholder="First Name" value=""
+                type="text" class="form-control" id="firstName"
+                name="firstName" placeholder="First Name" value=""
                 data-msg-required="Please enter a first name."
                 data-msg-maxlength="The first name cannot be more than 255 characters."
                 data-rule-required="true" data-rule-maxlength="255" />
             </div>
             <div class="form-group">
-              <label for="last_name">Last Name</label> 
+              <label for="last_name">Middle Initial</label> 
               <input
-                type="text" class="form-control" id="last_name"
-                name="last_name" placeholder="Last Name" value=""
+                type="text" class="form-control" id="middleInitial"
+                name="middleInitial" placeholder="MI" value=""
+                data-msg-maxlength="The last name cannot be more than 1 characters."
+                data-rule-required="false" data-rule-maxlength="1" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label> 
+              <input
+                type="text" class="form-control" id="lastName"
+                name="lastName" placeholder="Last Name" value=""
                 data-msg-required="Please enter a last name."
                 data-msg-maxlength="The last name cannot be more than 255 characters."
                 data-rule-required="true" data-rule-maxlength="255" />
@@ -336,11 +326,13 @@
                 data-rule-maxlength="255" data-rule-equalTo="#email" />
             </div>
             <div class="form-group">
-              <div class="checkbox">
-                <label for="admin_access"> 
-                  <input type="checkbox" id="admin_access" name="admin_access">Administrator access 
-                </label>
-              </div>
+              <label for="role">Role</label> 
+              <select class="form-control" id="role" name="role">
+                <option value="" selected disabled>Select role</option>
+                <g:each in="${roleList}" status="i" var="roleInstance">
+                  <option value="${roleInstance?.id}">${roleInstance?.description}</option>
+                </g:each>
+              </select>
             </div>
           </div>
           <div class="modal-footer">

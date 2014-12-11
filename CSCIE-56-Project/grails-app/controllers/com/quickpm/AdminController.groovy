@@ -13,6 +13,8 @@ import grails.converters.JSON
 
 class AdminController {
 
+	UserService userService
+	
     def index() { }
 	
 	def home() {
@@ -22,8 +24,8 @@ class AdminController {
 		
 		//Get all user except the admin
 		def userList = User.findAllByUsernameNotEqual(loggedInUsername)
-		
-		[currentUser: currentUser, userList: userList]
+		def roleList = Role.list()
+		[currentUser: currentUser, userList: userList, roleList: roleList]
 	}
 	
 	def changePassword() {
@@ -41,17 +43,11 @@ class AdminController {
 	}
 	
 	def activate(Integer id) {
-		User userInstance = User.findById(id)
-		userInstance.active = true
-		userInstance.save(flush:true)
-		render "User has been activated."
+		render userService.activate(id)
 	}
 	
 	def deactivate(Integer id) {
-		User userInstance = User.findById(id)
-		userInstance.active = false
-		userInstance.save(flush:true)
-		render "User has been deactivated."
+		render userService.deactivate(id)
 	}
 	
 	def getUser(Integer id) {
@@ -59,9 +55,6 @@ class AdminController {
 	}
 	
 	def resetPassword() {
-		def user = User.findById(params.id)
-		user.passwordHash = new Sha512Hash(params.password).toHex()
-		user.save(flush: true)
-		render "The password has been changed."
+		render userService.resetPassword(params)
 	}
 }
