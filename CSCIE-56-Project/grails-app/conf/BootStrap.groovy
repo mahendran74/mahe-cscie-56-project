@@ -1,8 +1,18 @@
+import com.quickpm.Milestone
+import com.quickpm.Project
 import com.quickpm.Role
 import com.quickpm.RoleType
+import com.quickpm.Task
+import com.quickpm.TaskGroup
 import com.quickpm.User
+import com.quickpm.Status
+
 import org.apache.shiro.crypto.hash.Sha512Hash
+
 import grails.converters.*
+
+import java.text.SimpleDateFormat
+import java.util.Date;
 
 class BootStrap {
     def init = { servletContext ->
@@ -120,7 +130,46 @@ class BootStrap {
 		// Add roles to the pm user
 		assert tmUserDisabled.addToRoles(tmRole)
 				.save(flush: true, failOnError: true)
+		
+		//Add Project
+		def project = Project.findByProjectName('My New Project') ?:
+			new Project(projectName : 'My New Project',
+				projectDesc : 'This is the first project', 
+				startDate : new SimpleDateFormat('MM/dd/yyyy').parse('12/10/2014'),
+				endDate : new SimpleDateFormat('MM/dd/yyyy').parse('02/10/2015'),
+				status : Status.GOOD,
+				projectManager : pmUser)
+			.save(flush: true, failOnError: true)
+		//Add Task Group
+		def taskGroup = TaskGroup.findByGroupName('Group of Tasks') ?:
+			new TaskGroup(groupName : 'Group of Tasks',
+				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/10/2014'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('2/1/2014'),
+				percentageComplete: 0)
+			.save(flush: true, failOnError: true)
+		project.addToTaskGroups(taskGroup)
+			.save(flush: true, failOnError: true)
 			
+		//Add Task
+		def task = new Task(taskDesc: 'New Task',
+				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/10/2014'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('2/1/2014'),
+				percentageComplete: 0,
+				status : Status.GOOD,
+				assignedTo: tmUser,
+				taskGroup: taskGroup )
+			.save(flush: true, failOnError: true)
+		taskGroup.addToTasks(task)
+			.save(flush: true, failOnError: true)
+
+		//Add Milestone
+		def milestone = new Milestone(milestoneDesc: 'New Milestone',
+				milestoneDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/10/2014'),
+				assignedTo:tmUser,
+				taskGroup: taskGroup)
+			.save(flush: true, failOnError: true)
+		taskGroup.addToMilestones(milestone)
+			.save(flush: true, failOnError: true)
     }
     def destroy = {
     }

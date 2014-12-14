@@ -9,8 +9,14 @@ class Project {
 	Status status
 	User projectManager
 	
-	static hasMany = [groups:Group, tasks:Task, milestones:Milestone]
+	static hasMany = [taskGroups:TaskGroup, tasks:Task, milestones:Milestone]
 	
     static constraints = {
+		projectName nullable: false, blank: false, unique: true
+		projectDesc nullable: true, blank: true
+		startDate nullable: false, blank: false
+		endDate nullable: false, blank: false
+		status nullable: false, blank: false
+		projectManager nullable: false, blank: false
     }
 }

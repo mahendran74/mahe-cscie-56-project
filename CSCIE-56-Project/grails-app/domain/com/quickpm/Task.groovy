@@ -9,7 +9,7 @@ class Task {
 	Status status
 	Task dependsOn
 	User assignedTo
-	Group taskGroup
+	TaskGroup taskGroup
 	
     static constraints = {
 		taskGroup nullable: true, blank: true

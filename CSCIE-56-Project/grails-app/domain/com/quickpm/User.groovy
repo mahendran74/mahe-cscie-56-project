@@ -14,6 +14,7 @@ class User {
     static constraints = {
 		username nullable: false, blank: false, unique: true
 		passwordHash blank: false
+		middleInitial nullable: true, blank: true
     }
 	
 	def isAdmin() {

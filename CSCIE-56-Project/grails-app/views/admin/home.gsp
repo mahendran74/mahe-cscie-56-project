@@ -183,6 +183,14 @@
                     title="Edit User">
                       <span class="glyphicon glyphicon-user"></span>
                   </a>
+                  <a href="#" 
+                    id="${userInstance?.id }" 
+                    type="button"
+                    class="btn btn-xs btn-primary right-button delete-user"
+                    data-toggle="tooltip"
+                    title="Edit User">
+                      <span class="glyphicon glyphicon-trash"></span>
+                  </a>
                 </td>
               </tr>
             </g:each>
@@ -303,7 +311,7 @@
             <div class="form-group">
               <label for="email">Email Address</label> 
               <input
-                type="text" class="form-control" id="email" name="email"
+                type="text" class="form-control" id="username" name="username"
                 placeholder="Email" value=""
                 data-msg-email="Please enter a valid email."
                 data-msg-required="Please enter a valid email."
@@ -312,19 +320,28 @@
                 data-rule-maxlength="255" data-rule-notUsed="true" />
               <div id="message"></div>
             </div>
-            <div class="form-group">
-              <label for="confirm_email">Confirm Email Address</label> 
-              <input
-                type="text" class="form-control" id="confirm_email"
-                name="confirm_email" placeholder="Confirm Email"
-                value=""
-                data-msg-email="Please confirm the email above."
-                data-msg-required="Please confirm the email above."
-                data-msg-maxlength="Your email cannot be more than 255 characters"
-                data-msg-equalTo="The email confirmation has to match the email above."
-                data-rule-email="true" data-rule-required="true"
-                data-rule-maxlength="255" data-rule-equalTo="#email" />
-            </div>
+              <div class="form-group" id="passwordDiv">
+                <label for="newUserPassword">New Password</label>
+                <input type="password" class="form-control" id="newUserPassword" name="newUserPassword" placeholder="Password" value=""
+                 data-msg-required="Please enter the new password." 
+                 data-msg-maxlength="Your password cannot be more than 20 characters." 
+                 data-msg-minlength="Your password cannot be less than 5 characters." 
+                 data-rule-required="true" 
+                 data-rule-maxlength="20"
+                 data-rule-minlength="5" />
+              </div>
+              <div class="form-group" id="confirmPasswordDiv">
+                <label for="newUserConfirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" id="newUserConfirmPassword" name="newUserConfirmPassword" placeholder="Comfirm password" value=""
+                 data-msg-required="Please confirm your new password." 
+                 data-msg-maxlength="Your password cannot be more than 20 characters." 
+                 data-msg-minlength="Your password cannot be less than 5 characters."
+                 data-msg-equalTo="The password confirmation has to match the password above."
+                 data-rule-required="true" 
+                 data-rule-maxlength="20"
+                 data-rule-minlength="5"
+                 data-rule-equalTo="#newUserPassword" />
+              </div>
             <div class="form-group">
               <label for="role">Role</label> 
               <select class="form-control" id="role" name="role">
@@ -356,12 +373,15 @@
   <script>
     var gspVars = {
     checkEmailUrl: '${createLink(controller:"user", action: "checkEmail")}',
-    activateUrl: '${createLink(controller:"admin", action: "activate")}',
-    deactivateUrl: '${createLink(controller:"admin", action: "deactivate")}',
-    getUserUrl: '${createLink(controller:"admin", action: "getUser")}',
     adminHomeUrl: '${createLink(controller:"admin", action: "home")}',
     changePasswordUrl: '${createLink(controller:"admin", action: "changePassword")}',
-    resetPasswordUrl: '${createLink(controller:"admin", action: "resetPassword")}' 
+    resetPasswordUrl: '${createLink(controller:"admin", action: "resetPassword")}' ,
+    addUserUrl: '${createLink(controller:"admin", action: "addUser")}' ,
+    updateUserUrl: '${createLink(controller:"admin", action: "updateUser")}',
+    deleteUserUrl: '${createLink(controller:"admin", action: "deleteUser")}',
+    activateUserUrl: '${createLink(controller:"admin", action: "activate")}',
+    deactivateUserUrl: '${createLink(controller:"admin", action: "deactivate")}',
+    getUserUrl: '${createLink(controller:"admin", action: "getUser")}'
     }
   </script>
 </body>

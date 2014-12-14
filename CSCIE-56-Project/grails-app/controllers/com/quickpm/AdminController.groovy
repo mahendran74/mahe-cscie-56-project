@@ -25,7 +25,8 @@ class AdminController {
 		//Get all user except the admin
 		def userList = User.findAllByUsernameNotEqual(loggedInUsername)
 		def roleList = Role.list()
-		[currentUser: currentUser, userList: userList, roleList: roleList]
+		def projectList = Project.list()
+		[currentUser: currentUser, userList: userList, roleList: roleList, projectList: projectList]
 	}
 	
 	def changePassword() {
@@ -50,11 +51,23 @@ class AdminController {
 		render userService.deactivate(id)
 	}
 	
+	def deleteUser(Integer id) {
+		render userService.deleteUser(id)
+	}
+	
 	def getUser(Integer id) {
 		render User.findById(id) as JSON
 	}
 	
 	def resetPassword() {
 		render userService.resetPassword(params)
+	}
+	
+	def addUser() {
+		render userService.addUser(params)
+	}
+	
+	def updateUser() {
+		render userService.updateUser(params)
 	}
 }

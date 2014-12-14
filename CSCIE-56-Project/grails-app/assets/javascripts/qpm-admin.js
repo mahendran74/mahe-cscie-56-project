@@ -28,21 +28,6 @@ $('#contact').on('click', function(e) {
   $('#contactWindow').modal('show');
 });
 
-$(function() {
-  $('#addNewUser').on('click', function(e) {
-    e.preventDefault();
-    $('#addNewUserWindow #user_id').val('');
-    $('#addNewUserWindow #first_name').val('');
-    $('#addNewUserWindow #last_name').val('');
-    $('#addNewUserWindow #email').val('');          
-    $('#addNewUserWindow #confirm_email').val('');
-    $('#addNewUserWindow #admin_access').prop("checked", true);
-    $('#addNewUserModalLabel').text("Add New User");
-    $('#alertAddNewUser').hide();
-    $('#addNewUserWindow').modal('show');
-  });
-});
-
 // Deactivate user
 $('.deactivate-user').on(
     'click',
@@ -54,7 +39,7 @@ $('.deactivate-user').on(
             if (result) {
               $.ajax({
                 type : 'post',
-                url : gspVars.deactivateUrl + "/" + user_id,
+                url : gspVars.deactivateUserUrl + "/" + user_id,
                 success : function(data) {
                   console.log(data);
                   bootbox.alert(data, function(result) {
@@ -74,7 +59,27 @@ $('.activate-user').on('click', function(e) {
     if (result) {
       $.ajax({
         type : 'post',
-        url : gspVars.activateUrl + "/" + user_id,
+        url : gspVars.activateUserUrl + "/" + user_id,
+        success : function(data) {
+          console.log(data);
+          bootbox.alert(data, function(result) {
+            window.location = gspVars.adminHomeUrl;
+          });
+        }
+      });
+    }
+  });
+});
+
+//Delete user
+$('.delete-user').on('click', function(e) {
+  e.preventDefault();
+  var user_id = $(this).attr('id');
+  bootbox.confirm("Are you sure you want to delete this user ? \nAll projects and tasks associated with this user will be deleted.", function(result) {
+    if (result) {
+      $.ajax({
+        type : 'post',
+        url : gspVars.deleteUserUrl + "/" + user_id,
         success : function(data) {
           console.log(data);
           bootbox.alert(data, function(result) {
@@ -127,7 +132,26 @@ function checkForRole(data, value) {
     return found;
 }
 
-//Edit user
+// Add User click
+$(function() {
+	  $('#addNewUser').on('click', function(e) {
+	    e.preventDefault();
+	    $('#addNewUserWindow #user_id').val('');
+	    $('#addNewUserWindow #firstName').val('');
+        $('#addNewUserWindow #middleInitial').val('');
+	    $('#addNewUserWindow #lastName').val('');
+	    $('#addNewUserWindow #email').val('');          
+	    $('#addNewUserWindow #confirm_email').val('');
+	    $('#addNewUserWindow #passwordDiv').show();
+	    $('#addNewUserWindow #confirmPasswordDiv').show();    
+	    $('#addNewUserWindow #role').val('');
+	    $('#addNewUserModalLabel').text("Add New User");
+	    $('#alertAddNewUser').hide();
+	    $('#addNewUserWindow').modal('show');
+	  });
+	});
+
+//Edit user click
 $('.edit-user').on(
     'click',
     function(e) {
@@ -138,15 +162,15 @@ $('.edit-user').on(
         datatype : 'json',
         url : gspVars.getUserUrl + "/" + user_id,
         success : function(data) {
+        	console.log(data)
           $('#addNewUserWindow #user_id').val(data.id);
-          $('#addNewUserWindow #first_name').val(data.firstName);
-          $('#addNewUserWindow #last_name').val(data.lastName);
-          $('#addNewUserWindow #email').val(data.username);          
-
-          if (checkForRole(data.roles, "ROLE_ADMIN"))
-            $('#addNewUserWindow #admin_access').prop("checked", true);
-          else
-            $('#addNewUserWindow #admin_access').prop("checked", false);
+          $('#addNewUserWindow #firstName').val(data.firstName);
+          $('#addNewUserWindow #middleInitial').val(data.middleInitial);
+          $('#addNewUserWindow #lastName').val(data.lastName);
+          $('#addNewUserWindow #username').val(data.username);          
+          $('#addNewUserWindow #role').val(data.roles[0].id); 
+          $('#addNewUserWindow #passwordDiv').hide();
+          $('#addNewUserWindow #confirmPasswordDiv').hide();
           $('#addNewUserModalLabel').text("Edit User");
           $('#alertAddNewUser').hide();
           $('#addNewUserWindow').modal('show');
@@ -155,7 +179,7 @@ $('.edit-user').on(
       
     });
 
-$("#email").change(function() {
+$("#username").change(function() {
   $("#message").html("checking...");
   var email = $("#email").val();
 
@@ -261,9 +285,9 @@ $("#addNewUserForm").validate(
 
       submitHandler : function(form) {
         var formData = $(form).serialize();
-        var submit_url = '/users/p_add_user';
+        var submit_url = gspVars.addUserUrl;
         if ($('#user_id').val() != "") {
-          submit_url = '/users/p_update_user';
+          submit_url = gspVars.updateUserUrl;
         }
         $.ajax({
           type : 'post',
