@@ -11,8 +11,6 @@ class UserController {
 	}
 	
 	def checkEmail(String email) {
-		//println "Here is request.JSON: ${request.JSON as JSON}"
-		println "Here is params: $params"
 		def result = [:]
 		if (userService.checkEmail(email)) {
 			result['code'] = 'Failure'
@@ -21,7 +19,7 @@ class UserController {
 			result['code'] = 'Success'
 			result['message'] = 'Email is available'
 		}
-		render result['message'] // as JSON
+		render result as JSON
 	}
 
 }

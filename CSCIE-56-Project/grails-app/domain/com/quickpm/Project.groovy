@@ -19,4 +19,10 @@ class Project {
 		status nullable: false, blank: false
 		projectManager nullable: false, blank: false
     }
+	
+	static mapping = {
+		taskGroups cascade: 'all-delete-orphan'
+		tasks cascade: 'all-delete-orphan'
+		milestones cascade: 'all-delete-orphan'
+	}
 }

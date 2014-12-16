@@ -47,6 +47,21 @@ class BootStrap {
 			output['name'] = it.name
 			return output;
 		}
+		JSON.registerObjectMarshaller(Project) {
+			def output = [:]
+			output['id'] = it.id
+			output['projectName'] = it.projectName
+			output['projectDesc'] = it.projectDesc
+			output['startDate'] = it.startDate.format('MM/dd/yyyy')
+			output['endDate'] = it.endDate.format('MM/dd/yyyy')
+			output['status'] = it.status
+			output['projectManager'] = ["id": it.projectManager.id, "name": it.projectManager.getFullName()]
+			return output;
+		}
+//		XML.registerObjectMarshaller(Project) {
+//			def output = [:]
+//		}
+		
 		// Create the roles
 		def adminRole = Role.findByName('ROLE_ADMIN') ?:
 			new Role(name: 'ROLE_ADMIN', description: 'Administrator').save(flush: true, failOnError: true)
@@ -137,14 +152,14 @@ class BootStrap {
 				projectDesc : 'This is the first project', 
 				startDate : new SimpleDateFormat('MM/dd/yyyy').parse('12/10/2014'),
 				endDate : new SimpleDateFormat('MM/dd/yyyy').parse('02/10/2015'),
-				status : Status.GOOD,
+				status : Status.PLANNED,
 				projectManager : pmUser)
 			.save(flush: true, failOnError: true)
 		//Add Task Group
 		def taskGroup = TaskGroup.findByGroupName('Group of Tasks') ?:
 			new TaskGroup(groupName : 'Group of Tasks',
 				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/10/2014'),
-				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('2/1/2014'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('2/1/2015'),
 				percentageComplete: 0)
 			.save(flush: true, failOnError: true)
 		project.addToTaskGroups(taskGroup)
@@ -153,9 +168,10 @@ class BootStrap {
 		//Add Task
 		def task = new Task(taskDesc: 'New Task',
 				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/10/2014'),
-				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('2/1/2014'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('2/1/2015'),
 				percentageComplete: 0,
-				status : Status.GOOD,
+				status : Status.PLANNED,
+				color : '#46d6db',
 				assignedTo: tmUser,
 				taskGroup: taskGroup )
 			.save(flush: true, failOnError: true)
@@ -164,7 +180,7 @@ class BootStrap {
 
 		//Add Milestone
 		def milestone = new Milestone(milestoneDesc: 'New Milestone',
-				milestoneDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/10/2014'),
+				milestoneDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/10/2015'),
 				assignedTo:tmUser,
 				taskGroup: taskGroup)
 			.save(flush: true, failOnError: true)

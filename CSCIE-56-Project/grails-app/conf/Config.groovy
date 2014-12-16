@@ -115,4 +115,5 @@ log4j.main = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+	debug  'com.quickpm'
 }

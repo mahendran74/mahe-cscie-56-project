@@ -13,4 +13,9 @@ class TaskGroup {
     static constraints = {
 		parentGroup nullable: true, blank: true
     }
+	
+	static mapping = {
+		tasks cascade: 'all-delete-orphan'
+		milestones cascade: 'all-delete-orphan'
+	}
 }

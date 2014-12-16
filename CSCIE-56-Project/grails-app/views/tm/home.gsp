@@ -227,7 +227,7 @@
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-
+  <asset:javascript src="application.js"/>
   <script type="text/javascript">
 var $rows = $('#userList tbody tr');
 $('#search').keyup(function() {

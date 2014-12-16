@@ -17,7 +17,7 @@ class User {
 		middleInitial nullable: true, blank: true
     }
 	
-	def isAdmin() {
-		
+	def getFullName() {
+		firstName + " " + lastName
 	}
 }

@@ -10,6 +10,12 @@ $(document).ready(function(){
 $('#signUp').on('click', function(e) {
   e.preventDefault();
   $('#alertSignUp').hide();
+  $('#signUpWindow #firstName').val('');
+  $('#signUpWindow #middleInitial').val('');
+  $('#signUpWindow #lastName').val('');
+  $('#signUpWindow #username').val('');
+  $('#signUpWindow #password').val('');
+  $('#signUpWindow #confirm_password').val('');
   $('#signUpWindow').modal('show');
 });
 
@@ -31,14 +37,13 @@ jQuery.validator.addMethod("notUsed",
    var response;
    $.ajax({
      type : "post",
-     url : gspVars.checkEmailUrl + "/" + value,
+     url : gspVars.checkEmailUrl + "?email=" + value,
      async: false,
      success : function(data) {
-       response = data;
+    	   response = data;
      }
    });
-   console.log("response " + response)
-   if (response == "Email is available")
+   if (response.code == "Success")
      return true;
    else
      return false;
@@ -85,7 +90,25 @@ $("#signUpForm").validate(
         });
       },
       submitHandler : function(form) {
-        form.submit();
+        var formData = $(form).serialize();
+        var submit_url = gspVars.signUpUserUrl; 
+        $.ajax({
+          type : 'post',
+          url : submit_url,
+          data : formData,
+          success : function(data) {
+            console.log(data);
+            //data = jQuery.parseJSON(data);
+            if (data.code == 'Success') {
+                bootbox.alert(data.message, function(result) {
+                	$('#signUpWindow').modal('hide');
+                });
+            } else {
+            	$('#alertSignUp').value(data.message);
+            	$('#alertSignUp').show();
+            }
+          }
+        });
         return false;
       }
     });

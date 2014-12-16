@@ -259,13 +259,15 @@
   </div>
   <!-- /.container -->
   <!-- We inline the values (ids, action links, resource links) we want to use in our JS file -->
+  <asset:javascript src="application.js"/>
   <script>
     var gspVars = {
 	  checkEmailUrl: '${createLink(controller:"user", action: "checkEmail")}',
     signUpUserUrl: '${createLink(controller:"user", action: "signUp")}'
     }
   </script>
+  
   <asset:javascript src="qpm-home.js"/>
-  <asset:javascript src="jquery-validate.js"/>
+  <asset:javascript src="jquery.validate.js"/>
 </body>
 </html>

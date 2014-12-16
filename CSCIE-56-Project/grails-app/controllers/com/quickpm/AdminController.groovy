@@ -14,6 +14,7 @@ import grails.converters.JSON
 class AdminController {
 
 	UserService userService
+	ProjectService projectService
 	
     def index() { }
 	
@@ -26,33 +27,69 @@ class AdminController {
 		def userList = User.findAllByUsernameNotEqual(loggedInUsername)
 		def roleList = Role.list()
 		def projectList = Project.list()
-		[currentUser: currentUser, userList: userList, roleList: roleList, projectList: projectList]
+		def userCriteria = User.createCriteria()
+		def pmList = userCriteria.list { // Get list of all user who are PM or Admin
+			roles {
+				or {
+					eq ('name', 'ROLE_PM')
+					eq ('name', 'ROLE_ADMIN')
+				}
+			}
+			eq('active', true)
+		}
+		def userTabActive, projectTabActive
+		if (params.show == 'project'){
+			userTabActive = ''
+			projectTabActive = 'active'
+		} else {
+			userTabActive = 'active'
+			projectTabActive = ''
+		}
+			
+		[currentUser: currentUser, userList: userList, roleList: roleList, projectList: projectList, pmList: pmList, userTabActive: userTabActive, projectTabActive: projectTabActive]
 	}
 	
 	def changePassword() {
+		def result = [:]
 		def authToken = new UsernamePasswordToken(params.username, params.oldPassword as String)
 		try {
 			SecurityUtils.subject.login(authToken)
 			def user = User.findByUsername(params.username)
 			user.passwordHash = new Sha512Hash(params.password).toHex()
 			user.save(flush: true)
-			render "The password has been changed."
+			result['code'] = 'Success'
+			result['message'] = 'The password has been successfully changed.'
 		} catch (AuthenticationException e) {
-			flash.message = "Invalid old password"
-			render flash.message
+			result['code'] = 'Failure'
+			result['message'] = 'Invalid old password.'
 		}
+		render result as JSON
 	}
 	
+	def nullPointerExceptionHandler(NullPointerException npe){
+			def result = [:]
+			result['code'] = 'Failure'
+			result['message'] = npe.message
+			render result as JSON
+	}
+	
+//	def defaultExceptionHandler(Exception e){
+//		def result = [:]
+//		result['code'] = 'Failure'
+//		result['message'] = e.message
+//		render result as JSON
+//	}
+	
 	def activate(Integer id) {
-		render userService.activate(id)
+		render userService.activate(id) as JSON
 	}
 	
 	def deactivate(Integer id) {
-		render userService.deactivate(id)
+		render userService.deactivate(id) as JSON
 	}
 	
 	def deleteUser(Integer id) {
-		render userService.deleteUser(id)
+		render userService.deleteUser(id) as JSON
 	}
 	
 	def getUser(Integer id) {
@@ -64,10 +101,22 @@ class AdminController {
 	}
 	
 	def addUser() {
-		render userService.addUser(params)
+		render userService.addUser(params) as JSON
 	}
 	
 	def updateUser() {
-		render userService.updateUser(params)
+		render userService.updateUser(params) as JSON
+	}
+	
+	def getProject(Integer id) {
+		render Project.findById(id) as JSON
+	}
+	
+	def updateProject() {
+		render projectService.updateProject(params) as JSON
+	}
+	
+	def deleteProject(Integer id) {
+		render projectService.deleteProject(id) as JSON
 	}
 }
