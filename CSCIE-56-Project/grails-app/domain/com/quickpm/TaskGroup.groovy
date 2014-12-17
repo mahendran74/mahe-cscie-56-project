@@ -2,16 +2,19 @@ package com.quickpm
 
 class TaskGroup {
 	
-	String groupName
+	String groupName 
 	Date startDate
 	Date endDate
 	Integer percentageComplete
 	TaskGroup parentGroup
+	Project project
 	
 	static hasMany = [tasks:Task, milestones:Milestone]
 	
     static constraints = {
 		parentGroup nullable: true, blank: true
+		percentageComplete nullable: true, blank: true
+		project nullable: true, blank: true
     }
 	
 	static mapping = {

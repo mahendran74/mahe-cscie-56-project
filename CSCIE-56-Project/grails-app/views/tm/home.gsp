@@ -220,7 +220,7 @@
           </div>
         </form>
       </div>
-    </div>
+    </div> 
   </div>
   <!-- /END NEW TASK MODAL -->
 

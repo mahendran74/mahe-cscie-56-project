@@ -56,12 +56,45 @@ class BootStrap {
 			output['endDate'] = it.endDate.format('MM/dd/yyyy')
 			output['status'] = it.status
 			output['projectManager'] = ["id": it.projectManager.id, "name": it.projectManager.getFullName()]
+
 			return output;
 		}
-//		XML.registerObjectMarshaller(Project) {
-//			def output = [:]
-//		}
-		
+		JSON.registerObjectMarshaller(TaskGroup) {
+			def output = [:]
+			output['id'] = it.id
+			output['groupName'] = it.groupName
+			output['startDate'] = it.startDate.format('MM/dd/yyyy')
+			output['endDate'] = it.endDate.format('MM/dd/yyyy')
+			output['parentGroup'] = it.parentGroup.id
+			return output;
+		}
+		JSON.registerObjectMarshaller(Task) {
+			def output = [:]
+			output['id'] = it.id
+			output['taskDesc'] = it.taskDesc
+			output['startDate'] = it.startDate.format('MM/dd/yyyy')
+			output['endDate'] = it.endDate.format('MM/dd/yyyy')
+			output['percentageComplete'] = it.percentageComplete
+			output['status'] = it.status
+			if (it.dependsOn)
+				output['dependsOn'] = it.dependsOn.id
+			output['assignedTo'] = it.assignedTo.id
+			if (it.taskGroup)
+				output['taskGroup'] = it.taskGroup.id
+			output['project'] = it.project.id
+			output['color'] = it.color
+			return output;
+		}
+		JSON.registerObjectMarshaller(Milestone) {
+			def output = [:]
+			output['id'] = it.id
+			output['milestoneDesc'] = it.milestoneDesc
+			output['milestoneDate'] = it.milestoneDate.format('MM/dd/yyyy')
+			output['assignedTo'] = it.assignedTo.id
+			output['taskGroup'] = it.taskGroup.id
+			output['project'] = it.project.id
+			return output;
+		}
 		// Create the roles
 		def adminRole = Role.findByName('ROLE_ADMIN') ?:
 			new Role(name: 'ROLE_ADMIN', description: 'Administrator').save(flush: true, failOnError: true)
@@ -155,12 +188,13 @@ class BootStrap {
 				status : Status.PLANNED,
 				projectManager : pmUser)
 			.save(flush: true, failOnError: true)
+			
 		//Add Task Group
 		def taskGroup = TaskGroup.findByGroupName('Group of Tasks') ?:
 			new TaskGroup(groupName : 'Group of Tasks',
 				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/10/2014'),
 				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('2/1/2015'),
-				percentageComplete: 0)
+				percentageComplete: 0, project: project)
 			.save(flush: true, failOnError: true)
 		project.addToTaskGroups(taskGroup)
 			.save(flush: true, failOnError: true)
@@ -173,7 +207,8 @@ class BootStrap {
 				status : Status.PLANNED,
 				color : '#46d6db',
 				assignedTo: tmUser,
-				taskGroup: taskGroup )
+				taskGroup: taskGroup,
+				project: project)
 			.save(flush: true, failOnError: true)
 		taskGroup.addToTasks(task)
 			.save(flush: true, failOnError: true)
@@ -182,7 +217,8 @@ class BootStrap {
 		def milestone = new Milestone(milestoneDesc: 'New Milestone',
 				milestoneDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/10/2015'),
 				assignedTo:tmUser,
-				taskGroup: taskGroup)
+				taskGroup: taskGroup,
+				project: project)
 			.save(flush: true, failOnError: true)
 		taskGroup.addToMilestones(milestone)
 			.save(flush: true, failOnError: true)

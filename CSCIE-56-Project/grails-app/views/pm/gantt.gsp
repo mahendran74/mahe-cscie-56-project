@@ -10,6 +10,9 @@
 <asset:stylesheet src="qpm-pm-theme.css"/>
 <asset:stylesheet src="datepicker.css" />
 <asset:stylesheet src="jsgantt.css" />
+<asset:stylesheet src="jquery-simplecolorpicker.css" />
+<asset:stylesheet src="jquery.simplecolorpicker-glyphicons.css" />
+<asset:stylesheet src="slider.css" />
 <style type="text/css">
 .about-qpm {
   width: 597px;
@@ -20,6 +23,7 @@
   text-align: center;
 }
 .datepicker{z-index:1151 !important;}
+.simplecolorpicker{z-index:1151 !important;}
 </style>
 <!-- Just for debugging purposes. Don't actually copy this line! -->
 <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -113,7 +117,7 @@
   <!-- START NEW USER MODAL -->
 
   <!-- New User Modal -->
-  <div class="modal fade" id="addNewUserWindow" tabindex="-1" data-backdrop="static" data-keyboard="false">
+    <div class="modal fade" id="addNewUserWindow" tabindex="-1" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
       <div class="modal-content">
         <form method='POST' id="addNewUserForm">
@@ -190,8 +194,8 @@
               <strong>Oh snap!</strong>
             </div>
             <div class="form-group">
-              <label for="task_desc">Task Description</label>
-              <input type="text" class="form-control" id="task_task_desc" name="task_desc" placeholder="Task Description" 
+              <label for="taskDesc">Task Description</label>
+              <input type="text" class="form-control" id="taskDesc" name="taskDesc" placeholder="Task Description" 
                 data-msg-required="Please enter the task description." 
                 data-msg-maxlength="The task description cannot be more than 255 characters." 
                 data-rule-required="true" 
@@ -200,8 +204,8 @@
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
-                  <label for="start_date">Start Date</label>
-                  <input type="text" class="form-control" id="task_start_date" name="start_date" 
+                  <label for="startDate">Start Date</label>
+                  <input type="text" class="form-control" id="startDate" name="startDate" 
                     data-msg-date="Please enter a valid date as start date." 
                     data-msg-required="Please enter a valid date as start date." 
                     data-rule-date="true" 
@@ -210,8 +214,8 @@
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
-                  <label for="end_date">End Date</label>
-                  <input type="text" class="form-control" id="task_end_date" name="end_date"  
+                  <label for="endDate">End Date</label>
+                  <input type="text" class="form-control" id="endDate" name="endDate"  
                     data-msg-date="Please enter a valid date as end date." 
                     data-msg-required="Please enter a valid date as end date." 
                     data-msg-greaterThan="The end date must fall after the start date." 
@@ -225,17 +229,13 @@
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
                   <label for="status">Status</label> 
-                  <select name="status" id="task_status">
-                    <option value="#7bd148">Green</option>
-                    <option value="#ffb878">Yellow</option>
-                    <option value="#dc2127">Red</option>
-                  </select>
+                  <g:select class="form-control" name="status" from="${Status.values()}" keys="${Status.values()*.name()}" />
                 </div>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
-                  <label for="color">Color</label> 
-                  <select name="color" id="task_color">
+                  <label for="color">Color</label> <br>
+                  <select name="color" id="color">
                     <option value="#7bd148">Green</option>
                     <option value="#5484ed">Bold blue</option>
                     <option value="#a4bdfc">Blue</option>
@@ -253,30 +253,47 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="assigned_to_id">Task Assigned To</label>
-              <input type="hidden" class="form-control" id="task_assigned_to_id" name="assigned_to_id" placeholder="Select a team member" 
-                data-msg-required="Please select a team mamber." 
-                data-rule-required="true"/>
+              <label for="assignedTo">Task Assigned To</label>
+              <select class="form-control" id="assignedTo" name="assignedTo">
+                <option value="" selected disabled>Select User</option>
+                <g:each in="${tmList}" status="i" var="userInstance">
+                <option value="${userInstance?.id}">
+                  ${userInstance?.firstName} ${userInstance?.lastName}
+                </option>
+                </g:each>
+              </select>
             </div>
             <div class="form-group">
-              <label for="groups_group_id">Task Group</label>
-              <input type="hidden" class="form-control" id="task_groups_group_id" name="groups_group_id" placeholder="Select a task group" 
-                data-msg-required="Please select a team group." 
-                data-rule-required="true"/>
+              <label for="taskGroup ">Task Group</label> 
+              <select class="form-control" id="taskGroup" name="taskGroup">
+                <option value="" selected disabled>Select Task Group</option>
+                <g:each in="${project.taskGroups}" status="i" var="groupInstance">
+                <option value="${groupInstance?.id}">
+                  ${groupInstance?.groupName}
+                </option>
+                </g:each>
+              </select>
             </div>
             <div class="form-group">
-              <label for="depends_on">Depended On</label>
-              <input type="hidden" class="form-control" id="task_depends_on" name="depends_on" placeholder="Select a dependent task" />
+              <label for="dependsOn ">Depends On</label> 
+              <select class="form-control" id="dependsOn" name="dependsOn">
+                <option value="" selected disabled>Select Task</option>
+                <g:each in="${taskList}" status="i" var="taskInstance">
+                <option value="${taskInstance?.id}">
+                  ${taskInstance?.taskDesc}
+                </option>
+                </g:each>
+              </select>
             </div>
             <div class="form-group">
               <label for="per_complete">Percentage Complete</label>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <input type="text" value="0" id="per_complete_slide" name="per_complete_slide" 
+              <input type="text" value="0" id="percentageCompleteSlide" name="percentageCompleteSlide" 
               data-slider-min="0" 
               data-slider-max="100" 
               data-slider-value="0" 
               data-slider-step="1"/>
-              <input type="hidden" id="task_per_complete" name="per_complete" />
+              <input type="hidden" id="percentageComplete" name="percentageComplete" />
               </div>
             </div>
           </div>
@@ -286,7 +303,8 @@
               <button type="submit" class="btn btn-primary" id="taskSaveButton">Save task</button>
             </div>
             <div id="editTaskAction">
-              <input type="hidden" id="task_id" name="task_id" />
+              <input type="hidden" id="taskID" name="taskID" />
+              <input type="hidden" name="projectID" id="projectID" value="${project?.id}" />
               <button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
               <button type="button" class="btn btn-danger" id="taskDelButton">Delete task</button>
               <button type="submit" class="btn btn-primary" id="taskEditButton">Save task</button>
@@ -314,18 +332,18 @@
               <strong>Oh snap!</strong>
             </div>
             <div class="form-group">
-              <label for="group_desc">Group Description</label>
-              <input type="text" class="form-control" id="group_group_desc" name="group_desc" placeholder="Group Description" value="" 
-                data-msg-required="Please enter the group description." 
-                data-msg-maxlength="The group description cannot be more than 255 characters." 
+              <label for="groupName">Group Name</label>
+              <input type="text" class="form-control" id="groupName" name="groupName" placeholder="Group Name" value="" 
+                data-msg-required="Please enter the group name." 
+                data-msg-maxlength="The group name cannot be more than 255 characters." 
                 data-rule-required="true" 
                 data-rule-maxlength="255" />
             </div>
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
-                  <label for="start_date">Start Date</label>
-                  <input type="text" class="form-control" id="group_start_date" name="start_date" value="" 
+                  <label for="startDate">Start Date</label>
+                  <input type="text" class="form-control" id="startDate" name="startDate" value="" 
                     data-msg-date="Please enter a valid date as start date." 
                     data-msg-required="Please enter a valid date as start date." 
                     data-rule-date="true" 
@@ -334,8 +352,8 @@
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
-                  <label for="end_date">End Date</label>
-                  <input type="text" class="form-control" id="group_end_date" name="end_date" value="" 
+                  <label for="endDate">End Date</label>
+                  <input type="text" class="form-control" id="endDate" name="endDate" value="" 
                     data-msg-date="Please enter a valid date as end date." 
                     data-msg-required="Please enter a valid date as end date." 
                     data-msg-greaterThan="The end date must fall after the start date." 
@@ -346,8 +364,15 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="parent_group_id">Parent Group</label>
-              <input type="hidden" class="form-control" id="group_parent_group_id" name="parent_group_id" placeholder="Select a group" value=""/>
+              <label for="parentGroup">Parent Group</label> 
+              <select class="form-control" id="parentGroup" name="parentGroup">
+                <option value="" selected disabled>Select Parent Group</option>
+                <g:each in="${project.taskGroups}" status="i" var="groupInstance">
+                <option value="${groupInstance?.id}">
+                  ${groupInstance?.groupName}
+                </option>
+                </g:each>
+              </select>
             </div>
           </div>
           <div class="modal-footer">
@@ -356,8 +381,8 @@
               <button type="submit" class="btn btn-primary" id="groupSaveButton">Save group</button>
             </div>
             <div id="editGroupAction">
-              <input type="hidden" name="projects_project_id" id="projects_project_id" value="<?=$project['project_id']?>" />
-              <input type="hidden" id="group_id" name="group_id" />
+              <input type="hidden" name="projectID" id="projectID" value="${project?.id}" />
+              <input type="hidden" id="groupID" name="groupID" />
               <button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
               <button type="button" class="btn btn-danger" id="groupDelButton">Delete group</button>
               <button type="submit" class="btn btn-primary" id="groupEditButton">Save group</button>
@@ -441,15 +466,21 @@
   <script type="text/javascript">
   var gspVars = {
 		    checkEmailUrl: '${createLink(controller:"user", action: "checkEmail")}',
-		    homeUrl: '${createLink(controller:"PM", action: "home")}',
-		    altHomeUrl: '${createLink(controller:"PM", action: "home")}',
+		    homeUrl: '${createLink(controller:"PM", action: "gantt")}' + '/' + '${project?.id}',
+		    altHomeUrl: '${createLink(controller:"PM", action: "gantt")}' + '/' + '${project?.id}',
 		    changePasswordUrl: '${createLink(controller:"PM", action: "changePassword")}',
 		    addUserUrl: '${createLink(controller:"PM", action: "addUser")}' ,
 		    getProjectUrl: '${createLink(controller:"PM", action: "getProject")}',
-		    addProjectUrl: '${createLink(controller:"PM", action: "addProject")}',    
-		    updateProjectUrl: '${createLink(controller:"PM", action: "updateProject")}',
-		    deleteProjectUrl: '${createLink(controller:"PM", action: "deleteProject")}',
-		    currentUserId: '${currentUser?.id}'
+		    getGroupUrl: '${createLink(controller:"PM", action: "getGroup")}',
+		    addGroupUrl: '${createLink(controller:"PM", action: "addGroup")}',    
+		    updateGroupUrl: '${createLink(controller:"PM", action: "updateGroup")}',
+		    deleteGroupUrl: '${createLink(controller:"PM", action: "deleteGroup")}',
+		    getTaskUrl: '${createLink(controller:"PM", action: "getTask")}',
+	      addTaskUrl: '${createLink(controller:"PM", action: "addTask")}',    
+	      updateTaskUrl: '${createLink(controller:"PM", action: "updateTask")}',
+	      deleteTaskUrl: '${createLink(controller:"PM", action: "deleteTask")}',
+		    currentUserId: '${currentUser?.id}',
+        projectId: '${project?.id}'
 		    }
     var d = "${raw(projectXMLString)}";
     var resList = '';

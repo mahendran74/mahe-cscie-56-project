@@ -21,6 +21,9 @@ class Project {
     }
 	
 	static mapping = {
+		taskGroups sort: 'startDate'
+		tasks sort: 'startDate'
+		milestones sort: 'milestoneDate'
 		taskGroups cascade: 'all-delete-orphan'
 		tasks cascade: 'all-delete-orphan'
 		milestones cascade: 'all-delete-orphan'

@@ -25,18 +25,22 @@ class PMController {
 		User currentUser = User.findByUsername(loggedInUsername)
 		def projectList = Project.findAllByProjectManager(currentUser)
 		def allowedRole = Role.findByName('ROLE_TM')
-		def xmlRole = allowedRole as XML
-		// return tjson: xmlRole.toString()
-		[currentUser: currentUser, projectList: projectList, allowedRole: allowedRole.id, tjson: xmlRole.toString()]
+		[currentUser: currentUser, projectList: projectList, allowedRole: allowedRole.id]
 	}
 	
 	def gantt(Integer id) {
 		Subject subject = SecurityUtils.getSubject()
 		def loggedInUsername = subject.principal
 		User currentUser = User.findByUsername(loggedInUsername)
-		def project = Project.findById(id)
+		def project = Project.findByIdAndProjectManager(id, currentUser)
+		if (!project)
+		{
+			redirect(action: "home") 
+		}
+		def userList = User.list();
+		def taskList = Task.findAllByProject(project)
 		def projectXMLString = projectService.getProjectXMLString(project)
-		[currentUser: currentUser, project: project, projectXMLString: projectXMLString.toString()]
+		[currentUser: currentUser, project: project, projectXMLString: projectXMLString.toString(), tmList: userList, taskList: taskList]
 	}
 	
 	def changePassword() {
@@ -70,6 +74,38 @@ class PMController {
 	
 	def updateProject() {
 		render projectService.updateProject(params) as JSON
+	}
+	
+	def getGroup(Integer id) {
+		render TaskGroup.findById(id) as JSON
+	}
+	
+	def addGroup() {
+		render projectService.addGroup(params) as JSON
+	}
+	
+	def updateGroup() {
+		render projectService.updateGroup(params) as JSON
+	}
+	
+	def deleteGroup(Integer id) {
+		render projectService.deleteGroup(id) as JSON
+	}
+	
+	def getTask(Integer id) {
+		render Task.findById(id) as JSON
+	}
+	
+	def addTask() {
+		render projectService.addTask(params) as JSON
+	}
+	
+	def updateTask() {
+		render projectService.updateTask(params) as JSON
+	}
+	
+	def deleteTask(Integer id) {
+		render projectService.deleteTask(id) as JSON
 	}
 	//	def defaultExceptionHandler(Exception e){
 	//		def result = [:]
