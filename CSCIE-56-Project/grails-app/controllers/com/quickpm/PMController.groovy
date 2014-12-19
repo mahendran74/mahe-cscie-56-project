@@ -5,12 +5,7 @@ import org.apache.shiro.SecurityUtils
 
 import static org.springframework.http.HttpStatus.*
 
-import org.apache.shiro.authc.AuthenticationException
-import org.apache.shiro.authc.UsernamePasswordToken
-import org.apache.shiro.crypto.hash.Sha512Hash
-
 import grails.converters.JSON
-import grails.converters.XML
 
 class PMController {
 	
@@ -37,27 +32,14 @@ class PMController {
 		{
 			redirect(action: "home") 
 		}
-		def userList = User.list();
+		def userList = User.list()
 		def taskList = Task.findAllByProject(project)
 		def projectXMLString = projectService.getProjectXMLString(project)
 		[currentUser: currentUser, project: project, projectXMLString: projectXMLString.toString(), tmList: userList, taskList: taskList]
 	}
 	
 	def changePassword() {
-		def result = [:]
-		def authToken = new UsernamePasswordToken(params.username, params.oldPassword as String)
-		try {
-			SecurityUtils.subject.login(authToken)
-			def user = User.findByUsername(params.username)
-			user.passwordHash = new Sha512Hash(params.password).toHex()
-			user.save(flush: true)
-			result['code'] = 'Success'
-			result['message'] = 'The password has been successfully changed.'
-		} catch (AuthenticationException e) {
-			result['code'] = 'Failure'
-			result['message'] = 'Invalid old password.'
-		}
-		render result as JSON
+		render userService.changePassword(params) as JSON
 	}
 	
 	def addUser() {
@@ -107,11 +89,27 @@ class PMController {
 	def deleteTask(Integer id) {
 		render projectService.deleteTask(id) as JSON
 	}
-	//	def defaultExceptionHandler(Exception e){
-	//		def result = [:]
-	//		result['code'] = 'Failure'
-	//		result['message'] = e.message
-	//		render result as JSON
-	//	}
+	def getMilestone(Integer id) {
+		render Milestone.findById(id) as JSON
+	}
+	
+	def addMilestone(params) {
+		render projectService.addMilestone(params) as JSON
+	}
+	
+	def updateMilestone(params) {
+		render projectService.updateMilestone(params) as JSON
+	}
+	
+	def deleteMilestone(Integer id) {
+		render projectService.deleteMilestone(id) as JSON
+	}
+	
+	def defaultExceptionHandler(Exception e){
+		def result = [:]
+		result['code'] = 'Failure'
+		result['message'] = e.message
+		render result as JSON
+	}
 	
 }

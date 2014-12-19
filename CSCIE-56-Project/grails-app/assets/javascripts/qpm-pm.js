@@ -52,8 +52,8 @@ $('#editProjectWindow #endDate').datepicker();
 
 ///////////////////////////////G R O U P/////////////////////////////////
 
-$('#startDate').datepicker();
-$('#endDate').datepicker();
+$('#addNewGroupWindow #startDate').datepicker();
+$('#addNewGroupWindow #endDate').datepicker();
 
 //Add Group click
 $('#addNewGroup').on('click', function(e) {
@@ -161,6 +161,9 @@ $("#addNewGroupForm").validate(
 });
 
 ///////////////////////////////T A S K////////////////////////////////////////
+$('#addNewTaskWindow #startDate').datepicker();
+$('#addNewTaskWindow #endDate').datepicker();
+
 $('#color').simplecolorpicker({
 	  picker : true,
 	  theme : 'glyphicons'
@@ -213,8 +216,8 @@ function editTaskItem(task_id) {
     	$('#addNewTaskWindow #taskGroup').val(data.taskGroup);
     	$('#addNewTaskWindow #dependsOn').val(data.dependsOn);
     	$('#addNewTaskWindow #color').simplecolorpicker('selectColor', '#7bd148');
-        $('#addNewTaskWindow #percentageCompleteSlide').slider('setValue', '');
-        $('#addNewTaskWindow #percentageComplete').val('');
+        $('#addNewTaskWindow #percentageCompleteSlide').slider('setValue', data.percentageComplete);
+        $('#addNewTaskWindow #percentageComplete').val(data.percentageComplete);
     	$('#addNewTaskModalLabel').text("Edit Task");
     	$('#addTaskAction').hide();
     	$('#editTaskAction').show();
@@ -285,6 +288,114 @@ $("#addNewTaskForm").validate(
 				} else {
 					$('#alertAddNewTask').text(data.message);
 	              	$('#alertAddNewTask').show();
+				}          
+			}
+		});
+		return false;
+	}
+});
+
+////////////////M I L E S T O N E///////////////////////////////////
+$('#addNewMilestoneWindow #milestoneDate').datepicker();
+//Add Milestone click
+$('#addNewMilestone').on('click', function(e) {
+	e.preventDefault();
+	$('#addNewMilestoneWindow #projectID').val(gspVars.projectId);
+	$('#addNewMilestoneWindow #milestoneDesc').val('');
+	$('#addNewMilestoneWindow #milestoneDate').val('');
+	$('#addNewMilestoneWindow #assignedTo').val(''); 
+	$('#addNewMilestoneWindow #taskGroup').val(''); 
+	$('#addNewMilestoneModalLabel').text("Add New Milestone");
+	$('#addMilestoneAction').show();
+	$('#editMilestoneAction').hide();
+	$('#alertAddNewMilestone').hide();
+	$('#addNewMilestoneWindow').modal('show');
+});
+
+//Edit Task click
+function editMilestoneItem(task_id) {
+  $.ajax({
+    type : 'post',
+    datatype : 'json',
+    url : gspVars.getMilestoneUrl + '/' + (task_id - 3000),
+    success : function(data) {
+    	console.log(data);
+    	$('#addNewMilestoneWindow #projectID').val(gspVars.projectId);
+    	$('#addNewMilestoneWindow #milestoneID').val(data.id);
+    	$('#addNewMilestoneWindow #milestoneDesc').val(data.taskDesc);
+    	$('#addNewMilestoneWindow #milestoneDate').val(data.startDate);
+    	$('#addNewTaskWindow #assignedTo').val(data.assignedTo);
+    	$('#addNewTaskWindow #taskGroup').val(data.taskGroup);
+    	$('#addNewTaskModalLabel').text("Edit Milestone");
+    	$('#addMilestoneAction').hide();
+    	$('#editMilestoneAction').show();
+    	$('#alertAddNewMilestone').hide();
+    	$('#addNewMilestoneWindow').modal('show');
+    }
+  });
+}
+
+//Delete Task click
+$('#milestoneDelButton').on('click',function(e) {
+	e.preventDefault();
+	var milestone_id = $('#milestoneID').val();
+	var project_id = $('#projectID').val();
+	bootbox.confirm("Are you sure you want to delete this milestone ?", function(result) {
+        if (result) {
+        	$.ajax({
+        		type : 'post',
+        		url : gspVars.deleteMilestoneUrl + '/' + milestone_id,
+        		success : function(data) {
+        			console.log(data);
+        			bootbox.alert(data.message, function(data) {
+        				window.location = gspVars.homeUrl;
+        			});
+        		}
+        	});
+        }
+	});
+});
+
+//Add/Edit Task submit
+$("#addNewMilestoneForm").validate(
+{
+	showErrors : function(errorMap, errorList) {
+		$.each(this.validElements(), function(index, element) {
+			var $element = $(element);
+			$element.data("title", "")
+				.removeClass("has-error")
+				.tooltip("destroy");
+		});
+		$.each(errorList, function(index, error) {
+			var $element = $(error.element);
+			$element.tooltip("destroy")
+				.data("title", error.message)
+				.addClass("has-error")
+				.tooltip({
+					'placement' : 'bottom'
+				});
+		});
+	},
+	submitHandler : function(form) {
+		var formData = $(form).serialize();
+		var submit_url = gspVars.updateMilestoneUrl; // Update task
+		if ($('#milestoneID').val() == "") {
+			submit_url = gspVars.addMilestoneUrl; // Add task
+		}
+		console.log(submit_url);
+		$.ajax({
+			type : 'post',
+			url : submit_url,
+			data : formData,
+			success : function(data) {
+				console.log(data)
+				if (data.code == 'Success') {
+					bootbox.alert(data.message, function(result) {
+						window.location = gspVars.homeUrl;
+					});
+				} else {
+					$('#alertAddNewMilestone').text(data.message);
+	              	$('#alertAddNewMilestone').show();
 				}          
 			}
 		});

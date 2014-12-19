@@ -7,69 +7,7 @@
 </head>
 <body>
     <g:layoutBody/>
-  <!-- START CHANGE PASSWORD MODAL -->
-  <!-- Change Password Modal -->
-  <div class="modal fade" id="changePasswordWindow" tabindex="-1"
-    data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <form method='POST' action='' id="changePasswordForm">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title" id="changePasswordLabel">Change Password</h4>
-          </div>
-          <div class="modal-body">
-            <div class="alert alert-danger" id="alertChangePassword">
-              <strong></strong>
-            </div>
-            <div class="form-group" id="oldPasswordDiv">
-              <label for="oldPassword">Old Password</label> <input
-                type="password" class="form-control" id="oldPassword"
-                name="oldPassword" placeholder="Old password" value=""
-                data-msg-required="Please enter the old password."
-                data-msg-maxlength="Your password cannot be more than 20 characters."
-                data-msg-minlength="Your password cannot be less than 5 characters."
-                data-rule-required="true" data-rule-maxlength="20"
-                data-rule-minlength="5" />
-            </div>
-            <div class="form-group">
-              <label for="password">New Password</label> <input
-                type="password" class="form-control" id="password"
-                name="password" placeholder="Password" value=""
-                data-msg-required="Please enter the new password."
-                data-msg-maxlength="Your password cannot be more than 20 characters."
-                data-msg-minlength="Your password cannot be less than 5 characters."
-                data-rule-required="true" data-rule-maxlength="20"
-                data-rule-minlength="5" />
-            </div>
-            <div class="form-group">
-              <label for="confirmPassword">Confirm Password</label> <input
-                type="password" class="form-control"
-                id="confirmPassword" name="confirmPassword"
-                placeholder="Comfirm password" value=""
-                data-msg-required="Please confirm your new password."
-                data-msg-maxlength="Your password cannot be more than 20 characters."
-                data-msg-minlength="Your password cannot be less than 5 characters."
-                data-msg-equalTo="The password confirmation has to match the password above."
-                data-rule-required="true" data-rule-maxlength="20"
-                data-rule-minlength="5" data-rule-equalTo="#password" />
-            </div>
-          </div>
-          <div class="modal-footer">
-            <input type="hidden" id="id" name="id"> <input
-              type="hidden" id="username" name="username">
-            <button type="reset" class="btn btn-default"
-              data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-success btn-primary"
-              id="addUserButton">Save</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 
-  <!-- /END CHANGE PASSWORD MODAL -->
-    
     <!-- About Modal -->
     <div class="modal fade" id="aboutWindow" tabindex="-1" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog">
@@ -79,7 +17,7 @@
             <h4 class="modal-title" id="aboutWindowModalLabel">About</h4>
           </div>
           <div class="modal-body about-qpm">
-            <h1><a href="http://p4.mahe-cscie-15.biz">CSCIE-15 P4 - Quick Project Management (QPM)</a></h1>
+            <h1><a href="http://p4.mahe-cscie-15.biz">CSCI E-56 Final Project - Quick Project Management (QPM)</a></h1>
             <p>The QPM is a project management tool. It helps users manage small projects like a Agile sprint. It has 3 different user interfaces for the 3 different roles that it supports.</p>
             <h2>Project Manager Interface</h2>
             <p>This is the default interface. The user signing in to the website will be given this role by default. This interface provides the user with the following privileges.</p>
@@ -163,7 +101,7 @@
 			</div>
 			<div class="row marketing">
 			  <div class="col-lg-12">
-				<p>Developed as part of CSCIE-15 - P4 by <a href="mailto:mahendran.sreedevi@gmail.com">Mahendran Sreedevi</a></p>
+				<p>Developed as part of CSCI E-56 - Final Project by <a href="mailto:mahendran.sreedevi@gmail.com">Mahendran Sreedevi</a></p>
 			  </div>
 			</div>
           </div>

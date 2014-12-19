@@ -2,7 +2,10 @@ package com.quickpm
 
 import grails.transaction.Transactional
 
+import org.apache.shiro.authc.AuthenticationException
+import org.apache.shiro.authc.UsernamePasswordToken
 import org.apache.shiro.crypto.hash.Sha512Hash
+import org.apache.shiro.SecurityUtils
 
 @Transactional
 class UserService {
@@ -64,6 +67,23 @@ class UserService {
 		} else {
 			result['code'] = 'Failure'
 			result['message'] = "User with id - '${id}' does not exist."
+		}
+		result
+	}
+	
+	def changePassword(params) {
+		def result = [:]
+		def authToken = new UsernamePasswordToken(params.username, params.oldPassword as String)
+		try {
+			SecurityUtils.subject.login(authToken)
+			def user = User.findByUsername(params.username)
+			user.passwordHash = new Sha512Hash(params.password).toHex()
+			user.save(flush: true)
+			result['code'] = 'Success'
+			result['message'] = 'The password has been successfully changed.'
+		} catch (AuthenticationException e) {
+			result['code'] = 'Failure'
+			result['message'] = 'Invalid old password.'
 		}
 		result
 	}

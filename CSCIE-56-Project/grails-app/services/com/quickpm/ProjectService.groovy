@@ -9,31 +9,46 @@ class ProjectService {
 		System.println (params)
 		def result = [:]
 		def user = User.findById(params.projectManager)
-		if (user) {
-			if (user.roles.any({ it.name == 'ROLE_PM' || it.name == 'ROLE_ADMIN' })) {
-				if (validateDate(new Date().parse("MM/dd/yyyy", params.startDate), new Date().parse("MM/dd/yyyy", params.endDate))) {
-					result['code'] = 'Failure'
-					result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
-				} else {
-					def project = new Project(
-						projectName: params.projectName,
-						projectDesc: params.projectDesc,
-						startDate: new Date().parse("MM/dd/yyyy", params.startDate),
-						endDate: new Date().parse("MM/dd/yyyy", params.endDate),
-						status: Status.PLANNED,
-						projectManager: user).save(flush: true, failOnError: true)
-						result['code'] = 'Success'
-						result['message'] = "The project has been created with '${user.firstName} ${user.lastName}' as the Project Manager"
-				}
-			} else {
+		if (!user) {
+			result['code'] = 'Failure'
+			result['message'] = "User with id - '${params.id}' does not exist."
+			return result
+		}
+		if (user.roles.any({ it.name == 'ROLE_PM' || it.name == 'ROLE_ADMIN' })) {
+			Date startDate = new Date().parse("MM/dd/yyyy", params.startDate)
+			Date endDate = new Date().parse("MM/dd/yyyy", params.endDate)
+			if (validateDate(startDate, endDate)) {
 				result['code'] = 'Failure'
-				result['message'] = "User with id - '${params.id}' is not a Project Manager."
+				result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
+				return result
+			} else {
+				def project = new Project(
+					projectName: params.projectName,
+					projectDesc: params.projectDesc,
+					startDate: startDate,
+					endDate: endDate,
+					status: Status.PLANNED,
+					projectManager: user)
+				.save(flush: true, failOnError: true)
+				def taskGroup = new TaskGroup(
+					groupName: params.projectName + " Task Group",
+					startDate: startDate,
+					endDate: endDate,
+					parentGroup: null,
+					percentageComplete: 0,
+					project: project)
+					.save(flush: true, failOnError: true)
+				project.addToTaskGroups(taskGroup)
+					.save(flush: true, failOnError: true)
+				result['code'] = 'Success'
+				result['message'] = "The project has been created with '${user.firstName} ${user.lastName}' as the Project Manager"
+				return result
 			}
 		} else {
 			result['code'] = 'Failure'
-			result['message'] = "User with id - '${params.id}' does not exist."
+			result['message'] = "User with id - '${params.id}' is not a Project Manager."
+			return result
 		}
-		result
     }
 	
 	def validateDate(Date startDate, Date endDate) {
@@ -46,37 +61,41 @@ class ProjectService {
 	def updateProject(params) {
 		def result = [:]
 		def project = Project.findById(params.projectID)
-		if (project) {
-			def user = User.findById(params.projectManager)
-			if (user) {
-				if (user.roles.any({ it.name == 'ROLE_PM' || it.name == 'ROLE_ADMIN' })) {
-					if (validateDate(new Date().parse("MM/dd/yyyy", params.startDate), new Date().parse("MM/dd/yyyy", params.endDate))) {
-						result['code'] = 'Failure'
-						result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
-					} else {
-						project.projectName = params.projectName
-						project.projectDesc = params.projectDesc
-						project.startDate = new Date().parse("MM/dd/yyyy", params.startDate)
-						project.endDate = new Date().parse("MM/dd/yyyy", params.endDate)
-						project.status = params.status
-						project.projectManager = user
-						project.save(flush: true, failOnError: true)
-						result['code'] = 'Success'
-						result['message'] = "The project has been updated."
-					}
-				} else {
-					result['code'] = 'Failure'
-					result['message'] = "User with id - '${params.id}' is not a Project Manager."
-				}
-			} else {
+		if (!project) {
+			result['code'] = 'Failure'
+			result['message'] = "Project with id - '${params.projectID}' does not exist."
+			return result
+		}
+		def user = User.findById(params.projectManager)
+		if (!user) {
+			result['code'] = 'Failure'
+			result['message'] = "User with id - '${params.projectManager}' does not exist."
+			return result
+		}
+		if (user.roles.any({ it.name == 'ROLE_PM' || it.name == 'ROLE_ADMIN' })) {
+			Date startDate = new Date().parse("MM/dd/yyyy", params.startDate)
+			Date endDate = new Date().parse("MM/dd/yyyy", params.endDate)
+			if (validateDate(startDate, endDate)) {
 				result['code'] = 'Failure'
-				result['message'] = "User with id - '${params.projectManager}' does not exist."
+				result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
+				return result
+			} else {
+				project.projectName = params.projectName
+				project.projectDesc = params.projectDesc
+				project.startDate = startDate
+				project.endDate = endDate
+				project.status = params.status 
+				project.projectManager = user
+				project.save(flush: true, failOnError: true)
+				result['code'] = 'Success'
+				result['message'] = "The project has been updated."
+				return result
 			}
 		} else {
 			result['code'] = 'Failure'
-			result['message'] = "Project with id - '${params.projectID}' does not exist."
+			result['message'] = "User with id - '${params.id}' is not a Project Manager."
+			return result
 		}
-		result
 	}
 	
 	def deleteProject(id) {
@@ -127,7 +146,7 @@ class ProjectService {
 		}
 		Date startDate = new Date().parse("MM/dd/yyyy", params.startDate)
 		Date endDate = new Date().parse("MM/dd/yyyy", params.endDate)
-		if (validateDate(new Date().parse("MM/dd/yyyy", params.startDate), new Date().parse("MM/dd/yyyy", params.endDate))) {
+		if (validateDate(startDate, endDate)) {
 			result['code'] = 'Failure'
 			result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
 			return result
@@ -144,11 +163,11 @@ class ProjectService {
 		}
 		def percentageComplete = 0
 		if (params.percentageComplete)
-			percentageComplete = new Integer(params.percentageComplete)
+			percentageComplete = params.percentageComplete.toInteger()
 		def task = new Task(
 			taskDesc: params.taskDesc,
-			startDate: new Date().parse("MM/dd/yyyy", params.startDate),
-			endDate: new Date().parse("MM/dd/yyyy", params.endDate),
+			startDate: startDate,
+			endDate: endDate,
 			percentageComplete: percentageComplete,
 			status : params.status,
 			assignedTo: assignedTo,
@@ -207,7 +226,7 @@ class ProjectService {
 		}
 		Date startDate = new Date().parse("MM/dd/yyyy", params.startDate)
 		Date endDate = new Date().parse("MM/dd/yyyy", params.endDate)
-		if (validateDate(new Date().parse("MM/dd/yyyy", params.startDate), new Date().parse("MM/dd/yyyy", params.endDate))) {
+		if (validateDate(startDate, endDate)) {
 			result['code'] = 'Failure'
 			result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
 			return result
@@ -223,18 +242,18 @@ class ProjectService {
 			return result
 		}
 		task.taskDesc = params.taskDesc
-		task.startDate = new Date().parse("MM/dd/yyyy", params.startDate)
-		task.endDate = new Date().parse("MM/dd/yyyy", params.endDate)
-		task.percentageComplete = params.percentageComplete
+		task.startDate = startDate
+		task.endDate = endDate
+		task.percentageComplete = params.percentageComplete.toInteger()
 		task.status = params.status
 		task.assignedTo = assignedTo
 		task.taskGroup = taskGroup
 		task.dependsOn = dependsOn
-		color = params.color
+		task.color = params.color
 		task.save(flush: true, failOnError: true)
 
 		result['code'] = 'Success'
-		result['message'] = "The task has been created."
+		result['message'] = "The task has been updated."
 		return result
 	}
 	
@@ -252,16 +271,115 @@ class ProjectService {
 		result
 	}
 	
-	def adddMilestone(params) {
-		
+	def addMilestone(params) {
+		def result = [:]
+		def assignedTo = User.findById(params.assignedTo)
+		if (!assignedTo) {
+			result['code'] = 'Failure'
+			result['message'] = "The assigned to user with id - '${params.assignedTo}' does not exist."
+			return result
+		}
+		def taskGroup
+		if (params.taskGroup) {
+			taskGroup = TaskGroup.findById(params.taskGroup)
+			if (!taskGroup) {
+				result['code'] = 'Failure'
+				result['message'] = "Task Group with id - '${params.taskGroup}', to which this milestone belongs to, does not exist."
+				return result
+			}
+		}
+		def project = Project.findById(params.projectID)
+		if (!project) {
+			result['code'] = 'Failure'
+			result['message'] = "Project with id - '${params.projectID}' does not exist."
+			return result
+		}
+		Date milestoneDate = new Date().parse("MM/dd/yyyy", params.milestoneDate)
+		if (milestoneDate.before(project.startDate)) {
+			result['code'] = 'Failure'
+			result['message'] = "The milestone date - ${params.milestoneDate} should not be before the project start date - ${project.startDate}."
+			return result
+		}
+		if (milestoneDate.after(project.endDate)) {
+			result['code'] = 'Failure'
+			result['message'] = "The milestone date - ${params.milestoneDate} should not be after the project end date - ${project.endDate}."
+			return result
+		}
+		def milestone = new Milestone(
+			milestoneDesc: params.milestoneDesc,
+			milestoneDate: milestoneDate,
+			assignedTo: assignedTo,
+			taskGroup: taskGroup,
+			project:project)
+		.save(flush: true, failOnError: true)
+		result['code'] = 'Success'
+		result['message'] = "The milestone has been created."
+		return result
 	}
 	
 	def updateMilestone(params) {
-		
+		def result = [:]
+		def milestone = Milestone.findById(params.milestoneID)
+		if (!task) {
+			result['code'] = 'Failure'
+			result['message'] = "Milestone with id - '${params.milestoneID}' does not exist."
+			return result
+		}
+		def assignedTo = User.findById(params.assignedTo)
+		if (!assignedTo) {
+			result['code'] = 'Failure'
+			result['message'] = "The assigned to user with id - '${params.assignedTo}' does not exist."
+			return result
+		}
+		def taskGroup
+		if (params.taskGroup) {
+			taskGroup = TaskGroup.findById(params.taskGroup)
+			if (!taskGroup) {
+				result['code'] = 'Failure'
+				result['message'] = "Task Group with id - '${params.taskGroup}', to which this milestone belongs to, does not exist."
+				return result
+			}
+		}
+		def project = Project.findById(params.projectID)
+		if (!project) {
+			result['code'] = 'Failure'
+			result['message'] = "Project with id - '${params.projectID}' does not exist."
+			return result
+		}
+		Date milestoneDate = new Date().parse("MM/dd/yyyy", params.milestoneDate)
+		if (milestoneDate.before(project.startDate)) {
+			result['code'] = 'Failure'
+			result['message'] = "The milestone date - ${params.milestoneDate} should not be before the project start date - ${project.startDate}."
+			return result
+		}
+		if (milestoneDate.after(project.endDate)) {
+			result['code'] = 'Failure'
+			result['message'] = "The milestone date - ${params.milestoneDate} should not be after the project end date - ${project.endDate}."
+			return result
+		}
+		milestone.milestoneDesc = params.milestoneDesc
+		milestone.milestoneDate = milestoneDate
+		milestone.assignedTo = assignedTo
+		milestone.taskGroup = taskGroup
+		milestone.save(flush: true, failOnError: true)
+
+		result['code'] = 'Success'
+		result['message'] = "The task has been updated."
+		return result
 	}
 	
 	def deleteMilestone(id) {
-		
+		def result = [:]
+		def milestone = Milestone.findById(id)
+		if (milestone) {
+			milestone.delete(flush: true)
+			result['code'] = 'Success'
+			result['message'] = "The milestone has been deleted."
+		} else {
+			result['code'] = 'Failure'
+			result['message'] = "Milestone with id - '${id}' does not exist."
+		}
+		result
 	}
 	
 	def addGroup(params) {
@@ -296,8 +414,8 @@ class ProjectService {
 		}
 		def taskGroup = new TaskGroup(
 			groupName: params.groupName,
-			startDate: new Date().parse("MM/dd/yyyy", params.startDate),
-			endDate: new Date().parse("MM/dd/yyyy", params.endDate),
+			startDate: startDate,
+			endDate: endDate,
 			parentGroup: parentGroup,
 			percentageComplete: params.percentageComplete,
 			project: project)
@@ -353,8 +471,8 @@ class ProjectService {
 			return result
 		}
 		group.groupName = params.groupName
-		group.startDate = new Date().parse("MM/dd/yyyy", params.startDate)
-		group.endDate = new Date().parse("MM/dd/yyyy", params.endDate)
+		group.startDate = startDate
+		group.endDate = endDate
 		group.save(flush: true, failOnError: true)
 		
 		result['code'] = 'Success'

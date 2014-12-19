@@ -114,68 +114,165 @@
   </div>
   <!-- /container -->
 
-  <!-- START NEW USER MODAL -->
-
-  <!-- New User Modal -->
-    <div class="modal fade" id="addNewUserWindow" tabindex="-1" data-backdrop="static" data-keyboard="false">
+  <!-- START CHANGE PASSWORD MODAL -->
+  <!-- Change Password Modal -->
+  <div class="modal fade" id="changePasswordWindow" tabindex="-1"
+    data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
       <div class="modal-content">
-        <form method='POST' id="addNewUserForm">
+        <form method='POST' action='' id="changePasswordForm">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title" id="addNewUserModalLabel">Add New User</h4>
+            <h4 class="modal-title" id="changePasswordLabel">Change Password</h4>
           </div>
           <div class="modal-body">
-            <div class="alert alert-danger" id="alertAddNewUser">
-              <strong>Oh snap!</strong>
+            <div class="alert alert-danger" id="alertChangePassword">
+              <strong></strong>
             </div>
-            <input type="hidden" name="tm_access" value="on" />
-            <div class="form-group">
-              <label for="first_name">First Name</label>
-              <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" value="" 
-                data-msg-required="Please enter a first name." 
-                data-msg-maxlength="The first name cannot be more than 255 characters." 
-                data-rule-required="true" 
-                data-rule-maxlength="255" />
-            </div>
-            <div class="form-group">
-              <label for="last_name">Last Name</label>
-              <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" value="" 
-                data-msg-required="Please enter a last name." 
-                data-msg-maxlength="The last name cannot be more than 255 characters." 
-                data-rule-required="true" 
-                data-rule-maxlength="255" />
+            <div class="form-group" id="oldPasswordDiv">
+              <label for="oldPassword">Old Password</label> <input
+                type="password" class="form-control" id="oldPassword"
+                name="oldPassword" placeholder="Old password" value=""
+                data-msg-required="Please enter the old password."
+                data-msg-maxlength="Your password cannot be more than 20 characters."
+                data-msg-minlength="Your password cannot be less than 5 characters."
+                data-rule-required="true" data-rule-maxlength="20"
+                data-rule-minlength="5" />
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="text" class="form-control" id="email" name="email" placeholder="Email" value="" 
-                data-msg-email="Please enter a valid email." 
-                data-msg-required="Please enter a valid email." 
-                data-msg-maxlength="Your email cannot be more than 255 characters" 
-                data-rule-email="true" data-rule-required="true" 
-                data-rule-maxlength="255" />
-              <div id="message"></div>
+              <label for="password">New Password</label> <input
+                type="password" class="form-control" id="password"
+                name="password" placeholder="Password" value=""
+                data-msg-required="Please enter the new password."
+                data-msg-maxlength="Your password cannot be more than 20 characters."
+                data-msg-minlength="Your password cannot be less than 5 characters."
+                data-rule-required="true" data-rule-maxlength="20"
+                data-rule-minlength="5" />
             </div>
             <div class="form-group">
-              <label for="confirm_email">Confirm Email Address</label>
-              <input type="text" class="form-control" id="confirm_email" name="confirm_email" placeholder="Confirm Email" value="" 
-                data-msg-email="Please confirm the email above." 
-                data-msg-required="Please confirm the email above." 
-                data-msg-maxlength="Your email cannot be more than 255 characters" 
-                data-msg-equalTo="The email confirmation has to match the email above." 
-                data-rule-email="true" data-rule-required="true"
-                data-rule-maxlength="255" 
-                data-rule-equalTo="#email" />
+              <label for="confirmPassword">Confirm Password</label> <input
+                type="password" class="form-control"
+                id="confirmPassword" name="confirmPassword"
+                placeholder="Comfirm password" value=""
+                data-msg-required="Please confirm your new password."
+                data-msg-maxlength="Your password cannot be more than 20 characters."
+                data-msg-minlength="Your password cannot be less than 5 characters."
+                data-msg-equalTo="The password confirmation has to match the password above."
+                data-rule-required="true" data-rule-maxlength="20"
+                data-rule-minlength="5" data-rule-equalTo="#password" />
             </div>
           </div>
           <div class="modal-footer">
-            <button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-success btn-primary" id="saveButton">Save</button>
+            <input type="hidden" id="id" name="id"> <input
+              type="hidden" id="username" name="username">
+            <button type="reset" class="btn btn-default"
+              data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success btn-primary"
+              id="addUserButton">Save</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+
+  <!-- /END CHANGE PASSWORD MODAL -->
+    
+
+  <!-- START NEW USER MODAL -->
+
+  <!-- New User Modal -->
+  <div class="modal fade" id="addNewUserWindow" tabindex="-1"
+    data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form method='POST' action='' id="addNewUserForm">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="addNewUserModalLabel">Add
+              New User</h4>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger" id="alertAddNewUser">
+              <strong>Oh snap!</strong>
+            </div>
+            <div class="form-group">
+              <label for="firstName">First Name</label> 
+              <input
+                type="text" class="form-control" id="firstName"
+                name="firstName" placeholder="First Name" value=""
+                data-msg-required="Please enter a first name."
+                data-msg-maxlength="The first name cannot be more than 255 characters."
+                data-rule-required="true" data-rule-maxlength="255" />
+            </div>
+            <div class="form-group">
+              <label for="last_name">Middle Initial</label> 
+              <input
+                type="text" class="form-control" id="middleInitial"
+                name="middleInitial" placeholder="MI" value=""
+                data-msg-maxlength="The last name cannot be more than 1 characters."
+                data-rule-required="false" data-rule-maxlength="1" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label> 
+              <input type="text"
+                class="form-control" id="lastName" name="lastName"
+                placeholder="Last Name" value=""
+                data-msg-required="Please enter a last name."
+                data-msg-maxlength="The last name cannot be more than 255 characters."
+                data-rule-required="true" data-rule-maxlength="255" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label> 
+              <input
+                type="text" class="form-control" id="username"
+                name="username" placeholder="Email" value=""
+                data-msg-email="Please enter a valid email."
+                data-msg-required="Please enter a valid email."
+                data-msg-maxlength="Your email cannot be more than 255 characters"
+                data-rule-email="true" data-rule-required="true"
+                data-rule-maxlength="255" data-rule-notUsed="true" />
+              <div id="message"></div>
+            </div>
+            <div class="form-group" id="passwordDiv">
+              <label for="newUserPassword">New Password</label> 
+              <input
+                type="password" class="form-control"
+                id="newUserPassword" name="newUserPassword"
+                placeholder="Password" value=""
+                data-msg-required="Please enter the new password."
+                data-msg-maxlength="Your password cannot be more than 20 characters."
+                data-msg-minlength="Your password cannot be less than 5 characters."
+                data-rule-required="true" data-rule-maxlength="20"
+                data-rule-minlength="5" />
+            </div>
+            <div class="form-group" id="confirmPasswordDiv">
+              <label for="newUserConfirmPassword">Confirm Password</label> 
+               <input type="password" class="form-control"
+                id="newUserConfirmPassword"
+                name="newUserConfirmPassword"
+                placeholder="Comfirm password" value=""
+                data-msg-required="Please confirm your new password."
+                data-msg-maxlength="Your password cannot be more than 20 characters."
+                data-msg-minlength="Your password cannot be less than 5 characters."
+                data-msg-equalTo="The password confirmation has to match the password above."
+                data-rule-required="true" data-rule-maxlength="20"
+                data-rule-minlength="5"
+                data-rule-equalTo="#newUserPassword" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="hidden" id="role" name="role" value="${allowedRole}">
+            <input type="hidden" id="user_id" name="user_id">
+            <button type="reset" class="btn btn-default"
+              data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success btn-primary"
+              id="addUserButton">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <!-- /END NEW USER MODAL -->
 
   <!-- START NEW TASK MODAL -->
@@ -410,8 +507,8 @@
               <strong>Oh snap!</strong>
             </div>
             <div class="form-group">
-              <label for="milestone_desc">Milestone Description</label>
-              <input type="text" class="form-control" id="milestone_milestone_desc" name="milestone_desc" placeholder="Group Description" value="" 
+              <label for="milestoneDesc">Milestone Description</label>
+              <input type="text" class="form-control" id="milestoneDesc" name="milestoneDesc" placeholder="Milestone Description" value="" 
                 data-msg-required="Please enter the milestone description." 
                 data-msg-maxlength="The milestone description cannot be more than 255 characters." 
                 data-rule-required="true" 
@@ -420,8 +517,8 @@
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
-                  <label for="start_date">Milestone Date</label>
-                  <input type="text" class="form-control" id="milestone_milestone_date" name="milestone_date" value="" 
+                  <label for="milestoneDate">Milestone Date</label>
+                  <input type="text" class="form-control" id="milestoneDate" name="milestoneDate" value="" 
                     data-msg-date="Please enter a valid date as milestone date." 
                     data-msg-required="Please enter a valid date as milestone date." 
                     data-rule-date="true" 
@@ -430,14 +527,26 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="assigned_to_id">Milestone Assigned To</label>
-              <input type="hidden" class="form-control" id="milestone_assigned_to_id" name="assigned_to_id" placeholder="Select a team member" value="" 
-                data-msg-required="Please select a team mamber." 
-                data-rule-required="true"/>
+              <label for="assignedTo">Milestone Assigned To</label>
+              <select class="form-control" id="assignedTo" name="assignedTo">
+                <option value="" selected disabled>Select User</option>
+                <g:each in="${tmList}" status="i" var="userInstance">
+                <option value="${userInstance?.id}">
+                  ${userInstance?.firstName} ${userInstance?.lastName}
+                </option>
+                </g:each>
+              </select>
             </div>
             <div class="form-group">
-              <label for="parent_group_id">Parent Group</label>
-              <input type="hidden" class="form-control" id="milestone_groups_group_id" name="groups_group_id" placeholder="Select a group" value=""/>
+              <label for="taskGroup ">Task Group</label> 
+              <select class="form-control" id="taskGroup" name="taskGroup">
+                <option value="" selected disabled>Select Task Group</option>
+                <g:each in="${project.taskGroups}" status="i" var="groupInstance">
+                <option value="${groupInstance?.id}">
+                  ${groupInstance?.groupName}
+                </option>
+                </g:each>
+              </select>
             </div>
           </div>
           <div class="modal-footer">
@@ -446,7 +555,8 @@
               <button type="submit" class="btn btn-primary" id="milestoneSaveButton">Save milestone</button>
             </div>
             <div id="editMilestoneAction">
-              <input type="hidden" id="milestone_id" name="milestone_id" />
+              <input type="hidden" id="milestoneID" name="milestoneID" />
+              <input type="hidden" name="projectID" id="projectID" value="${project?.id}" />
               <button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
               <button type="button" class="btn btn-danger" id="milestoneDelButton">Delete milestone</button>
               <button type="submit" class="btn btn-primary" id="milestoneEditButton">Save milestone</button>
@@ -479,6 +589,10 @@
 	      addTaskUrl: '${createLink(controller:"PM", action: "addTask")}',    
 	      updateTaskUrl: '${createLink(controller:"PM", action: "updateTask")}',
 	      deleteTaskUrl: '${createLink(controller:"PM", action: "deleteTask")}',
+	      getMilestoneUrl: '${createLink(controller:"PM", action: "getMilestone")}',
+	      addMilestoneUrl: '${createLink(controller:"PM", action: "addMilestone")}',    
+	      updateMilestoneUrl: '${createLink(controller:"PM", action: "updateMilestone")}',
+	      deleteMilestoneUrl: '${createLink(controller:"PM", action: "deleteMilestone")}',
 		    currentUserId: '${currentUser?.id}',
         projectId: '${project?.id}'
 		    }

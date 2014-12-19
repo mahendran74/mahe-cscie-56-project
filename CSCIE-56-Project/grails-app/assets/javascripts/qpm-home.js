@@ -32,8 +32,7 @@ $('#about').on('click', function(e) {
   $('#aboutWindow').modal('show');
 });
 
-jQuery.validator.addMethod("notUsed", 
-    function(value, element, params) {
+jQuery.validator.addMethod("notUsed", function(value, element, params) {
    var response;
    $.ajax({
      type : "post",
@@ -97,8 +96,6 @@ $("#signUpForm").validate(
           url : submit_url,
           data : formData,
           success : function(data) {
-            console.log(data);
-            //data = jQuery.parseJSON(data);
             if (data.code == 'Success') {
                 bootbox.alert(data.message, function(result) {
                 	$('#signUpWindow').modal('hide');

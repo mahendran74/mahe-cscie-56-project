@@ -108,34 +108,30 @@ $('.delete-project').on('click', function(e) {
 });
 
 // Reset password
-$('.reset-password').on(
-    'click',
-    function(e) {
-        e.preventDefault();
-        $('#changePasswordWindow #id').val($(this).attr('id'));
-        $('#changePasswordWindow #username').val('');
-        $('#changePasswordWindow #password').val('');
-        $('#changePasswordWindow #confirmPassword').val('');          
-        $('#changePasswordWindow #oldPasswordDiv').hide();
-        $('#changePasswordLabel').text("Reset Password");
-        $('#alertChangePassword').hide();
-        $('#changePasswordWindow').modal('show');
-    });
+$('.reset-password').on('click', function(e) {
+	e.preventDefault();
+	$('#changePasswordWindow #id').val($(this).attr('id'));
+	$('#changePasswordWindow #username').val('');
+	$('#changePasswordWindow #password').val('');
+	$('#changePasswordWindow #confirmPassword').val('');          
+	$('#changePasswordWindow #oldPasswordDiv').hide();
+	$('#changePasswordLabel').text("Reset Password");
+	$('#alertChangePassword').hide();
+	$('#changePasswordWindow').modal('show');
+});
 
-$('.change-password').on(
-	    'click',
-	    function(e) {
-	        e.preventDefault();
-	        $('#changePasswordWindow #id').val('');
-	        $('#changePasswordWindow #username').val($(this).attr('id'));
-	        $('#changePasswordWindow #password').val('');
-	        $('#changePasswordWindow #confirmPassword').val('');
-	        $('#changePasswordWindow #oldPassword').val('');
-	        $('#changePasswordWindow #oldPasswordDiv').show();
-	        $('#changePasswordLabel').text("Change Password");
-	        $('#alertChangePassword').hide();
-	        $('#changePasswordWindow').modal('show');
-	    });
+$('.change-password').on('click', function(e) {
+	e.preventDefault();
+	$('#changePasswordWindow #id').val('');
+	$('#changePasswordWindow #username').val($(this).attr('id'));
+	$('#changePasswordWindow #password').val('');
+	$('#changePasswordWindow #confirmPassword').val('');
+	$('#changePasswordWindow #oldPassword').val('');
+	$('#changePasswordWindow #oldPasswordDiv').show();
+	$('#changePasswordLabel').text("Change Password");
+	$('#alertChangePassword').hide();
+	$('#changePasswordWindow').modal('show');
+});
 
 function checkForRole(data, value) {
     var found = false;
