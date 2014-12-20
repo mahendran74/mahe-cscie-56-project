@@ -1,6 +1,7 @@
 package com.quickpm
 
 import grails.transaction.Transactional
+import java.text.SimpleDateFormat
 
 @Transactional
 class ProjectService {
@@ -15,8 +16,8 @@ class ProjectService {
 			return result
 		}
 		if (user.roles.any({ it.name == 'ROLE_PM' || it.name == 'ROLE_ADMIN' })) {
-			Date startDate = new Date().parse("MM/dd/yyyy", params.startDate)
-			Date endDate = new Date().parse("MM/dd/yyyy", params.endDate)
+			Date startDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.startDate)
+			Date endDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.endDate)
 			if (validateDate(startDate, endDate)) {
 				result['code'] = 'Failure'
 				result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
@@ -73,8 +74,8 @@ class ProjectService {
 			return result
 		}
 		if (user.roles.any({ it.name == 'ROLE_PM' || it.name == 'ROLE_ADMIN' })) {
-			Date startDate = new Date().parse("MM/dd/yyyy", params.startDate)
-			Date endDate = new Date().parse("MM/dd/yyyy", params.endDate)
+			Date startDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.startDate)
+			Date endDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.endDate)
 			if (validateDate(startDate, endDate)) {
 				result['code'] = 'Failure'
 				result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
@@ -144,8 +145,8 @@ class ProjectService {
 			result['message'] = "Project with id - '${params.projectID}' does not exist."
 			return result
 		}
-		Date startDate = new Date().parse("MM/dd/yyyy", params.startDate)
-		Date endDate = new Date().parse("MM/dd/yyyy", params.endDate)
+		Date startDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.startDate)
+		Date endDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.endDate)
 		if (validateDate(startDate, endDate)) {
 			result['code'] = 'Failure'
 			result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
@@ -153,12 +154,12 @@ class ProjectService {
 		} 
 		if (startDate.before(project.startDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The task start date - ${params.startDate} should not be before the project start date - ${project.startDate}."
+			result['message'] = "The task start date - ${params.startDate} should not be before the project start date - ${project.startDate.format('MM/dd/yyyy')}."
 			return result
 		}
 		if (endDate.after(project.endDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The task end date - ${params.endDate} should not be after the project end date - ${project.endDate}."
+			result['message'] = "The task end date - ${params.endDate} should not be after the project end date - ${project.endDate.format('MM/dd/yyyy')}."
 			return result
 		}
 		def percentageComplete = 0
@@ -224,8 +225,8 @@ class ProjectService {
 			result['message'] = "Project with id - '${params.projectID}' does not exist."
 			return result
 		}
-		Date startDate = new Date().parse("MM/dd/yyyy", params.startDate)
-		Date endDate = new Date().parse("MM/dd/yyyy", params.endDate)
+		Date startDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.startDate)
+		Date endDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.endDate)
 		if (validateDate(startDate, endDate)) {
 			result['code'] = 'Failure'
 			result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
@@ -233,12 +234,12 @@ class ProjectService {
 		}
 		if (startDate.before(project.startDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The task start date - ${params.startDate} should not be before the project start date - ${project.startDate}."
+			result['message'] = "The task start date - ${params.startDate} should not be before the project start date - ${project.startDate.format('MM/dd/yyyy')}."
 			return result
 		}
 		if (endDate.after(project.endDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The task end date - ${params.endDate} should not be after the project end date - ${project.endDate}."
+			result['message'] = "The task end date - ${params.endDate} should not be after the project end date - ${project.endDate.format('MM/dd/yyyy')}."
 			return result
 		}
 		task.taskDesc = params.taskDesc
@@ -297,12 +298,12 @@ class ProjectService {
 		Date milestoneDate = new Date().parse("MM/dd/yyyy", params.milestoneDate)
 		if (milestoneDate.before(project.startDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The milestone date - ${params.milestoneDate} should not be before the project start date - ${project.startDate}."
+			result['message'] = "The milestone date - ${params.milestoneDate} should not be before the project start date - ${project.startDate.format('MM/dd/yyyy')}."
 			return result
 		}
 		if (milestoneDate.after(project.endDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The milestone date - ${params.milestoneDate} should not be after the project end date - ${project.endDate}."
+			result['message'] = "The milestone date - ${params.milestoneDate} should not be after the project end date - ${project.endDate.format('MM/dd/yyyy')}."
 			return result
 		}
 		def milestone = new Milestone(
@@ -349,12 +350,12 @@ class ProjectService {
 		Date milestoneDate = new Date().parse("MM/dd/yyyy", params.milestoneDate)
 		if (milestoneDate.before(project.startDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The milestone date - ${params.milestoneDate} should not be before the project start date - ${project.startDate}."
+			result['message'] = "The milestone date - ${params.milestoneDate} should not be before the project start date - ${project.startDate.format('MM/dd/yyyy')}."
 			return result
 		}
 		if (milestoneDate.after(project.endDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The milestone date - ${params.milestoneDate} should not be after the project end date - ${project.endDate}."
+			result['message'] = "The milestone date - ${params.milestoneDate} should not be after the project end date - ${project.endDate.format('MM/dd/yyyy')}."
 			return result
 		}
 		milestone.milestoneDesc = params.milestoneDesc
@@ -391,8 +392,8 @@ class ProjectService {
 			result['message'] = "Project with id - '${params.projectID}' does not exist."
 			return result
 		}
-		Date startDate = new Date().parse("MM/dd/yyyy", params.startDate)
-		Date endDate = new Date().parse("MM/dd/yyyy", params.endDate)
+		Date startDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.startDate)
+		Date endDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.endDate)
 		if (validateDate(startDate, endDate)) {
 			result['code'] = 'Failure'
 			result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
@@ -400,12 +401,12 @@ class ProjectService {
 		}
 		if (startDate.before(project.startDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The group start date - ${params.startDate} should not be before the project start date - ${project.startDate}."
+			result['message'] = "The group start date - ${params.startDate} should not be before the project start date - ${project.startDate.format('MM/dd/yyyy')}."
 			return result
 		} 
 		if (endDate.after(project.endDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The group end date - ${params.endDate} should not be after the project end date - ${project.endDate}."
+			result['message'] = "The group end date - ${params.endDate} should not be after the project end date - ${project.endDate.format('MM/dd/yyyy')}."
 			return result
 		}
 		def parentGroup
@@ -453,8 +454,8 @@ class ProjectService {
 			result['message'] = "Project with id - '${params.projectID}' does not exist."
 			return result
 		}
-		Date startDate = new Date().parse("MM/dd/yyyy", params.startDate)
-		Date endDate = new Date().parse("MM/dd/yyyy", params.endDate)
+		Date startDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.startDate)
+		Date endDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.endDate)
 		if (validateDate(startDate, endDate)) {
 			result['code'] = 'Failure'
 			result['message'] = "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
@@ -462,12 +463,12 @@ class ProjectService {
 		}
 		if (startDate.before(project.startDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The group start date - ${params.startDate} should not be before the project start date - ${project.startDate}."
+			result['message'] = "The group start date - ${params.startDate} should not be before the project start date - ${project.startDate.format('MM/dd/yyyy')}."
 			return result
 		} 
 		if (endDate.after(project.endDate)) {
 			result['code'] = 'Failure'
-			result['message'] = "The group end date - ${params.endDate} should not be after the project end date - ${project.endDate}."
+			result['message'] = "The group end date - ${params.endDate} should not be after the project end date - ${project.endDate.format('MM/dd/yyyy')}."
 			return result
 		}
 		group.groupName = params.groupName

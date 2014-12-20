@@ -9,6 +9,9 @@
 <asset:stylesheet src="qpm.css"/>
 <asset:stylesheet src="qpm-tm-theme.css"/>
 <asset:stylesheet src="fullcalendar.css"/>
+<asset:stylesheet src="jquery-simplecolorpicker.css" />
+<asset:stylesheet src="jquery.simplecolorpicker-glyphicons.css" />
+<asset:stylesheet src="slider.css" />
 <style type="text/css">
 .about-qpm {
   width: 597px;

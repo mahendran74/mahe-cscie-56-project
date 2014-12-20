@@ -16,6 +16,10 @@ $('#color').simplecolorpicker({
 	  picker : true,
 	  theme : 'glyphicons'
 	});
+$('#taskcolor').simplecolorpicker({
+	  picker : true,
+	  theme : 'glyphicons'
+	});
 $('#addNewTaskWindow #percentageCompleteSlide').slider({
 	  formater : function(value) {
 	    return 'Percentage complete : ' + value + ' %';
@@ -47,7 +51,7 @@ $(document).ready( function() {
                   	$('#addNewTaskWindow #assignedTo').val(data.assignedTo);
                   	$('#addNewTaskWindow #taskGroup').val(data.taskGroup);
                   	$('#addNewTaskWindow #dependsOn').val(data.dependsOn);
-                  	$('#addNewTaskWindow #color').simplecolorpicker('selectColor', '#7bd148');
+                  	$('#addNewTaskWindow #color').simplecolorpicker('selectColor', data.color);
                     $('#addNewTaskWindow #percentageCompleteSlide').slider('setValue', data.percentageComplete);
                     $('#addNewTaskWindow #percentageComplete').val(data.percentageComplete);
                     $('#addNewTaskWindow #source').val('calendar');
@@ -100,7 +104,7 @@ $('.edit-task').on('click', function(e) {
           	$('#addNewTaskWindow #assignedTo').val(data.assignedTo);
           	$('#addNewTaskWindow #taskGroup').val(data.taskGroup);
           	$('#addNewTaskWindow #dependsOn').val(data.dependsOn);
-          	$('#addNewTaskWindow #color').simplecolorpicker('selectColor', '#7bd148');
+          	$('#addNewTaskWindow #color').simplecolorpicker('selectColor', data.color);
             $('#addNewTaskWindow #percentageCompleteSlide').slider('setValue', data.percentageComplete);
             $('#addNewTaskWindow #percentageComplete').val(data.percentageComplete);
             $('#addNewTaskWindow #source').val('tasks');
@@ -137,8 +141,10 @@ $("#addNewTaskForm").validate(
 		var formData = $(form).serialize();
 		var submit_url = gspVars.updateTaskUrl; // Update task
 		var home_url = gspVars.homeUrl;
+		alert (home_url);
 		if ($('#source').val() == "tasks") {
 			home_url = gspVars.altHomeUrl; 
+			alert (home_url);
 		}
 		console.log(formData);
 		console.log(submit_url);
@@ -148,6 +154,7 @@ $("#addNewTaskForm").validate(
 			data : formData,
 			success : function(data) {
 				console.log(data)
+				console.log(home_url)
 				if (data.code == 'Success') {
 					bootbox.alert(data.message, function(result) {
 						window.location = home_url;

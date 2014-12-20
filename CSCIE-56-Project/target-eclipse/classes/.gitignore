@@ -2,11 +2,12 @@
 /com/
 /dbdoc/
 /grails/
-/hibernate/
 /hibernate.cfg.xml
 /javascripts/
 /messages.properties
 /org/
+/spring/
+/uglifyjs/
 /AssetPipelineBootStrap$_closure1.class
 /AssetPipelineBootStrap.class
 /AssetUrlMappings$__clinit__closure1.class
@@ -14,6 +15,10 @@
 /BootStrap$_closure1.class
 /BootStrap$_closure1_closure3.class
 /BootStrap$_closure1_closure4.class
+/BootStrap$_closure1_closure5.class
+/BootStrap$_closure1_closure6.class
+/BootStrap$_closure1_closure7.class
+/BootStrap$_closure1_closure8.class
 /BootStrap$_closure2.class
 /BootStrap.class
 /BootstrapResources$_run_closure1.class
@@ -104,7 +109,3 @@
 /resources$_run_closure1.class
 /resources$_run_closure1_closure2.class
 /resources.class
-/BootStrap$_closure1_closure5.class
-/BootStrap$_closure1_closure6.class
-/BootStrap$_closure1_closure7.class
-/BootStrap$_closure1_closure8.class

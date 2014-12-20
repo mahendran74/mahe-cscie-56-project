@@ -181,7 +181,7 @@ $("#addNewTaskWindow #percentageCompleteSlide").on('slide', function(slideEvt) {
 $('#addNewTask').on('click', function(e) {
 	e.preventDefault();
 	$('#addNewTaskWindow #projectID').val(gspVars.projectId);
-	$('#addNewTaskWindow #groupName').val('');
+	$('#addNewTaskWindow #taskDesc').val('');
 	$('#addNewTaskWindow #startDate').val('');
 	$('#addNewTaskWindow #endDate').val('');
 	$('#addNewTaskWindow #status').val('');
