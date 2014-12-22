@@ -246,17 +246,16 @@
 
     <!-- /END THE SIGN UP MODAL -->
 
-    <!-- FOOTER -->
+  </div>
+      <!-- FOOTER -->
     <footer>
       <p class="pull-right">
         <a href="#">Back to top</a>
       </p>
       <p>
-        CSCIE-14 P4. Submitted by <a href="mailto:mahendran.sreedevi@gmail.com">Mahendran Sreedevi</a>
+        CSCI E-56 Final Project. Submitted by <a href="mailto:mahendran.sreedevi@gmail.com">Mahendran Sreedevi</a>
       </p>
     </footer>
-
-  </div>
   <!-- /.container -->
   <!-- We inline the values (ids, action links, resource links) we want to use in our JS file -->
   <asset:javascript src="application.js"/>

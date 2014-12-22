@@ -123,15 +123,15 @@ class BootStrap {
 		assert adminUser.addToRoles(adminRole)
 				.save(flush: true, failOnError: true)
 				
-				// Create an admin user
-				def adminUser1 = User.findByUsername('admin1@test.com') ?:
-					new User(firstName: 'Admin1',
-							lastName: 'User',
-							middleInitial: 'I',
-							username: 'admin1@test.com',
-							passwordHash: new Sha512Hash("password").toHex(),
-							active: true)
-							.save(flush: true, failOnError: true)
+		// Create an admin user
+		def adminUser1 = User.findByUsername('admin1@test.com') ?:
+			new User(firstName: 'Admin1',
+					lastName: 'User',
+					middleInitial: 'I',
+					username: 'admin1@test.com',
+					passwordHash: new Sha512Hash("password").toHex(),
+					active: true)
+					.save(flush: true, failOnError: true)
 		
 				// Add roles to the admin user
 				assert adminUser1.addToRoles(adminRole)

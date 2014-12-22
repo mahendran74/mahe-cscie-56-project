@@ -7,12 +7,11 @@ import java.text.SimpleDateFormat
 class ProjectService {
 	
     def addProject(params) {
-		System.println (params)
 		def result = [:]
 		def user = User.findById(params.projectManager)
 		if (!user) {
 			result['code'] = 'Failure'
-			result['message'] = "User with id - '${params.id}' does not exist."
+			result['message'] = "User with id - '${params.projectManager}' does not exist."
 			return result
 		}
 		if (user.roles.any({ it.name == 'ROLE_PM' || it.name == 'ROLE_ADMIN' })) {
@@ -47,7 +46,7 @@ class ProjectService {
 			}
 		} else {
 			result['code'] = 'Failure'
-			result['message'] = "User with id - '${params.id}' is not a Project Manager."
+			result['message'] = "User with id - '${params.projectManager}' is not a Project Manager."
 			return result
 		}
     }
@@ -94,7 +93,7 @@ class ProjectService {
 			}
 		} else {
 			result['code'] = 'Failure'
-			result['message'] = "User with id - '${params.id}' is not a Project Manager."
+			result['message'] = "User with id - '${params.projectManager}' is not a Project Manager."
 			return result
 		}
 	}
