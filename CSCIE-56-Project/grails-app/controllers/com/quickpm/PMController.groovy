@@ -23,7 +23,7 @@ class PMController {
 		[currentUser: currentUser, projectList: projectList, allowedRole: allowedRole.id]
 	}
 	
-	def gantt(id) {
+	def gantt(Long id) {
 		Subject subject = SecurityUtils.getSubject()
 		def loggedInUsername = subject.principal
 		User currentUser = User.findByUsername(loggedInUsername)
@@ -50,7 +50,7 @@ class PMController {
 		render projectService.addProject(params) as JSON
 	}
 	
-	def getProject(id) {
+	def getProject(Long id) {
 		render Project.findById(id) as JSON
 	}
 	
@@ -58,7 +58,7 @@ class PMController {
 		render projectService.updateProject(params) as JSON
 	}
 	
-	def getGroup(id) {
+	def getGroup(Long id) {
 		render TaskGroup.findById(id) as JSON
 	}
 	
@@ -70,11 +70,11 @@ class PMController {
 		render projectService.updateGroup(params) as JSON
 	}
 	
-	def deleteGroup(id) {
+	def deleteGroup(Long id) {
 		render projectService.deleteGroup(id) as JSON
 	}
 	
-	def getTask(id) {
+	def getTask(Long id) {
 		render Task.findById(id) as JSON
 	}
 	
@@ -86,10 +86,10 @@ class PMController {
 		render projectService.updateTask(params) as JSON
 	}
 	
-	def deleteTask(id) {
+	def deleteTask(Long id) {
 		render projectService.deleteTask(id) as JSON
 	}
-	def getMilestone(id) {
+	def getMilestone(Long id) {
 		render Milestone.findById(id) as JSON
 	}
 	
@@ -101,7 +101,7 @@ class PMController {
 		render projectService.updateMilestone(params) as JSON
 	}
 	
-	def deleteMilestone(id) {
+	def deleteMilestone(Long id) {
 		render projectService.deleteMilestone(id) as JSON
 	}
 	

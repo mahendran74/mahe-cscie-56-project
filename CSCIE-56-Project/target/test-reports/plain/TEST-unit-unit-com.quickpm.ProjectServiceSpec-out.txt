@@ -1,0 +1,39 @@
+--Output from test addProject--
+--Output from test addProject with invalid user--
+--Output from test addProject with user who is not a PM or ADMIN--
+--Output from test addProject with invalid dates--
+--Output from test updateProject--
+--Output from test updateProject with invalid project--
+--Output from test updateProject with invalid user--
+--Output from test updateProject with valid user who is not a PM--
+--Output from test updateProject with invalid dates--
+--Output from test deleteProject--
+--Output from test deleteProject with invalid project--
+--Output from test addGroup--
+addGroup - [groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid project--
+addGroup - [groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid dates--
+addGroup - [groupName:Group of Tasks, startDate:2/1/2015, endDate:12/10/2014, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid start date--
+addGroup - [groupName:Group of Tasks, startDate:12/1/2014, endDate:12/10/2014, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid end date--
+addGroup - [groupName:Group of Tasks, startDate:2/1/2015, endDate:02/30/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with invalid task group--
+updateGroup - [groupID:2]
+--Output from test updateGroup with invalid parent task group--
+updateGroup - [groupID:1, parentGroup:23]
+--Output from test updateGroup with the current group as its own parent task group--
+updateGroup - [groupID:1, parentGroup:1]
+--Output from test updateGroup with invalid project--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:4]
+--Output from test updateGroup with invalid dates--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:2/10/2015, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with start date before project start date--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/1/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with end date after project end date--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/11/2014, endDate:2/11/2015, percentageComplete:0, projectID:1]
+--Output from test deleteGroup--
+--Output from test deleteGroup with invalid task group id--

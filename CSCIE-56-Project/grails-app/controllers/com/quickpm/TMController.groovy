@@ -30,7 +30,7 @@ class TMController {
 		
 	}
 	
-	def getTasks(Integer id) {
+	def getTasks(Long id) {
 		def user = User.findById(id)
 		def taskList = Task.findAllByAssignedTo(user)
 		def retList = []
@@ -60,7 +60,7 @@ class TMController {
 		}
 		render retList as JSON
 	}
-	def getTask(Integer id) {
+	def getTask(Long id) {
 		render Task.findById(id) as JSON
 	}
 	def updateTask()

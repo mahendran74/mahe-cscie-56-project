@@ -23038,3 +23038,1272 @@ org.codehaus.groovy.grails.web.converters.exceptions.ConverterException: Error p
 Caused by: org.codehaus.groovy.grails.web.json.JSONException: Expected a ',' or '}' at character 20302 of {"delegate":{"applicationContext":{"active":true,"applicationListeners":[],"applicationName":"","autowireCapableBeanFactory":{"accessControlContext":{"class":"java.security.AccessControlContext","domainCombiner":null},"autowireCandidateResolver":{"class":"org.springframework.context.annotation.ContextAnnotationAutowireCandidateResolver"},"beanClassLoader":{"URLs":["file:/Users/mahe/git/mahe-cscie-56-project/CSCIE-56-Project/test/unit/","file:/Users/mahe/git/mahe-cscie-56-project/CSCIE-56-Project/target/test-classes/unit/"],"class":"java.net.URLClassLoader","parent":{"URLs":["file:/Users/mahe/git/mahe-cscie-56-project/CSCIE-56-Project/target/classes/","file:/Users/mahe/git/mahe-cscie-56-project/CSCIE-56-Project/target/work/plugin-classes/","file:/Users/mahe/git/mahe-cscie-56-project/CSCIE-56-Project/target/work/plugin-build-classes/","file:/Users/mahe/git/mahe-cscie-56-project/CSCIE-56-Project/target/work/plugin-provided-classes/","file:/Users/mahe/git/mahe-cscie-56-project/CSCIE-56-Project/target/test-classes/","file:/Users/mahe/git/mahe-cscie-56-project/CSCIE-56-Project/target/work/resources/","file:/Users/mahe/software/grails-2.4.4/lib/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.0.1.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.codehaus.groovy/groovy-all/jars/groovy-all-2.3.7.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-rest-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.5.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.slf4j/slf4j-api/jars/slf4j-api-1.7.5.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-datasource-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-jdbc/jars/spring-jdbc-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.apache.tomcat.embed/tomcat-embed-logging-log4j/jars/tomcat-embed-logging-log4j-7.0.50.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.apache.tomcat/tomcat-jdbc/jars/tomcat-jdbc-7.0.50.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.apache.tomcat/tomcat-juli/jars/tomcat-juli-7.0.50.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-context/jars/spring-context-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-aop/jars/spring-aop-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-expression/jars/spring-expression-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-controllers-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-validation-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-web-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-web-gsp-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-web-jsp-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-web-fileupload-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/commons-fileupload/commons-fileupload/jars/commons-fileupload-1.3.1.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-web-common-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-webmvc/jars/spring-webmvc-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-context-support/jars/spring-context-support-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-databinding-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-web-mvc-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-web-url-mappings-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-web-sitemesh-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/opensymphony/sitemesh/jars/sitemesh-2.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-aspects/jars/spring-aspects-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-web-databinding-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.aspectj/aspectjweaver/jars/aspectjweaver-1.8.2.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.aspectj/aspectjrt/jars/aspectjrt-1.8.2.jar","file:/Users/mahe/software/grails-2.4.4/lib/com.google.code.gson/gson/jars/gson-2.2.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-databinding-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-core-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-spring-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/xalan/serializer/jars/serializer-2.7.1.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-core/jars/spring-core-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-beans/jars/spring-beans-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/lib/aopalliance/aopalliance/jars/aopalliance-1.0.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-bootstrap-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-i18n-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/commons-lang/commons-lang/jars/commons-lang-2.6.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-filters-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-gsp-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-codecs-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-encoder-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-web/jars/spring-web-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/lib/commons-codec/commons-codec/jars/commons-codec-1.6.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-logging-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-web-gsp-taglib-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-log4j-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.5.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-services-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-tx/jars/spring-tx-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-servlets-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-url-mappings-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-validation-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/commons-validator/commons-validator/jars/commons-validator-1.4.0.jar","file:/Users/mahe/software/grails-2.4.4/lib/com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru/jars/concurrentlinkedhashmap-lru-1.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-async-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-async-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.codehaus.gpars/gpars/jars/gpars-1.2.1.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.codehaus.jsr166-mirror/jsr166y/jars/jsr166y-1.7.0.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-testing-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-converters-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-test-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.objenesis/objenesis/jars/objenesis-1.4.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-project-api-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.apache.ant/ant/jars/ant-1.8.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.apache.ant/ant-launcher/jars/ant-launcher-1.8.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/jline/jline/jars/jline-2.12.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.codehaus.gant/gant_groovy1.8/jars/gant_groovy1.8-1.9.6.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.fusesource.jansi/jansi/jars/jansi-1.11.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-domain-class-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/spring-test/jars/spring-test-4.0.7.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/lib/cglib/cglib/jars/cglib-2.2.2.jar","file:/Users/mahe/software/grails-2.4.4/lib/asm/asm/jars/asm-3.3.1.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-mimetypes-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.spockframework/spock-core/jars/spock-core-0.7-groovy-2.0.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar","file:/Users/mahe/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar","file:/Users/mahe/software/grails-2.4.4/lib/junit/junit/jars/junit-4.11.jar","file:/Users/mahe/software/grails-2.4.4/lib/com.h2database/h2/jars/h2-1.3.176.jar","file:/Users/mahe/software/grails-2.4.4/lib/log4j/log4j/jars/log4j-1.2.17.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-resources-2.4.4.jar","file:/Users/mahe/.m2/repository/org/grails/grails-datastore-test-support/1.0.2-grails-2.4/grails-datastore-test-support-1.0.2-grails-2.4.jar","file:/Users/mahe/.m2/repository/org/javassist/javassist/3.17.1-GA/javassist-3.17.1-GA.jar","file:/Users/mahe/.m2/repository/org/mozilla/rhino/1.7R4/rhino-1.7R4.jar","file:/Users/mahe/software/grails-2.4.4/lib/commons-io/commons-io/jars/commons-io-2.2.jar","file:/Users/mahe/.m2/repository/org/apache/shiro/shiro-quartz/1.2.2/shiro-quartz-1.2.2.jar","file:/Users/mahe/.m2/repository/org/opensymphony/quartz/quartz/1.6.1/quartz-1.6.1.jar","file:/Users/mahe/.m2/repository/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2.jar","file:/Users/mahe/.m2/repository/org/apache/shiro/shiro-spring/1.2.2/shiro-spring-1.2.2.jar","file:/Users/mahe/.m2/repository/org/apache/shiro/shiro-ehcache/1.2.2/shiro-ehcache-1.2.2.jar","file:/Users/mahe/.m2/repository/org/apache/shiro/shiro-core/1.2.2/shiro-core-1.2.2.jar","file:/Users/mahe/.m2/repository/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar","file:/Users/mahe/.m2/repository/org/hibernate/hibernate-validator/5.1.1.Final/hibernate-validator-5.1.1.Final.jar","file:/Users/mahe/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar","file:/Users/mahe/.m2/repository/com/fasterxml/classmate/1.0.0/classmate-1.0.0.jar","file:/Users/mahe/.m2/repository/org/hibernate/hibernate-ehcache/4.3.6.Final/hibernate-ehcache-4.3.6.Final.jar","file:/Users/mahe/.m2/repository/org/hibernate/hibernate-core/4.3.6.Final/hibernate-core-4.3.6.Final.jar","file:/Users/mahe/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar","file:/Users/mahe/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar","file:/Users/mahe/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar","file:/Users/mahe/.m2/repository/net/sf/ehcache/ehcache-core/2.4.8/ehcache-core-2.4.8.jar","file:/Users/mahe/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.grails/grails-datastore-core/jars/grails-datastore-core-3.1.3.RELEASE.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.grails/grails-datastore-gorm/jars/grails-datastore-gorm-3.1.3.RELEASE.jar","file:/Users/mahe/.m2/repository/org/grails/grails-datastore-gorm-hibernate4/3.1.3.RELEASE/grails-datastore-gorm-hibernate4-3.1.3.RELEASE.jar","file:/Users/mahe/.m2/repository/org/grails/grails-datastore-gorm-hibernate-core/3.1.3.RELEASE/grails-datastore-gorm-hibernate-core-3.1.3.RELEASE.jar","file:/Users/mahe/.m2/repository/org/grails/grails-datastore-gorm-plugin-support/3.1.3.RELEASE/grails-datastore-gorm-plugin-support-3.1.3.RELEASE.jar","file:/Users/mahe/.m2/repository/org/springframework/spring-orm/4.0.7.RELEASE/spring-orm-4.0.7.RELEASE.jar","file:/Users/mahe/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar","file:/Users/mahe/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar","file:/Users/mahe/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.grails/grails-datastore-simple/jars/grails-datastore-simple-3.1.3.RELEASE.jar","file:/Users/mahe/.m2/repository/org/liquibase/liquibase-core/2.0.5/liquibase-core-2.0.5.jar"],"class":"groovy.lang.GroovyClassLoader","loadedClasses":[],"parent":{"URLs":["file:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/lib/tools.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.codehaus.groovy/groovy-all/jars/groovy-all-2.3.7.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.5.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.codehaus.gant/gant_groovy1.8/jars/gant_groovy1.8-1.9.6.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.apache.tomcat.embed/tomcat-embed-logging-log4j/jars/tomcat-embed-logging-log4j-7.0.50.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-plugin-log4j-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/log4j/log4j/jars/log4j-1.2.17.jar","file:/Users/mahe/software/grails-2.4.4/dist/grails-bootstrap-2.4.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.slf4j/slf4j-api/jars/slf4j-api-1.7.5.jar","file:/Users/mahe/software/grails-2.4.4/lib/jline/jline/jars/jline-2.12.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.apache.ant/ant/jars/ant-1.8.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.apache.ant/ant-launcher/jars/ant-launcher-1.8.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.apache.ant/ant-trax/jars/ant-trax-1.7.1.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.apache.ant/ant-junit/jars/ant-junit-1.8.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.apache.ivy/ivy/jars/ivy-2.3.0.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.fusesource.jansi/jansi/jars/jansi-1.11.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.objenesis/objenesis/jars/objenesis-1.4.jar","file:/Users/mahe/software/grails-2.4.4/lib/cglib/cglib/jars/cglib-2.2.2.jar","file:/Users/mahe/software/grails-2.4.4/lib/asm/asm/jars/asm-3.3.1.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.spockframework/spock-core/jars/spock-core-0.7-groovy-2.0.jar","file:/Users/mahe/software/grails-2.4.4/lib/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar","file:/Users/mahe/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar","file:/Users/mahe/software/grails-2.4.4/lib/junit/junit/jars/junit-4.11.jar","file:/Users/mahe/.m2/repository/org/apache/tomcat/tomcat-catalina-ant/7.0.55/tomcat-catalina-ant-7.0.55.jar","file:/Users/mahe/.m2/repository/org/apache/tomcat/embed/tomcat-embed-jasper/7.0.55/tomcat-embed-jasper-7.0.55.jar","file:/Users/mahe/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/7.0.55/tomcat-embed-el-7.0.55.jar","file:/Users/mahe/.m2/repository/org/apache/tomcat/embed/tomcat-embed-logging-log4j/7.0.55/tomcat-embed-logging-log4j-7.0.55.jar","file:/Users/mahe/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/7.0.55/tomcat-embed-websocket-7.0.55.jar","file:/Users/mahe/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/7.0.55/tomcat-embed-core-7.0.55.jar","file:/Users/mahe/git/mahe-cscie-56-project/CSCIE-56-Project/","file:/Users/mahe/software/grails-2.4.4/lib/org.springframework/springloaded/jars/springloaded-1.2.1.RELEASE.jar"],"class":"sun.misc.Launcher$AppClassLoader","parent":{"URLs":["file:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/dnsns.jar","file:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/localedata.jar","file:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/sunec.jar","file:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar","file:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar","file:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/zipfs.jar","file:/usr/local/Cellar/subversion/1.8.10_1/lib/libsvnjavahl-1.0.dylib","file:/System/Library/Java/Extensions/AppleScriptEngine.jar","file:/System/Library/Java/Extensions/dns_sd.jar","file:/System/Library/Java/Extensions/j3daudio.jar","file:/System/Library/Java/Extensions/j3dcore.jar","file:/System/Library/Java/Extensions/j3dutils.jar","file:/System/Library/Java/Extensions/jai_codec.jar","file:/System/Library/Java/Extensions/jai_core.jar","file:/System/Library/Java/Extensions/libAppleScriptEngine.jnilib","file:/System/Library/Java/Extensions/libJ3D.jnilib","file:/System/Library/Java/Extensions/libJ3DAudio.jnilib","file:/System/Library/Java/Extensions/libJ3DUtils.jnilib","file:/System/Library/Java/Extensions/libmlib_jai.jnilib","file:/System/Library/Java/Extensions/mlibwrapper_jai.jar","file:/System/Library/Java/Extensions/MRJToolkit.jar","file:/System/Library/Java/Extensions/vecmath.jar","file:/usr/lib/java/libjdns_sd.jnilib"],"class":"sun.misc.Launcher$ExtClassLoader","parent":null}},"resourceLoader":{"class":"groovy.lang.GroovyClassLoader$1"}}},"beanDefinitionCount":78,"beanDefinitionNames":["org.springframework.context.annotation.internalConfigurationAnnotationProcessor","org.springframework.context.annotation.internalAutowiredAnnotationProcessor","org.springframework.context.annotation.internalRequiredAnnotationProcessor","org.springframework.context.annotation.internalCommonAnnotationProcessor","org.springframework.context.annotation.internalPersistenceAnnotationProcessor","errorsXmlMarshallerRegisterer","grailsApplicationPostProcessor","defaultDateConverter","defaultGrailsintConverter","mimeTypes","grailsLinkGenerator","jsonDataBindingSourceCreator","defaultCurrencyConverter","defaultGrailsBigIntegerConverter","defaultGrailsshortConverter","grailsPlaceholderConfigurer","groovyPageUnitTestResourceLoader","defaultGrailsdoubleConverter","codecLookup","grailsUrlConverter","instanceConvertersControllersApi","groovyPageLocator","groovyPagesTemplateRenderer","jspTagLibraryResolver","timeZoneConverter","grailsUrlMappingsHolder","transactionManager","localeResolver","instanceControllersRestApi","grailsDatastore","proxyHandler","defaultGrailsjava.lang.DoubleConverter","convertersConfigurationInitializer","halJsonDataBindingSourceCreator","messageSource","grailsWebDataBinder","groovyPagesTemplateEngine","instanceControllersApi","jsonErrorsMarshaller","xmlDataBindingSourceCreator","instanceControllerTagLibraryApi","multipartResolver","mimeTypeResolver","defaultGrailsjava.lang.LongConverter","grailsMimeUtility","org.grails.beans.ConstraintsEvaluator","defaultGrailsjava.lang.IntegerConverter","defaultGrailsBigDecimalConverter","gspTagLibraryLookup","dataBindingSourceRegistry","defaultGrailsjava.lang.ShortConverter","mapBasedSmartPropertyOverrideConfigurer","errorsJsonMarshallerRegisterer","responseMimeTypesApi","defaultGrailslongConverter","filteringCodecsByContentTypeSettings","rendererRegistry","requestMimeTypesApi","halXmlDataBindingSourceCreator","defaultGrailsjava.lang.FloatConverter","xmlErrorsMarshaller","defaultGrailsfloatConverter","grailsDomainClassCleaner","org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor","org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor","com.quickpm.PMController","com.quickpm.User","com.quickpm.UserValidator","com.quickpm.RoleValidator","com.quickpm.Role","com.quickpm.ProjectValidator","com.quickpm.Project","com.quickpm.TaskValidator","com.quickpm.Task","com.quickpm.TaskGroupValidator","com.quickpm.TaskGroup","com.quickpm.Milestone","com.quickpm.MilestoneValidator"],"beanExpressionResolver":{"class":"org.springframework.context.expression.StandardBeanExpressionResolver"},"beanPostProcessorCount":11,"beanPostProcessors":[{"class":"org.springframework.context.support.ApplicationContextAwareProcessor"},{"class":"org.springframework.web.context.support.ServletContextAwareProcessor"},{"class":"org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker"},{"class":"org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor"
 	at grails.converters.JSON.parse(JSON.java:269)
 	... 1 more
+2014-12-22 07:06:50,692 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: No enum constant com.quickpm.Status.Planned
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at com.quickpm.ProjectService.$tt__updateProject(ProjectService.groovy:87)
+	at com.quickpm.ProjectService.updateProject_closure3(ProjectService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:175)
+2014-12-22 07:06:50,694 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: No enum constant com.quickpm.Status.Planned
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at com.quickpm.ProjectService.$tt__updateProject(ProjectService.groovy:87)
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:175)
+2014-12-22 07:06:50,695 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: No enum constant com.quickpm.Status.Planned
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at com.quickpm.ProjectService.$tt__updateProject(ProjectService.groovy:87)
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:175)
+2014-12-22 07:06:50,695 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: No enum constant com.quickpm.Status.Planned
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at com.quickpm.ProjectService.$tt__updateProject(ProjectService.groovy:87)
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:175)
+2014-12-22 07:06:50,698 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: No enum constant com.quickpm.Status.Planned
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at com.quickpm.ProjectService.$tt__updateProject(ProjectService.groovy:87)
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:175)
+2014-12-22 07:06:50,698 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: No enum constant com.quickpm.Status.Planned
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at com.quickpm.ProjectService.$tt__updateProject(ProjectService.groovy:87)
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:175)
+2014-12-22 07:08:15,144 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The project has been created with '${pmUser.firstName} ${pmUser.lastName}' as the Project Manager"
+|     |           |                                        |      |            |      |
+|     |           |                                        |      PM           |      User
+|     |           |                                        |                   com.quickpm.User : 1
+|     |           |                                        com.quickpm.User : 1
+|     |           false
+|     |           41 differences (37% similarity)
+|     |           The project has been (upd)ated(.-------------------------------------)
+|     |           The project has been (cre)ated( with 'PM User' as the Project Manager)
+|     The project has been updated.
+[code:Success, message:The project has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:179)
+2014-12-22 07:08:15,149 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The project has been created with '${pmUser.firstName} ${pmUser.lastName}' as the Project Manager"
+|     |           |                                        |      |            |      |
+|     |           |                                        |      PM           |      User
+|     |           |                                        |                   com.quickpm.User : 1
+|     |           |                                        com.quickpm.User : 1
+|     |           false
+|     |           41 differences (37% similarity)
+|     |           The project has been (upd)ated(.-------------------------------------)
+|     |           The project has been (cre)ated( with 'PM User' as the Project Manager)
+|     The project has been updated.
+[code:Success, message:The project has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:179)
+2014-12-22 07:08:15,151 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The project has been created with '${pmUser.firstName} ${pmUser.lastName}' as the Project Manager"
+|     |           |                                        |      |            |      |
+|     |           |                                        |      PM           |      User
+|     |           |                                        |                   com.quickpm.User : 1
+|     |           |                                        com.quickpm.User : 1
+|     |           false
+|     |           41 differences (37% similarity)
+|     |           The project has been (upd)ated(.-------------------------------------)
+|     |           The project has been (cre)ated( with 'PM User' as the Project Manager)
+|     The project has been updated.
+[code:Success, message:The project has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:179)
+2014-12-22 07:08:15,151 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The project has been created with '${pmUser.firstName} ${pmUser.lastName}' as the Project Manager"
+|     |           |                                        |      |            |      |
+|     |           |                                        |      PM           |      User
+|     |           |                                        |                   com.quickpm.User : 1
+|     |           |                                        com.quickpm.User : 1
+|     |           false
+|     |           41 differences (37% similarity)
+|     |           The project has been (upd)ated(.-------------------------------------)
+|     |           The project has been (cre)ated( with 'PM User' as the Project Manager)
+|     The project has been updated.
+[code:Success, message:The project has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:179)
+2014-12-22 07:08:15,155 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The project has been created with '${pmUser.firstName} ${pmUser.lastName}' as the Project Manager"
+|     |           |                                        |      |            |      |
+|     |           |                                        |      PM           |      User
+|     |           |                                        |                   com.quickpm.User : 1
+|     |           |                                        com.quickpm.User : 1
+|     |           false
+|     |           41 differences (37% similarity)
+|     |           The project has been (upd)ated(.-------------------------------------)
+|     |           The project has been (cre)ated( with 'PM User' as the Project Manager)
+|     The project has been updated.
+[code:Success, message:The project has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:179)
+2014-12-22 07:08:15,155 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The project has been created with '${pmUser.firstName} ${pmUser.lastName}' as the Project Manager"
+|     |           |                                        |      |            |      |
+|     |           |                                        |      PM           |      User
+|     |           |                                        |                   com.quickpm.User : 1
+|     |           |                                        com.quickpm.User : 1
+|     |           false
+|     |           41 differences (37% similarity)
+|     |           The project has been (upd)ated(.-------------------------------------)
+|     |           The project has been (cre)ated( with 'PM User' as the Project Manager)
+|     The project has been updated.
+[code:Success, message:The project has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject(ProjectServiceSpec.groovy:179)
+2014-12-22 07:12:11,068 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Project' on field 'projectManager': rejected value [null]; codes [com.quickpm.Project.projectManager.nullable.error.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.error.projectManager,com.quickpm.Project.projectManager.nullable.error.com.quickpm.User,com.quickpm.Project.projectManager.nullable.error,project.projectManager.nullable.error.com.quickpm.Project.projectManager,project.projectManager.nullable.error.projectManager,project.projectManager.nullable.error.com.quickpm.User,project.projectManager.nullable.error,com.quickpm.Project.projectManager.nullable.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.projectManager,com.quickpm.Project.projectManager.nullable.com.quickpm.User,com.quickpm.Project.projectManager.nullable,project.projectManager.nullable.com.quickpm.Project.projectManager,project.projectManager.nullable.projectManager,project.projectManager.nullable.com.quickpm.User,project.projectManager.nullable,nullable.com.quickpm.Project.projectManager,nullable.projectManager,nullable.com.quickpm.User,nullable]; arguments [projectManager,class com.quickpm.Project]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrConstructorNewInstance(ReflectiveInterceptor.java:1002)
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:200)
+2014-12-22 07:12:11,070 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Project' on field 'projectManager': rejected value [null]; codes [com.quickpm.Project.projectManager.nullable.error.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.error.projectManager,com.quickpm.Project.projectManager.nullable.error.com.quickpm.User,com.quickpm.Project.projectManager.nullable.error,project.projectManager.nullable.error.com.quickpm.Project.projectManager,project.projectManager.nullable.error.projectManager,project.projectManager.nullable.error.com.quickpm.User,project.projectManager.nullable.error,com.quickpm.Project.projectManager.nullable.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.projectManager,com.quickpm.Project.projectManager.nullable.com.quickpm.User,com.quickpm.Project.projectManager.nullable,project.projectManager.nullable.com.quickpm.Project.projectManager,project.projectManager.nullable.projectManager,project.projectManager.nullable.com.quickpm.User,project.projectManager.nullable,nullable.com.quickpm.Project.projectManager,nullable.projectManager,nullable.com.quickpm.User,nullable]; arguments [projectManager,class com.quickpm.Project]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:200)
+2014-12-22 07:12:11,071 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Project' on field 'projectManager': rejected value [null]; codes [com.quickpm.Project.projectManager.nullable.error.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.error.projectManager,com.quickpm.Project.projectManager.nullable.error.com.quickpm.User,com.quickpm.Project.projectManager.nullable.error,project.projectManager.nullable.error.com.quickpm.Project.projectManager,project.projectManager.nullable.error.projectManager,project.projectManager.nullable.error.com.quickpm.User,project.projectManager.nullable.error,com.quickpm.Project.projectManager.nullable.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.projectManager,com.quickpm.Project.projectManager.nullable.com.quickpm.User,com.quickpm.Project.projectManager.nullable,project.projectManager.nullable.com.quickpm.Project.projectManager,project.projectManager.nullable.projectManager,project.projectManager.nullable.com.quickpm.User,project.projectManager.nullable,nullable.com.quickpm.Project.projectManager,nullable.projectManager,nullable.com.quickpm.User,nullable]; arguments [projectManager,class com.quickpm.Project]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:200)
+2014-12-22 07:12:11,072 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Project' on field 'projectManager': rejected value [null]; codes [com.quickpm.Project.projectManager.nullable.error.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.error.projectManager,com.quickpm.Project.projectManager.nullable.error.com.quickpm.User,com.quickpm.Project.projectManager.nullable.error,project.projectManager.nullable.error.com.quickpm.Project.projectManager,project.projectManager.nullable.error.projectManager,project.projectManager.nullable.error.com.quickpm.User,project.projectManager.nullable.error,com.quickpm.Project.projectManager.nullable.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.projectManager,com.quickpm.Project.projectManager.nullable.com.quickpm.User,com.quickpm.Project.projectManager.nullable,project.projectManager.nullable.com.quickpm.Project.projectManager,project.projectManager.nullable.projectManager,project.projectManager.nullable.com.quickpm.User,project.projectManager.nullable,nullable.com.quickpm.Project.projectManager,nullable.projectManager,nullable.com.quickpm.User,nullable]; arguments [projectManager,class com.quickpm.Project]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:200)
+2014-12-22 07:12:11,076 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Project' on field 'projectManager': rejected value [null]; codes [com.quickpm.Project.projectManager.nullable.error.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.error.projectManager,com.quickpm.Project.projectManager.nullable.error.com.quickpm.User,com.quickpm.Project.projectManager.nullable.error,project.projectManager.nullable.error.com.quickpm.Project.projectManager,project.projectManager.nullable.error.projectManager,project.projectManager.nullable.error.com.quickpm.User,project.projectManager.nullable.error,com.quickpm.Project.projectManager.nullable.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.projectManager,com.quickpm.Project.projectManager.nullable.com.quickpm.User,com.quickpm.Project.projectManager.nullable,project.projectManager.nullable.com.quickpm.Project.projectManager,project.projectManager.nullable.projectManager,project.projectManager.nullable.com.quickpm.User,project.projectManager.nullable,nullable.com.quickpm.Project.projectManager,nullable.projectManager,nullable.com.quickpm.User,nullable]; arguments [projectManager,class com.quickpm.Project]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:200)
+2014-12-22 07:12:11,076 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Project' on field 'projectManager': rejected value [null]; codes [com.quickpm.Project.projectManager.nullable.error.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.error.projectManager,com.quickpm.Project.projectManager.nullable.error.com.quickpm.User,com.quickpm.Project.projectManager.nullable.error,project.projectManager.nullable.error.com.quickpm.Project.projectManager,project.projectManager.nullable.error.projectManager,project.projectManager.nullable.error.com.quickpm.User,project.projectManager.nullable.error,com.quickpm.Project.projectManager.nullable.com.quickpm.Project.projectManager,com.quickpm.Project.projectManager.nullable.projectManager,com.quickpm.Project.projectManager.nullable.com.quickpm.User,com.quickpm.Project.projectManager.nullable,project.projectManager.nullable.com.quickpm.Project.projectManager,project.projectManager.nullable.projectManager,project.projectManager.nullable.com.quickpm.User,project.projectManager.nullable,nullable.com.quickpm.Project.projectManager,nullable.projectManager,nullable.com.quickpm.User,nullable]; arguments [projectManager,class com.quickpm.Project]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:200)
+2014-12-22 07:14:26,702 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "Project with id - '${params.projectID}' does not exist."
+|     |           |                        |      |
+|     |           |                        |      1
+|     |           |                        [projectID:1, projectManager:1]
+|     |           false
+|     |           25 differences (43% similarity)
+|     |           (Us--)e(r-) with id - '1' (i--)s not (a Projec)t( Manager).
+|     |           (Proj)e(ct) with id - '1' (doe)s not (exis----)t(--------).
+|     User with id - '1' is not a Project Manager.
+[code:Failure, message:User with id - '1' is not a Project Manager.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:221)
+2014-12-22 07:14:26,707 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "Project with id - '${params.projectID}' does not exist."
+|     |           |                        |      |
+|     |           |                        |      1
+|     |           |                        [projectID:1, projectManager:1]
+|     |           false
+|     |           25 differences (43% similarity)
+|     |           (Us--)e(r-) with id - '1' (i--)s not (a Projec)t( Manager).
+|     |           (Proj)e(ct) with id - '1' (doe)s not (exis----)t(--------).
+|     User with id - '1' is not a Project Manager.
+[code:Failure, message:User with id - '1' is not a Project Manager.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:221)
+2014-12-22 07:14:26,709 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "Project with id - '${params.projectID}' does not exist."
+|     |           |                        |      |
+|     |           |                        |      1
+|     |           |                        [projectID:1, projectManager:1]
+|     |           false
+|     |           25 differences (43% similarity)
+|     |           (Us--)e(r-) with id - '1' (i--)s not (a Projec)t( Manager).
+|     |           (Proj)e(ct) with id - '1' (doe)s not (exis----)t(--------).
+|     User with id - '1' is not a Project Manager.
+[code:Failure, message:User with id - '1' is not a Project Manager.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:221)
+2014-12-22 07:14:26,709 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "Project with id - '${params.projectID}' does not exist."
+|     |           |                        |      |
+|     |           |                        |      1
+|     |           |                        [projectID:1, projectManager:1]
+|     |           false
+|     |           25 differences (43% similarity)
+|     |           (Us--)e(r-) with id - '1' (i--)s not (a Projec)t( Manager).
+|     |           (Proj)e(ct) with id - '1' (doe)s not (exis----)t(--------).
+|     User with id - '1' is not a Project Manager.
+[code:Failure, message:User with id - '1' is not a Project Manager.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:221)
+2014-12-22 07:14:26,713 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "Project with id - '${params.projectID}' does not exist."
+|     |           |                        |      |
+|     |           |                        |      1
+|     |           |                        [projectID:1, projectManager:1]
+|     |           false
+|     |           25 differences (43% similarity)
+|     |           (Us--)e(r-) with id - '1' (i--)s not (a Projec)t( Manager).
+|     |           (Proj)e(ct) with id - '1' (doe)s not (exis----)t(--------).
+|     User with id - '1' is not a Project Manager.
+[code:Failure, message:User with id - '1' is not a Project Manager.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:221)
+2014-12-22 07:14:26,713 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "Project with id - '${params.projectID}' does not exist."
+|     |           |                        |      |
+|     |           |                        |      1
+|     |           |                        [projectID:1, projectManager:1]
+|     |           false
+|     |           25 differences (43% similarity)
+|     |           (Us--)e(r-) with id - '1' (i--)s not (a Projec)t( Manager).
+|     |           (Proj)e(ct) with id - '1' (doe)s not (exis----)t(--------).
+|     User with id - '1' is not a Project Manager.
+[code:Failure, message:User with id - '1' is not a Project Manager.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid user(ProjectServiceSpec.groovy:221)
+2014-12-22 07:20:37,718 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:The end date - 12/10/2014 should fall after start date - 02/10/2015.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid dates(ProjectServiceSpec.groovy:287)
+2014-12-22 07:20:37,722 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:The end date - 12/10/2014 should fall after start date - 02/10/2015.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid dates(ProjectServiceSpec.groovy:287)
+2014-12-22 07:20:37,723 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:The end date - 12/10/2014 should fall after start date - 02/10/2015.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid dates(ProjectServiceSpec.groovy:287)
+2014-12-22 07:20:37,723 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:The end date - 12/10/2014 should fall after start date - 02/10/2015.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid dates(ProjectServiceSpec.groovy:287)
+2014-12-22 07:20:37,726 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:The end date - 12/10/2014 should fall after start date - 02/10/2015.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid dates(ProjectServiceSpec.groovy:287)
+2014-12-22 07:20:37,726 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:The end date - 12/10/2014 should fall after start date - 02/10/2015.]
+
+	at com.quickpm.ProjectServiceSpec.test updateProject with invalid dates(ProjectServiceSpec.groovy:287)
+2014-12-22 07:28:34,778 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - '[projectID:1]' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteProject(ProjectServiceSpec.groovy:326)
+2014-12-22 07:28:34,782 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - '[projectID:1]' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteProject(ProjectServiceSpec.groovy:326)
+2014-12-22 07:28:34,783 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - '[projectID:1]' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteProject(ProjectServiceSpec.groovy:326)
+2014-12-22 07:28:34,783 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - '[projectID:1]' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteProject(ProjectServiceSpec.groovy:326)
+2014-12-22 07:28:34,786 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - '[projectID:1]' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteProject(ProjectServiceSpec.groovy:326)
+2014-12-22 07:28:34,787 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - '[projectID:1]' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteProject(ProjectServiceSpec.groovy:326)
+2014-12-22 07:43:55,440 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The task group has been created."
+|     |           |
+|     |           false
+|     |           32 differences (20% similarity)
+|     |           (Proj)e(ct) (wi)t(h id) (- 'n)u(ll') (doe)s (not-) (exis)t(--).
+|     |           (Th--)e(--) (--)t(ask-) (gro-)u(p--) (ha-)s (been) (crea)t(ed).
+|     Project with id - 'null' does not exist.
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:378)
+2014-12-22 07:43:55,444 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The task group has been created."
+|     |           |
+|     |           false
+|     |           32 differences (20% similarity)
+|     |           (Proj)e(ct) (wi)t(h id) (- 'n)u(ll') (doe)s (not-) (exis)t(--).
+|     |           (Th--)e(--) (--)t(ask-) (gro-)u(p--) (ha-)s (been) (crea)t(ed).
+|     Project with id - 'null' does not exist.
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:378)
+2014-12-22 07:43:55,445 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The task group has been created."
+|     |           |
+|     |           false
+|     |           32 differences (20% similarity)
+|     |           (Proj)e(ct) (wi)t(h id) (- 'n)u(ll') (doe)s (not-) (exis)t(--).
+|     |           (Th--)e(--) (--)t(ask-) (gro-)u(p--) (ha-)s (been) (crea)t(ed).
+|     Project with id - 'null' does not exist.
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:378)
+2014-12-22 07:43:55,445 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The task group has been created."
+|     |           |
+|     |           false
+|     |           32 differences (20% similarity)
+|     |           (Proj)e(ct) (wi)t(h id) (- 'n)u(ll') (doe)s (not-) (exis)t(--).
+|     |           (Th--)e(--) (--)t(ask-) (gro-)u(p--) (ha-)s (been) (crea)t(ed).
+|     Project with id - 'null' does not exist.
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:378)
+2014-12-22 07:43:55,450 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The task group has been created."
+|     |           |
+|     |           false
+|     |           32 differences (20% similarity)
+|     |           (Proj)e(ct) (wi)t(h id) (- 'n)u(ll') (doe)s (not-) (exis)t(--).
+|     |           (Th--)e(--) (--)t(ask-) (gro-)u(p--) (ha-)s (been) (crea)t(ed).
+|     Project with id - 'null' does not exist.
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:378)
+2014-12-22 07:43:55,450 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The task group has been created."
+|     |           |
+|     |           false
+|     |           32 differences (20% similarity)
+|     |           (Proj)e(ct) (wi)t(h id) (- 'n)u(ll') (doe)s (not-) (exis)t(--).
+|     |           (Th--)e(--) (--)t(ask-) (gro-)u(p--) (ha-)s (been) (crea)t(ed).
+|     Project with id - 'null' does not exist.
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:378)
+2014-12-22 07:46:40,774 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Failure'
+|     |        |
+|     Success  false
+|              7 differences (0% similarity)
+|              (Success)
+|              (Failure)
+[code:Success, message:The task group has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:377)
+2014-12-22 07:46:40,777 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Failure'
+|     |        |
+|     Success  false
+|              7 differences (0% similarity)
+|              (Success)
+|              (Failure)
+[code:Success, message:The task group has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:377)
+2014-12-22 07:46:40,778 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Failure'
+|     |        |
+|     Success  false
+|              7 differences (0% similarity)
+|              (Success)
+|              (Failure)
+[code:Success, message:The task group has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:377)
+2014-12-22 07:46:40,778 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Failure'
+|     |        |
+|     Success  false
+|              7 differences (0% similarity)
+|              (Success)
+|              (Failure)
+[code:Success, message:The task group has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:377)
+2014-12-22 07:46:40,781 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Failure'
+|     |        |
+|     Success  false
+|              7 differences (0% similarity)
+|              (Success)
+|              (Failure)
+[code:Success, message:The task group has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:377)
+2014-12-22 07:46:40,781 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Failure'
+|     |        |
+|     Success  false
+|              7 differences (0% similarity)
+|              (Success)
+|              (Failure)
+[code:Success, message:The task group has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test addGroup(ProjectServiceSpec.groovy:377)
+2014-12-22 07:59:58,861 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:568)
+2014-12-22 07:59:58,865 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:568)
+2014-12-22 07:59:58,866 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:568)
+2014-12-22 07:59:58,866 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:568)
+2014-12-22 07:59:58,869 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:568)
+2014-12-22 07:59:58,869 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:568)
+2014-12-22 08:00:55,828 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' which was set as the parent group, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:569)
+2014-12-22 08:00:55,832 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' which was set as the parent group, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:569)
+2014-12-22 08:00:55,833 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' which was set as the parent group, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:569)
+2014-12-22 08:00:55,834 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' which was set as the parent group, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:569)
+2014-12-22 08:00:55,837 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' which was set as the parent group, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:569)
+2014-12-22 08:00:55,837 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Task Group with id - 'null' which was set as the parent group, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup(ProjectServiceSpec.groovy:569)
+2014-12-22 08:13:24,868 [http-bio-8080-exec-11] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: id for class: com.quickpm.PMController
+	at org.codehaus.groovy.grails.plugins.web.api.ControllerTagLibraryApi.propertyMissing(ControllerTagLibraryApi.java:121)
+	at com.quickpm.PMController$$EOzB79ge.propertyMissing(PMController.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReloadedTypeInvoker$2.invoke(ReloadedTypeInvoker.java:122)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaClassImpl.invokeMissingProperty(MetaClassImpl.java:874)
+	at groovy.lang.MetaClassImpl.getProperty(MetaClassImpl.java:1853)
+	at groovy.lang.ExpandoMetaClass.getProperty(ExpandoMetaClass.java:1140)
+	at groovy.lang.MetaClassImpl.getProperty(MetaClassImpl.java:3690)
+	at groovy.lang.ExpandoMetaClass.getProperty(ExpandoMetaClass.java:1152)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassGetPropertySite.getProperty(PogoMetaClassGetPropertySite.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:231)
+	at com.quickpm.PMController$$EOzB79ge.gantt(PMController.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReloadedTypeInvoker$2.invoke(ReloadedTypeInvoker.java:122)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.grails.web.servlet.mvc.MixedGrailsControllerHelper.invoke(MixedGrailsControllerHelper.java:154)
+	at org.codehaus.groovy.grails.web.servlet.mvc.AbstractGrailsControllerHelper.handleAction(AbstractGrailsControllerHelper.java:375)
+	at org.codehaus.groovy.grails.web.servlet.mvc.AbstractGrailsControllerHelper.executeAction(AbstractGrailsControllerHelper.java:252)
+	at org.codehaus.groovy.grails.web.servlet.mvc.AbstractGrailsControllerHelper.handleURI(AbstractGrailsControllerHelper.java:205)
+	at org.codehaus.groovy.grails.web.servlet.mvc.AbstractGrailsControllerHelper.handleURI(AbstractGrailsControllerHelper.java:126)
+	at org.codehaus.groovy.grails.web.servlet.mvc.SimpleGrailsController.handleRequest(SimpleGrailsController.java:72)
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:50)
+	at org.codehaus.groovy.grails.web.servlet.GrailsDispatcherServlet.doDispatch(GrailsDispatcherServlet.java:347)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:198)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:748)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:486)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:338)
+	at org.codehaus.groovy.grails.web.mapping.UrlMappingUtils.forwardRequestForUrlMappingInfo(UrlMappingUtils.java:178)
+	at org.codehaus.groovy.grails.web.mapping.UrlMappingUtils.forwardRequestForUrlMappingInfo(UrlMappingUtils.java:144)
+	at org.codehaus.groovy.grails.web.mapping.UrlMappingUtils.forwardRequestForUrlMappingInfo(UrlMappingUtils.java:135)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.doFilterInternal(UrlMappingsFilter.java:216)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:67)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1070)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2014-12-22 08:13:24,870 [http-bio-8080-exec-11] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: id for class: com.quickpm.PMController
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:198)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2014-12-22 08:13:24,879 [http-bio-8080-exec-11] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: id for class: com.quickpm.PMController
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:198)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2014-12-22 08:13:24,879 [http-bio-8080-exec-11] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: id for class: com.quickpm.PMController
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:198)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2014-12-22 08:30:21,497 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at org.codehaus.groovy.grails.plugins.web.api.ControllerTagLibraryApi.methodMissing(ControllerTagLibraryApi.java:97)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at com.quickpm.PMControllerSpec.test gantt(PMControllerSpec.groovy:146)
+2014-12-22 08:30:21,504 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at com.quickpm.PMControllerSpec.test gantt(PMControllerSpec.groovy:146)
+2014-12-22 08:30:21,515 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at com.quickpm.PMControllerSpec.test gantt(PMControllerSpec.groovy:146)
+2014-12-22 08:30:21,520 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at com.quickpm.PMControllerSpec.test gantt(PMControllerSpec.groovy:146)
+2014-12-22 08:30:21,539 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at com.quickpm.PMControllerSpec.test gantt(PMControllerSpec.groovy:146)
+2014-12-22 08:30:21,540 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at com.quickpm.PMControllerSpec.test gantt(PMControllerSpec.groovy:146)
+2014-12-22 08:30:21,680 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at org.codehaus.groovy.grails.plugins.web.api.ControllerTagLibraryApi.methodMissing(ControllerTagLibraryApi.java:97)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at com.quickpm.PMControllerSpec.test gantt a user is logged in who is not the PM of this project(PMControllerSpec.groovy:238)
+2014-12-22 08:30:21,681 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at com.quickpm.PMControllerSpec.test gantt a user is logged in who is not the PM of this project(PMControllerSpec.groovy:238)
+2014-12-22 08:30:21,682 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at com.quickpm.PMControllerSpec.test gantt a user is logged in who is not the PM of this project(PMControllerSpec.groovy:238)
+2014-12-22 08:30:21,683 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at com.quickpm.PMControllerSpec.test gantt a user is logged in who is not the PM of this project(PMControllerSpec.groovy:238)
+2014-12-22 08:30:21,685 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at com.quickpm.PMControllerSpec.test gantt a user is logged in who is not the PM of this project(PMControllerSpec.groovy:238)
+2014-12-22 08:30:21,686 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.gantt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: gantt(), gantt(java.lang.Integer), wait(long), wait(), any(), wait(long, int)
+	at com.quickpm.PMControllerSpec.test gantt a user is logged in who is not the PM of this project(PMControllerSpec.groovy:238)
+2014-12-22 08:30:22,055 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at org.codehaus.groovy.grails.plugins.web.api.ControllerTagLibraryApi.methodMissing(ControllerTagLibraryApi.java:97)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:30:22,056 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:30:22,058 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:30:22,058 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:30:22,061 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:30:22,062 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:30:22,188 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at org.codehaus.groovy.grails.plugins.web.api.ControllerTagLibraryApi.methodMissing(ControllerTagLibraryApi.java:97)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:30:22,189 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:30:22,190 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:30:22,190 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:30:22,192 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:30:22,193 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:30:22,427 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at org.codehaus.groovy.grails.plugins.web.api.ControllerTagLibraryApi.methodMissing(ControllerTagLibraryApi.java:97)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:30:22,427 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:30:22,428 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:30:22,429 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:30:22,430 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:30:22,431 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:30:22,660 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at org.codehaus.groovy.grails.plugins.web.api.ControllerTagLibraryApi.methodMissing(ControllerTagLibraryApi.java:97)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:30:22,661 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:30:22,663 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:30:22,664 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:30:22,666 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:30:22,666 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:31:53,539 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at org.codehaus.groovy.grails.plugins.web.api.ControllerTagLibraryApi.methodMissing(ControllerTagLibraryApi.java:97)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:31:53,542 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:31:53,545 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:31:53,546 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:31:53,554 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:31:53,555 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getProject() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getProject(), getProject(java.lang.Integer), addProject(), getProperty(java.lang.String), updateProject()
+	at com.quickpm.PMControllerSpec.test getProject(PMControllerSpec.groovy:329)
+2014-12-22 08:31:53,679 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at org.codehaus.groovy.grails.plugins.web.api.ControllerTagLibraryApi.methodMissing(ControllerTagLibraryApi.java:97)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:31:53,680 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:31:53,683 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:31:53,684 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:31:53,688 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:31:53,689 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getGroup() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getGroup(), getGroup(java.lang.Integer), addGroup(), deleteGroup(), getErrors(), updateGroup()
+	at com.quickpm.PMControllerSpec.test getGroup(PMControllerSpec.groovy:363)
+2014-12-22 08:31:53,949 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at org.codehaus.groovy.grails.plugins.web.api.ControllerTagLibraryApi.methodMissing(ControllerTagLibraryApi.java:97)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:31:53,949 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:31:53,951 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:31:53,951 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:31:53,953 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:31:53,954 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getTask() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getTask(), getTask(java.lang.Integer), getClass(), addTask(), getFlash(), deleteTask()
+	at com.quickpm.PMControllerSpec.test getTask(PMControllerSpec.groovy:438)
+2014-12-22 08:31:54,182 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at org.codehaus.groovy.grails.plugins.web.api.ControllerTagLibraryApi.methodMissing(ControllerTagLibraryApi.java:97)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:31:54,182 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:31:54,184 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:31:54,184 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:31:54,187 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:31:54,187 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.PMController.getMilestone() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getMilestone(), getMilestone(java.lang.Integer), addMilestone(), addMilestone(java.lang.Object), deleteMilestone(), updateMilestone()
+	at com.quickpm.PMControllerSpec.test getMilestone(PMControllerSpec.groovy:509)
+2014-12-22 08:45:08,066 [FileSystemWatcher: files=#8 cl=groovy.lang.GroovyClassLoader@4e05bedf] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2014-12-22 08:45:08,068 [FileSystemWatcher: files=#8 cl=groovy.lang.GroovyClassLoader@4e05bedf] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2014-12-22 08:59:56,955 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
+|     |           |                    |      |                                         |      |
+|     |           |                    |      2/1/2015                                  |      2/10/2014
+|     |           |                    |                                                [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           |                    [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           false
+|     |           34 differences (62% similarity)
+|     |           The (group) (start )date - 2/1(0)/201(4) should (not be) (be)f(ore )t(h)e( p)r(oject) start date - (1)2/10/2014.
+|     |           The (end--) (------)date - 2/1(-)/201(5) should (fall--) (a-)f(----)t(-)e(--)r(-----) start date - (-)2/10/2014.
+|     The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.
+[code:Failure, message:The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup with invalid dates(ProjectServiceSpec.groovy:782)
+2014-12-22 08:59:56,961 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
+|     |           |                    |      |                                         |      |
+|     |           |                    |      2/1/2015                                  |      2/10/2014
+|     |           |                    |                                                [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           |                    [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           false
+|     |           34 differences (62% similarity)
+|     |           The (group) (start )date - 2/1(0)/201(4) should (not be) (be)f(ore )t(h)e( p)r(oject) start date - (1)2/10/2014.
+|     |           The (end--) (------)date - 2/1(-)/201(5) should (fall--) (a-)f(----)t(-)e(--)r(-----) start date - (-)2/10/2014.
+|     The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.
+[code:Failure, message:The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup with invalid dates(ProjectServiceSpec.groovy:782)
+2014-12-22 08:59:56,962 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
+|     |           |                    |      |                                         |      |
+|     |           |                    |      2/1/2015                                  |      2/10/2014
+|     |           |                    |                                                [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           |                    [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           false
+|     |           34 differences (62% similarity)
+|     |           The (group) (start )date - 2/1(0)/201(4) should (not be) (be)f(ore )t(h)e( p)r(oject) start date - (1)2/10/2014.
+|     |           The (end--) (------)date - 2/1(-)/201(5) should (fall--) (a-)f(----)t(-)e(--)r(-----) start date - (-)2/10/2014.
+|     The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.
+[code:Failure, message:The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup with invalid dates(ProjectServiceSpec.groovy:782)
+2014-12-22 08:59:56,962 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
+|     |           |                    |      |                                         |      |
+|     |           |                    |      2/1/2015                                  |      2/10/2014
+|     |           |                    |                                                [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           |                    [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           false
+|     |           34 differences (62% similarity)
+|     |           The (group) (start )date - 2/1(0)/201(4) should (not be) (be)f(ore )t(h)e( p)r(oject) start date - (1)2/10/2014.
+|     |           The (end--) (------)date - 2/1(-)/201(5) should (fall--) (a-)f(----)t(-)e(--)r(-----) start date - (-)2/10/2014.
+|     The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.
+[code:Failure, message:The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup with invalid dates(ProjectServiceSpec.groovy:782)
+2014-12-22 08:59:56,966 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
+|     |           |                    |      |                                         |      |
+|     |           |                    |      2/1/2015                                  |      2/10/2014
+|     |           |                    |                                                [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           |                    [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           false
+|     |           34 differences (62% similarity)
+|     |           The (group) (start )date - 2/1(0)/201(4) should (not be) (be)f(ore )t(h)e( p)r(oject) start date - (1)2/10/2014.
+|     |           The (end--) (------)date - 2/1(-)/201(5) should (fall--) (a-)f(----)t(-)e(--)r(-----) start date - (-)2/10/2014.
+|     The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.
+[code:Failure, message:The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup with invalid dates(ProjectServiceSpec.groovy:782)
+2014-12-22 08:59:56,966 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The end date - ${params.endDate} should fall after start date - ${params.startDate}."
+|     |           |                    |      |                                         |      |
+|     |           |                    |      2/1/2015                                  |      2/10/2014
+|     |           |                    |                                                [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           |                    [groupID:1, groupName:Group of Tasks, startDate:2/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+|     |           false
+|     |           34 differences (62% similarity)
+|     |           The (group) (start )date - 2/1(0)/201(4) should (not be) (be)f(ore )t(h)e( p)r(oject) start date - (1)2/10/2014.
+|     |           The (end--) (------)date - 2/1(-)/201(5) should (fall--) (a-)f(----)t(-)e(--)r(-----) start date - (-)2/10/2014.
+|     The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.
+[code:Failure, message:The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.]
+
+	at com.quickpm.ProjectServiceSpec.test updateGroup with invalid dates(ProjectServiceSpec.groovy:782)

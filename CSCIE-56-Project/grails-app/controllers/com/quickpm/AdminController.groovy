@@ -63,19 +63,19 @@ class AdminController {
 		render result as JSON
 	}
 	
-	def activate(Integer id) {
+	def activate(Long id) {
 		render userService.activate(id) as JSON
 	}
 	
-	def deactivate(Integer id) {
+	def deactivate(Long id) {
 		render userService.deactivate(id) as JSON
 	}
 	
-	def deleteUser(Integer id) {
+	def deleteUser(Long id) {
 		render userService.deleteUser(id) as JSON
 	}
 	
-	def getUser(Integer id) {
+	def getUser(Long id) {
 		render User.findById(id) as JSON
 	}
 	
@@ -91,7 +91,7 @@ class AdminController {
 		render userService.updateUser(params) as JSON
 	}
 	
-	def getProject(Integer id) {
+	def getProject(Long id) {
 		render Project.findById(id) as JSON
 	}
 	
@@ -99,7 +99,7 @@ class AdminController {
 		render projectService.updateProject(params) as JSON
 	}
 	
-	def deleteProject(Integer id) {
+	def deleteProject(Long id) {
 		render projectService.deleteProject(id) as JSON
 	}
 }

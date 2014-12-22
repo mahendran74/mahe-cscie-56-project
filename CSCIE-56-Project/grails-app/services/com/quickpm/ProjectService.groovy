@@ -98,7 +98,7 @@ class ProjectService {
 		}
 	}
 	
-	def deleteProject(id) {
+	def deleteProject(Long id) {
 		def result = [:]
 		def project = Project.findById(id)
 		if (project) {
@@ -257,7 +257,7 @@ class ProjectService {
 		return result
 	}
 	
-	def deleteTask(id) {
+	def deleteTask(Long id) {
 		def result = [:]
 		def task = Task.findById(id)
 		if (task) {
@@ -294,7 +294,7 @@ class ProjectService {
 			result['message'] = "Project with id - '${params.projectID}' does not exist."
 			return result
 		}
-		Date milestoneDate = new Date().parse("MM/dd/yyyy", params.milestoneDate)
+		Date milestoneDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.milestoneDate)
 		if (milestoneDate.before(project.startDate)) {
 			result['code'] = 'Failure'
 			result['message'] = "The milestone date - ${params.milestoneDate} should not be before the project start date - ${project.startDate.format('MM/dd/yyyy')}."
@@ -346,7 +346,7 @@ class ProjectService {
 			result['message'] = "Project with id - '${params.projectID}' does not exist."
 			return result
 		}
-		Date milestoneDate = new Date().parse("MM/dd/yyyy", params.milestoneDate)
+		Date milestoneDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.milestoneDate)
 		if (milestoneDate.before(project.startDate)) {
 			result['code'] = 'Failure'
 			result['message'] = "The milestone date - ${params.milestoneDate} should not be before the project start date - ${project.startDate.format('MM/dd/yyyy')}."
@@ -368,7 +368,7 @@ class ProjectService {
 		return result
 	}
 	
-	def deleteMilestone(id) {
+	def deleteMilestone(Long id) {
 		def result = [:]
 		def milestone = Milestone.findById(id)
 		if (milestone) {
@@ -436,16 +436,20 @@ class ProjectService {
 			result['message'] = "Task Group with id - '${params.groupID}' does not exist."
 			return result
 		}
-		def parentGroup = TaskGroup.findById(params.parentGroup)
-		if (!parentGroup) {
-			result['code'] = 'Failure'
-			result['message'] = "Task Group with id - '${params.parentGroup}' which was set as the parent group, does not exist."
-			return result
-		}
-		if (group.equals(parentGroup)) {
-			result['code'] = 'Failure'
-			result['message'] = "A task group cannot be its own parent."
-			return result
+		if (params.parentGroup) {
+			def parentGroup = TaskGroup.findById(params.parentGroup)
+			if (!parentGroup) {
+				result['code'] = 'Failure'
+				result['message'] = "Task Group with id - '${params.parentGroup}' which was set as the parent group, does not exist."
+				return result
+			}
+
+			if (group.equals(parentGroup)) {
+				result['code'] = 'Failure'
+				result['message'] = "A task group cannot be its own parent."
+				return result
+			}
+			group.parentGroup = parentGroup
 		}
 		def project = Project.findById(params.projectID)
 		if (!project) {
@@ -453,6 +457,7 @@ class ProjectService {
 			result['message'] = "Project with id - '${params.projectID}' does not exist."
 			return result
 		}
+		group.project = project
 		Date startDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.startDate)
 		Date endDate = new SimpleDateFormat("MM/dd/yyyy").parse(params.endDate)
 		if (validateDate(startDate, endDate)) {
@@ -480,7 +485,7 @@ class ProjectService {
 		return result
 	}
 	
-	def deleteGroup(id) {
+	def deleteGroup(Long id) {
 		def result = [:]
 		def group = TaskGroup.findById(id)
 		if (group) { 
