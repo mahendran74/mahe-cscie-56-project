@@ -353,12 +353,10 @@
             </div>
           </div>
           <div class="modal-footer">
-            <input type="hidden" id="id" name="id"> <input
-              type="hidden" id="username" name="username">
-            <button type="reset" class="btn btn-default"
-              data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-success btn-primary"
-              id="addUserButton">Save</button>
+            <input type="hidden" id="id" name="id"> 
+            <input type="hidden" id="username" name="username">
+            <button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success btn-primary" id="addUserButton">Save</button>
           </div>
         </form>
       </div>

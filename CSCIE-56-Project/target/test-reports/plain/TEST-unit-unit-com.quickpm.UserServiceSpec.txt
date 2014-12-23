@@ -1,0 +1,73 @@
+Testsuite: com.quickpm.UserServiceSpec
+Tests run: 22, Failures: 0, Errors: 0, Time elapsed: 4.109 sec
+------------- Standard Output ---------------
+--Output from test checkEmail--
+--Output from test checkEmail invalid email--
+--Output from test signUp--
+--Output from test signUp existing user--
+--Output from test signUp with no role setup--
+--Output from test activate--
+--Output from test activate invalid user--
+--Output from test deactivate--
+--Output from test deactivate invalid user--
+--Output from test changePassword--
+--Output from test changePassword invalid old password--
+--Output from test changePassword invalid user--
+--Output from test resetPassword--
+--Output from test restPassword invalid user--
+--Output from test addUser--
+--Output from test addUser user already exists--
+--Output from test addUser no role setup--
+--Output from test updateUser--
+--Output from test updateUser invalid user--
+--Output from test updateUser invalid role--
+--Output from test deleteUser--
+--Output from test deleteUser invalid user--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from test checkEmail--
+--Output from test checkEmail invalid email--
+--Output from test signUp--
+--Output from test signUp existing user--
+--Output from test signUp with no role setup--
+--Output from test activate--
+--Output from test activate invalid user--
+--Output from test deactivate--
+--Output from test deactivate invalid user--
+--Output from test changePassword--
+--Output from test changePassword invalid old password--
+--Output from test changePassword invalid user--
+--Output from test resetPassword--
+--Output from test restPassword invalid user--
+--Output from test addUser--
+--Output from test addUser user already exists--
+--Output from test addUser no role setup--
+--Output from test updateUser--
+--Output from test updateUser invalid user--
+--Output from test updateUser invalid role--
+--Output from test deleteUser--
+--Output from test deleteUser invalid user--
+------------- ---------------- ---------------
+
+Testcase: test checkEmail took 2.949 sec
+Testcase: test checkEmail invalid email took 0.063 sec
+Testcase: test signUp took 0.106 sec
+Testcase: test signUp existing user took 0.051 sec
+Testcase: test signUp with no role setup took 0.041 sec
+Testcase: test activate took 0.068 sec
+Testcase: test activate invalid user took 0.044 sec
+Testcase: test deactivate took 0.066 sec
+Testcase: test deactivate invalid user took 0.046 sec
+Testcase: test changePassword took 0.077 sec
+Testcase: test changePassword invalid old password took 0.058 sec
+Testcase: test changePassword invalid user took 0.038 sec
+Testcase: test resetPassword took 0.055 sec
+Testcase: test restPassword invalid user took 0.035 sec
+Testcase: test addUser took 0.065 sec
+Testcase: test addUser user already exists took 0.061 sec
+Testcase: test addUser no role setup took 0.043 sec
+Testcase: test updateUser took 0.079 sec
+Testcase: test updateUser invalid user took 0.03 sec
+Testcase: test updateUser invalid role took 0.034 sec
+Testcase: test deleteUser took 0.049 sec
+Testcase: test deleteUser invalid user took 0.02 sec

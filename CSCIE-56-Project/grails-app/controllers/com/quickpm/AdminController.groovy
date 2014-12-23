@@ -80,7 +80,7 @@ class AdminController {
 	}
 	
 	def resetPassword() {
-		render userService.resetPassword(params)
+		render userService.resetPassword(params) as JSON
 	}
 	
 	def addUser() {

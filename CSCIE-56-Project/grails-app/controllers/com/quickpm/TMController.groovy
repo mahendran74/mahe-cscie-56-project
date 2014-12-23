@@ -60,22 +60,24 @@ class TMController {
 		}
 		render retList as JSON
 	}
+	
 	def getTask(Long id) {
 		render Task.findById(id) as JSON
 	}
+	
 	def updateTask()
 	{
-		System.println params
 		render projectService.updateTask(params) as JSON
 	}
 	
 	def changePassword() {
 		render userService.changePassword(params) as JSON
 	}
-//	def defaultExceptionHandler(Exception e){
-//		def result = [:]
-//		result['code'] = 'Failure'
-//		result['message'] = e.message
-//		render result as JSON
-//	}
+	
+	def defaultExceptionHandler(Exception e){
+		def result = [:]
+		result['code'] = 'Failure'
+		result['message'] = e.message
+		render result as JSON
+	}
 }

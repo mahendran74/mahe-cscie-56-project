@@ -24307,3 +24307,2070 @@ result['message'] == "The end date - ${params.endDate} should fall after start d
 [code:Failure, message:The group start date - 2/10/2014 should not be before the project start date - 12/10/2014.]
 
 	at com.quickpm.ProjectServiceSpec.test updateGroup with invalid dates(ProjectServiceSpec.groovy:782)
+2014-12-23 01:07:16,144 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:996)
+2014-12-23 01:07:16,150 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:996)
+2014-12-23 01:07:16,151 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:996)
+2014-12-23 01:07:16,152 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:996)
+2014-12-23 01:07:16,159 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:996)
+2014-12-23 01:07:16,159 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:996)
+2014-12-23 01:08:28,880 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1002)
+2014-12-23 01:08:28,884 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1002)
+2014-12-23 01:08:28,884 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1002)
+2014-12-23 01:08:28,885 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1002)
+2014-12-23 01:08:28,888 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1002)
+2014-12-23 01:08:28,888 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Project with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1002)
+2014-12-23 01:10:02,694 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [com.quickpm.Task] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectService.addTask_closure5(ProjectService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:10:02,696 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [com.quickpm.Task] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:10:02,697 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [com.quickpm.Task] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:10:02,697 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [com.quickpm.Task] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:10:02,700 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [com.quickpm.Task] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:10:02,700 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [com.quickpm.Task] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:11:04,979 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [null]; codes [com.quickpm.Task.status.nullable.error.com.quickpm.Task.status,com.quickpm.Task.status.nullable.error.status,com.quickpm.Task.status.nullable.error.com.quickpm.Status,com.quickpm.Task.status.nullable.error,task.status.nullable.error.com.quickpm.Task.status,task.status.nullable.error.status,task.status.nullable.error.com.quickpm.Status,task.status.nullable.error,com.quickpm.Task.status.nullable.com.quickpm.Task.status,com.quickpm.Task.status.nullable.status,com.quickpm.Task.status.nullable.com.quickpm.Status,com.quickpm.Task.status.nullable,task.status.nullable.com.quickpm.Task.status,task.status.nullable.status,task.status.nullable.com.quickpm.Status,task.status.nullable,nullable.com.quickpm.Task.status,nullable.status,nullable.com.quickpm.Status,nullable]; arguments [status,class com.quickpm.Task]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [Planned]; codes [com.quickpm.Task.status.typeMismatch.error,com.quickpm.Task.status.typeMismatch,task.status.typeMismatch.error,task.status.typeMismatch,typeMismatch.com.quickpm.Task.status,typeMismatch.status,typeMismatch.com.quickpm.Status,typeMismatch]; arguments [status]; default message [No enum constant com.quickpm.Status.Planned]
+
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrConstructorNewInstance(ReflectiveInterceptor.java:1002)
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectService.addTask_closure5(ProjectService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:11:04,981 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [null]; codes [com.quickpm.Task.status.nullable.error.com.quickpm.Task.status,com.quickpm.Task.status.nullable.error.status,com.quickpm.Task.status.nullable.error.com.quickpm.Status,com.quickpm.Task.status.nullable.error,task.status.nullable.error.com.quickpm.Task.status,task.status.nullable.error.status,task.status.nullable.error.com.quickpm.Status,task.status.nullable.error,com.quickpm.Task.status.nullable.com.quickpm.Task.status,com.quickpm.Task.status.nullable.status,com.quickpm.Task.status.nullable.com.quickpm.Status,com.quickpm.Task.status.nullable,task.status.nullable.com.quickpm.Task.status,task.status.nullable.status,task.status.nullable.com.quickpm.Status,task.status.nullable,nullable.com.quickpm.Task.status,nullable.status,nullable.com.quickpm.Status,nullable]; arguments [status,class com.quickpm.Task]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [Planned]; codes [com.quickpm.Task.status.typeMismatch.error,com.quickpm.Task.status.typeMismatch,task.status.typeMismatch.error,task.status.typeMismatch,typeMismatch.com.quickpm.Task.status,typeMismatch.status,typeMismatch.com.quickpm.Status,typeMismatch]; arguments [status]; default message [No enum constant com.quickpm.Status.Planned]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:11:04,983 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [null]; codes [com.quickpm.Task.status.nullable.error.com.quickpm.Task.status,com.quickpm.Task.status.nullable.error.status,com.quickpm.Task.status.nullable.error.com.quickpm.Status,com.quickpm.Task.status.nullable.error,task.status.nullable.error.com.quickpm.Task.status,task.status.nullable.error.status,task.status.nullable.error.com.quickpm.Status,task.status.nullable.error,com.quickpm.Task.status.nullable.com.quickpm.Task.status,com.quickpm.Task.status.nullable.status,com.quickpm.Task.status.nullable.com.quickpm.Status,com.quickpm.Task.status.nullable,task.status.nullable.com.quickpm.Task.status,task.status.nullable.status,task.status.nullable.com.quickpm.Status,task.status.nullable,nullable.com.quickpm.Task.status,nullable.status,nullable.com.quickpm.Status,nullable]; arguments [status,class com.quickpm.Task]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [Planned]; codes [com.quickpm.Task.status.typeMismatch.error,com.quickpm.Task.status.typeMismatch,task.status.typeMismatch.error,task.status.typeMismatch,typeMismatch.com.quickpm.Task.status,typeMismatch.status,typeMismatch.com.quickpm.Status,typeMismatch]; arguments [status]; default message [No enum constant com.quickpm.Status.Planned]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:11:04,983 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [null]; codes [com.quickpm.Task.status.nullable.error.com.quickpm.Task.status,com.quickpm.Task.status.nullable.error.status,com.quickpm.Task.status.nullable.error.com.quickpm.Status,com.quickpm.Task.status.nullable.error,task.status.nullable.error.com.quickpm.Task.status,task.status.nullable.error.status,task.status.nullable.error.com.quickpm.Status,task.status.nullable.error,com.quickpm.Task.status.nullable.com.quickpm.Task.status,com.quickpm.Task.status.nullable.status,com.quickpm.Task.status.nullable.com.quickpm.Status,com.quickpm.Task.status.nullable,task.status.nullable.com.quickpm.Task.status,task.status.nullable.status,task.status.nullable.com.quickpm.Status,task.status.nullable,nullable.com.quickpm.Task.status,nullable.status,nullable.com.quickpm.Status,nullable]; arguments [status,class com.quickpm.Task]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [Planned]; codes [com.quickpm.Task.status.typeMismatch.error,com.quickpm.Task.status.typeMismatch,task.status.typeMismatch.error,task.status.typeMismatch,typeMismatch.com.quickpm.Task.status,typeMismatch.status,typeMismatch.com.quickpm.Status,typeMismatch]; arguments [status]; default message [No enum constant com.quickpm.Status.Planned]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:11:04,988 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [null]; codes [com.quickpm.Task.status.nullable.error.com.quickpm.Task.status,com.quickpm.Task.status.nullable.error.status,com.quickpm.Task.status.nullable.error.com.quickpm.Status,com.quickpm.Task.status.nullable.error,task.status.nullable.error.com.quickpm.Task.status,task.status.nullable.error.status,task.status.nullable.error.com.quickpm.Status,task.status.nullable.error,com.quickpm.Task.status.nullable.com.quickpm.Task.status,com.quickpm.Task.status.nullable.status,com.quickpm.Task.status.nullable.com.quickpm.Status,com.quickpm.Task.status.nullable,task.status.nullable.com.quickpm.Task.status,task.status.nullable.status,task.status.nullable.com.quickpm.Status,task.status.nullable,nullable.com.quickpm.Task.status,nullable.status,nullable.com.quickpm.Status,nullable]; arguments [status,class com.quickpm.Task]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [Planned]; codes [com.quickpm.Task.status.typeMismatch.error,com.quickpm.Task.status.typeMismatch,task.status.typeMismatch.error,task.status.typeMismatch,typeMismatch.com.quickpm.Task.status,typeMismatch.status,typeMismatch.com.quickpm.Status,typeMismatch]; arguments [status]; default message [No enum constant com.quickpm.Status.Planned]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:11:04,988 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [null]; codes [com.quickpm.Task.status.nullable.error.com.quickpm.Task.status,com.quickpm.Task.status.nullable.error.status,com.quickpm.Task.status.nullable.error.com.quickpm.Status,com.quickpm.Task.status.nullable.error,task.status.nullable.error.com.quickpm.Task.status,task.status.nullable.error.status,task.status.nullable.error.com.quickpm.Status,task.status.nullable.error,com.quickpm.Task.status.nullable.com.quickpm.Task.status,com.quickpm.Task.status.nullable.status,com.quickpm.Task.status.nullable.com.quickpm.Status,com.quickpm.Task.status.nullable,task.status.nullable.com.quickpm.Task.status,task.status.nullable.status,task.status.nullable.com.quickpm.Status,task.status.nullable,nullable.com.quickpm.Task.status,nullable.status,nullable.com.quickpm.Status,nullable]; arguments [status,class com.quickpm.Task]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.quickpm.Task' on field 'status': rejected value [Planned]; codes [com.quickpm.Task.status.typeMismatch.error,com.quickpm.Task.status.typeMismatch,task.status.typeMismatch.error,task.status.typeMismatch,typeMismatch.com.quickpm.Task.status,typeMismatch.status,typeMismatch.com.quickpm.Status,typeMismatch]; arguments [status]; default message [No enum constant com.quickpm.Status.Planned]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:167)
+	at com.quickpm.ProjectServiceSpec.test addTask(ProjectServiceSpec.groovy:1000)
+2014-12-23 01:29:48,217 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1380)
+	at java.text.DateFormat.parse(DateFormat.java:355)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:147)
+	at com.quickpm.ProjectService.addTask_closure5(ProjectService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.ProjectServiceSpec.test addMilestone(ProjectServiceSpec.groovy:1301)
+2014-12-23 01:29:48,219 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1380)
+	at java.text.DateFormat.parse(DateFormat.java:355)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:147)
+	at com.quickpm.ProjectServiceSpec.test addMilestone(ProjectServiceSpec.groovy:1301)
+2014-12-23 01:29:48,220 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1380)
+	at java.text.DateFormat.parse(DateFormat.java:355)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:147)
+	at com.quickpm.ProjectServiceSpec.test addMilestone(ProjectServiceSpec.groovy:1301)
+2014-12-23 01:29:48,220 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1380)
+	at java.text.DateFormat.parse(DateFormat.java:355)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:147)
+	at com.quickpm.ProjectServiceSpec.test addMilestone(ProjectServiceSpec.groovy:1301)
+2014-12-23 01:29:48,223 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1380)
+	at java.text.DateFormat.parse(DateFormat.java:355)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:147)
+	at com.quickpm.ProjectServiceSpec.test addMilestone(ProjectServiceSpec.groovy:1301)
+2014-12-23 01:29:48,223 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1380)
+	at java.text.DateFormat.parse(DateFormat.java:355)
+	at com.quickpm.ProjectService.$tt__addTask(ProjectService.groovy:147)
+	at com.quickpm.ProjectServiceSpec.test addMilestone(ProjectServiceSpec.groovy:1301)
+2014-12-23 01:35:44,286 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateTask(ProjectServiceSpec.groovy:1296)
+2014-12-23 01:35:44,290 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateTask(ProjectServiceSpec.groovy:1296)
+2014-12-23 01:35:44,291 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateTask(ProjectServiceSpec.groovy:1296)
+2014-12-23 01:35:44,292 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateTask(ProjectServiceSpec.groovy:1296)
+2014-12-23 01:35:44,296 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateTask(ProjectServiceSpec.groovy:1296)
+2014-12-23 01:35:44,297 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateTask(ProjectServiceSpec.groovy:1296)
+2014-12-23 01:44:06,584 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The assigned to user with id - '${params.assignedTo}' does not exist."
+|     |           |                                     |      |
+|     |           |                                     |      1
+|     |           |                                     [taskID:1, assignedTo:1, taskGroup:3]
+|     |           false
+|     |           43 differences (40% similarity)
+|     |           T(ask) (Group w)i(th i)d (--) ('3',) (to )w(h)i(c)h (th)i(s) (task) (belongs) (to, )does not exist.
+|     |           T(he-) (ass----)i(gne-)d (to) (user) (---)w(-)i(t)h (--)i(d) (----) ('1'----) (----)does not exist.
+|     Task Group with id - '3', to which this task belongs to, does not exist.
+[code:Failure, message:Task Group with id - '3', to which this task belongs to, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateTask with invalid task group(ProjectServiceSpec.groovy:1455)
+2014-12-23 01:44:06,589 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The assigned to user with id - '${params.assignedTo}' does not exist."
+|     |           |                                     |      |
+|     |           |                                     |      1
+|     |           |                                     [taskID:1, assignedTo:1, taskGroup:3]
+|     |           false
+|     |           43 differences (40% similarity)
+|     |           T(ask) (Group w)i(th i)d (--) ('3',) (to )w(h)i(c)h (th)i(s) (task) (belongs) (to, )does not exist.
+|     |           T(he-) (ass----)i(gne-)d (to) (user) (---)w(-)i(t)h (--)i(d) (----) ('1'----) (----)does not exist.
+|     Task Group with id - '3', to which this task belongs to, does not exist.
+[code:Failure, message:Task Group with id - '3', to which this task belongs to, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateTask with invalid task group(ProjectServiceSpec.groovy:1455)
+2014-12-23 01:44:06,590 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The assigned to user with id - '${params.assignedTo}' does not exist."
+|     |           |                                     |      |
+|     |           |                                     |      1
+|     |           |                                     [taskID:1, assignedTo:1, taskGroup:3]
+|     |           false
+|     |           43 differences (40% similarity)
+|     |           T(ask) (Group w)i(th i)d (--) ('3',) (to )w(h)i(c)h (th)i(s) (task) (belongs) (to, )does not exist.
+|     |           T(he-) (ass----)i(gne-)d (to) (user) (---)w(-)i(t)h (--)i(d) (----) ('1'----) (----)does not exist.
+|     Task Group with id - '3', to which this task belongs to, does not exist.
+[code:Failure, message:Task Group with id - '3', to which this task belongs to, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateTask with invalid task group(ProjectServiceSpec.groovy:1455)
+2014-12-23 01:44:06,591 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The assigned to user with id - '${params.assignedTo}' does not exist."
+|     |           |                                     |      |
+|     |           |                                     |      1
+|     |           |                                     [taskID:1, assignedTo:1, taskGroup:3]
+|     |           false
+|     |           43 differences (40% similarity)
+|     |           T(ask) (Group w)i(th i)d (--) ('3',) (to )w(h)i(c)h (th)i(s) (task) (belongs) (to, )does not exist.
+|     |           T(he-) (ass----)i(gne-)d (to) (user) (---)w(-)i(t)h (--)i(d) (----) ('1'----) (----)does not exist.
+|     Task Group with id - '3', to which this task belongs to, does not exist.
+[code:Failure, message:Task Group with id - '3', to which this task belongs to, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateTask with invalid task group(ProjectServiceSpec.groovy:1455)
+2014-12-23 01:44:06,595 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The assigned to user with id - '${params.assignedTo}' does not exist."
+|     |           |                                     |      |
+|     |           |                                     |      1
+|     |           |                                     [taskID:1, assignedTo:1, taskGroup:3]
+|     |           false
+|     |           43 differences (40% similarity)
+|     |           T(ask) (Group w)i(th i)d (--) ('3',) (to )w(h)i(c)h (th)i(s) (task) (belongs) (to, )does not exist.
+|     |           T(he-) (ass----)i(gne-)d (to) (user) (---)w(-)i(t)h (--)i(d) (----) ('1'----) (----)does not exist.
+|     Task Group with id - '3', to which this task belongs to, does not exist.
+[code:Failure, message:Task Group with id - '3', to which this task belongs to, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateTask with invalid task group(ProjectServiceSpec.groovy:1455)
+2014-12-23 01:44:06,595 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The assigned to user with id - '${params.assignedTo}' does not exist."
+|     |           |                                     |      |
+|     |           |                                     |      1
+|     |           |                                     [taskID:1, assignedTo:1, taskGroup:3]
+|     |           false
+|     |           43 differences (40% similarity)
+|     |           T(ask) (Group w)i(th i)d (--) ('3',) (to )w(h)i(c)h (th)i(s) (task) (belongs) (to, )does not exist.
+|     |           T(he-) (ass----)i(gne-)d (to) (user) (---)w(-)i(t)h (--)i(d) (----) ('1'----) (----)does not exist.
+|     Task Group with id - '3', to which this task belongs to, does not exist.
+[code:Failure, message:Task Group with id - '3', to which this task belongs to, does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateTask with invalid task group(ProjectServiceSpec.groovy:1455)
+2014-12-23 02:18:05,870 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2170)
+2014-12-23 02:18:05,874 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2170)
+2014-12-23 02:18:05,876 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2170)
+2014-12-23 02:18:05,876 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2170)
+2014-12-23 02:18:05,881 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2170)
+2014-12-23 02:18:05,882 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.ProjectServiceSpec
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2170)
+2014-12-23 02:30:33,497 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The task has been updated."
+|     |           |
+|     |           false
+|     |           11 differences (64% similarity)
+|     |           The (mile)s(tone) has been (cre)ated.
+|     |           The (ta--)s(k---) has been (upd)ated.
+|     The milestone has been created.
+[code:Success, message:The milestone has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:30:33,501 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The task has been updated."
+|     |           |
+|     |           false
+|     |           11 differences (64% similarity)
+|     |           The (mile)s(tone) has been (cre)ated.
+|     |           The (ta--)s(k---) has been (upd)ated.
+|     The milestone has been created.
+[code:Success, message:The milestone has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:30:33,502 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The task has been updated."
+|     |           |
+|     |           false
+|     |           11 differences (64% similarity)
+|     |           The (mile)s(tone) has been (cre)ated.
+|     |           The (ta--)s(k---) has been (upd)ated.
+|     The milestone has been created.
+[code:Success, message:The milestone has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:30:33,502 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The task has been updated."
+|     |           |
+|     |           false
+|     |           11 differences (64% similarity)
+|     |           The (mile)s(tone) has been (cre)ated.
+|     |           The (ta--)s(k---) has been (upd)ated.
+|     The milestone has been created.
+[code:Success, message:The milestone has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:30:33,505 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The task has been updated."
+|     |           |
+|     |           false
+|     |           11 differences (64% similarity)
+|     |           The (mile)s(tone) has been (cre)ated.
+|     |           The (ta--)s(k---) has been (upd)ated.
+|     The milestone has been created.
+[code:Success, message:The milestone has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:30:33,505 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The task has been updated."
+|     |           |
+|     |           false
+|     |           11 differences (64% similarity)
+|     |           The (mile)s(tone) has been (cre)ated.
+|     |           The (ta--)s(k---) has been (upd)ated.
+|     The milestone has been created.
+[code:Success, message:The milestone has been created.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:30:33,532 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "Milestone with id - '${params.milestoneID}' does not exist."
+|     |           |                          |      |
+|     |           |                          |      2
+|     |           |                          [milestoneID:2]
+|     |           false
+|     |           19 differences (64% similarity)
+|     |           (The ass)i(gn)e(d )to( us)e(r) with id - '(null)' does not exist.
+|     |           (M------)i(l-)e(s-)to(n--)e(-) with id - '(2---)' does not exist.
+|     The assigned to user with id - 'null' does not exist.
+[code:Failure, message:The assigned to user with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2201)
+2014-12-23 02:30:33,532 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "Milestone with id - '${params.milestoneID}' does not exist."
+|     |           |                          |      |
+|     |           |                          |      2
+|     |           |                          [milestoneID:2]
+|     |           false
+|     |           19 differences (64% similarity)
+|     |           (The ass)i(gn)e(d )to( us)e(r) with id - '(null)' does not exist.
+|     |           (M------)i(l-)e(s-)to(n--)e(-) with id - '(2---)' does not exist.
+|     The assigned to user with id - 'null' does not exist.
+[code:Failure, message:The assigned to user with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2201)
+2014-12-23 02:30:33,533 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "Milestone with id - '${params.milestoneID}' does not exist."
+|     |           |                          |      |
+|     |           |                          |      2
+|     |           |                          [milestoneID:2]
+|     |           false
+|     |           19 differences (64% similarity)
+|     |           (The ass)i(gn)e(d )to( us)e(r) with id - '(null)' does not exist.
+|     |           (M------)i(l-)e(s-)to(n--)e(-) with id - '(2---)' does not exist.
+|     The assigned to user with id - 'null' does not exist.
+[code:Failure, message:The assigned to user with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2201)
+2014-12-23 02:30:33,533 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "Milestone with id - '${params.milestoneID}' does not exist."
+|     |           |                          |      |
+|     |           |                          |      2
+|     |           |                          [milestoneID:2]
+|     |           false
+|     |           19 differences (64% similarity)
+|     |           (The ass)i(gn)e(d )to( us)e(r) with id - '(null)' does not exist.
+|     |           (M------)i(l-)e(s-)to(n--)e(-) with id - '(2---)' does not exist.
+|     The assigned to user with id - 'null' does not exist.
+[code:Failure, message:The assigned to user with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2201)
+2014-12-23 02:30:33,534 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "Milestone with id - '${params.milestoneID}' does not exist."
+|     |           |                          |      |
+|     |           |                          |      2
+|     |           |                          [milestoneID:2]
+|     |           false
+|     |           19 differences (64% similarity)
+|     |           (The ass)i(gn)e(d )to( us)e(r) with id - '(null)' does not exist.
+|     |           (M------)i(l-)e(s-)to(n--)e(-) with id - '(2---)' does not exist.
+|     The assigned to user with id - 'null' does not exist.
+[code:Failure, message:The assigned to user with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2201)
+2014-12-23 02:30:33,534 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "Milestone with id - '${params.milestoneID}' does not exist."
+|     |           |                          |      |
+|     |           |                          |      2
+|     |           |                          [milestoneID:2]
+|     |           false
+|     |           19 differences (64% similarity)
+|     |           (The ass)i(gn)e(d )to( us)e(r) with id - '(null)' does not exist.
+|     |           (M------)i(l-)e(s-)to(n--)e(-) with id - '(2---)' does not exist.
+|     The assigned to user with id - 'null' does not exist.
+[code:Failure, message:The assigned to user with id - 'null' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2201)
+2014-12-23 02:34:42,439 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectService.updateMilestone_closure9(ProjectService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2186)
+2014-12-23 02:34:42,442 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2186)
+2014-12-23 02:34:42,443 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2186)
+2014-12-23 02:34:42,443 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2186)
+2014-12-23 02:34:42,447 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2186)
+2014-12-23 02:34:42,447 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2186)
+2014-12-23 02:34:42,485 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectService.updateMilestone_closure9(ProjectService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2198)
+2014-12-23 02:34:42,486 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2198)
+2014-12-23 02:34:42,486 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2198)
+2014-12-23 02:34:42,486 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2198)
+2014-12-23 02:34:42,487 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2198)
+2014-12-23 02:34:42,487 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid milestoneID(ProjectServiceSpec.groovy:2198)
+2014-12-23 02:34:42,534 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectService.updateMilestone_closure9(ProjectService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid assignedTo(ProjectServiceSpec.groovy:2255)
+2014-12-23 02:34:42,534 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid assignedTo(ProjectServiceSpec.groovy:2255)
+2014-12-23 02:34:42,535 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid assignedTo(ProjectServiceSpec.groovy:2255)
+2014-12-23 02:34:42,535 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid assignedTo(ProjectServiceSpec.groovy:2255)
+2014-12-23 02:34:42,535 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid assignedTo(ProjectServiceSpec.groovy:2255)
+2014-12-23 02:34:42,536 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid assignedTo(ProjectServiceSpec.groovy:2255)
+2014-12-23 02:34:42,582 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectService.updateMilestone_closure9(ProjectService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid taskGroup(ProjectServiceSpec.groovy:2313)
+2014-12-23 02:34:42,582 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid taskGroup(ProjectServiceSpec.groovy:2313)
+2014-12-23 02:34:42,582 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid taskGroup(ProjectServiceSpec.groovy:2313)
+2014-12-23 02:34:42,583 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid taskGroup(ProjectServiceSpec.groovy:2313)
+2014-12-23 02:34:42,583 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid taskGroup(ProjectServiceSpec.groovy:2313)
+2014-12-23 02:34:42,583 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid taskGroup(ProjectServiceSpec.groovy:2313)
+2014-12-23 02:34:42,629 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectService.updateMilestone_closure9(ProjectService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid project(ProjectServiceSpec.groovy:2372)
+2014-12-23 02:34:42,629 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid project(ProjectServiceSpec.groovy:2372)
+2014-12-23 02:34:42,629 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid project(ProjectServiceSpec.groovy:2372)
+2014-12-23 02:34:42,630 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid project(ProjectServiceSpec.groovy:2372)
+2014-12-23 02:34:42,630 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid project(ProjectServiceSpec.groovy:2372)
+2014-12-23 02:34:42,630 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone invalid project(ProjectServiceSpec.groovy:2372)
+2014-12-23 02:34:42,673 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectService.updateMilestone_closure9(ProjectService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date before project start date(ProjectServiceSpec.groovy:2434)
+2014-12-23 02:34:42,674 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date before project start date(ProjectServiceSpec.groovy:2434)
+2014-12-23 02:34:42,674 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date before project start date(ProjectServiceSpec.groovy:2434)
+2014-12-23 02:34:42,674 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date before project start date(ProjectServiceSpec.groovy:2434)
+2014-12-23 02:34:42,675 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date before project start date(ProjectServiceSpec.groovy:2434)
+2014-12-23 02:34:42,675 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date before project start date(ProjectServiceSpec.groovy:2434)
+2014-12-23 02:34:42,717 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectService.updateMilestone_closure9(ProjectService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date after project end date(ProjectServiceSpec.groovy:2496)
+2014-12-23 02:34:42,717 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date after project end date(ProjectServiceSpec.groovy:2496)
+2014-12-23 02:34:42,717 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date after project end date(ProjectServiceSpec.groovy:2496)
+2014-12-23 02:34:42,717 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date after project end date(ProjectServiceSpec.groovy:2496)
+2014-12-23 02:34:42,718 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date after project end date(ProjectServiceSpec.groovy:2496)
+2014-12-23 02:34:42,718 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: task for class: com.quickpm.ProjectService
+Possible solutions: class
+	at com.quickpm.ProjectService.$tt__updateMilestone(ProjectService.groovy:323)
+	at com.quickpm.ProjectServiceSpec.test updateMilestone milestone date after project end date(ProjectServiceSpec.groovy:2496)
+2014-12-23 02:36:47,781 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The milestone has been updated."
+|     |           |
+|     |           false
+|     |           8 differences (74% similarity)
+|     |           The (ta--)s(k---) has been updated.
+|     |           The (mile)s(tone) has been updated.
+|     The task has been updated.
+[code:Success, message:The task has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:36:47,785 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The milestone has been updated."
+|     |           |
+|     |           false
+|     |           8 differences (74% similarity)
+|     |           The (ta--)s(k---) has been updated.
+|     |           The (mile)s(tone) has been updated.
+|     The task has been updated.
+[code:Success, message:The task has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:36:47,786 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The milestone has been updated."
+|     |           |
+|     |           false
+|     |           8 differences (74% similarity)
+|     |           The (ta--)s(k---) has been updated.
+|     |           The (mile)s(tone) has been updated.
+|     The task has been updated.
+[code:Success, message:The task has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:36:47,786 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The milestone has been updated."
+|     |           |
+|     |           false
+|     |           8 differences (74% similarity)
+|     |           The (ta--)s(k---) has been updated.
+|     |           The (mile)s(tone) has been updated.
+|     The task has been updated.
+[code:Success, message:The task has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:36:47,789 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The milestone has been updated."
+|     |           |
+|     |           false
+|     |           8 differences (74% similarity)
+|     |           The (ta--)s(k---) has been updated.
+|     |           The (mile)s(tone) has been updated.
+|     The task has been updated.
+[code:Success, message:The task has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:36:47,789 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The milestone has been updated."
+|     |           |
+|     |           false
+|     |           8 differences (74% similarity)
+|     |           The (ta--)s(k---) has been updated.
+|     |           The (mile)s(tone) has been updated.
+|     The task has been updated.
+[code:Success, message:The task has been updated.]
+
+	at com.quickpm.ProjectServiceSpec.test updateMilestone(ProjectServiceSpec.groovy:2189)
+2014-12-23 02:45:03,005 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The milestone has been delete."
+|     |           |
+|     |           false
+|     |           1 difference (96% similarity)
+|     |           The milestone has been delete(d).
+|     |           The milestone has been delete(-).
+|     The milestone has been deleted.
+[code:Success, message:The milestone has been deleted.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone(ProjectServiceSpec.groovy:2553)
+2014-12-23 02:45:03,010 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "The milestone has been delete."
+|     |           |
+|     |           false
+|     |           1 difference (96% similarity)
+|     |           The milestone has been delete(d).
+|     |           The milestone has been delete(-).
+|     The milestone has been deleted.
+[code:Success, message:The milestone has been deleted.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone(ProjectServiceSpec.groovy:2553)
+2014-12-23 02:45:03,011 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The milestone has been delete."
+|     |           |
+|     |           false
+|     |           1 difference (96% similarity)
+|     |           The milestone has been delete(d).
+|     |           The milestone has been delete(-).
+|     The milestone has been deleted.
+[code:Success, message:The milestone has been deleted.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone(ProjectServiceSpec.groovy:2553)
+2014-12-23 02:45:03,011 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The milestone has been delete."
+|     |           |
+|     |           false
+|     |           1 difference (96% similarity)
+|     |           The milestone has been delete(d).
+|     |           The milestone has been delete(-).
+|     The milestone has been deleted.
+[code:Success, message:The milestone has been deleted.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone(ProjectServiceSpec.groovy:2553)
+2014-12-23 02:45:03,014 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The milestone has been delete."
+|     |           |
+|     |           false
+|     |           1 difference (96% similarity)
+|     |           The milestone has been delete(d).
+|     |           The milestone has been delete(-).
+|     The milestone has been deleted.
+[code:Success, message:The milestone has been deleted.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone(ProjectServiceSpec.groovy:2553)
+2014-12-23 02:45:03,014 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "The milestone has been delete."
+|     |           |
+|     |           false
+|     |           1 difference (96% similarity)
+|     |           The milestone has been delete(d).
+|     |           The milestone has been delete(-).
+|     The milestone has been deleted.
+[code:Success, message:The milestone has been deleted.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone(ProjectServiceSpec.groovy:2553)
+2014-12-23 02:45:03,047 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Milestone with id - '2' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone invalid project ID(ProjectServiceSpec.groovy:2561)
+2014-12-23 02:45:03,048 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Milestone with id - '2' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone invalid project ID(ProjectServiceSpec.groovy:2561)
+2014-12-23 02:45:03,048 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Milestone with id - '2' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone invalid project ID(ProjectServiceSpec.groovy:2561)
+2014-12-23 02:45:03,049 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Milestone with id - '2' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone invalid project ID(ProjectServiceSpec.groovy:2561)
+2014-12-23 02:45:03,049 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Milestone with id - '2' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone invalid project ID(ProjectServiceSpec.groovy:2561)
+2014-12-23 02:45:03,049 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Milestone with id - '2' does not exist.]
+
+	at com.quickpm.ProjectServiceSpec.test deleteMilestone invalid project ID(ProjectServiceSpec.groovy:2561)
+2014-12-23 02:53:22,852 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result == ""
+|      |
+|      false
+|      762 differences (0% similarity)
+|      (<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>)
+|      (------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------)
+<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>
+
+	at com.quickpm.ProjectServiceSpec.test getProjectXMLString(ProjectServiceSpec.groovy:2630)
+2014-12-23 02:53:22,857 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result == ""
+|      |
+|      false
+|      762 differences (0% similarity)
+|      (<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>)
+|      (------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------)
+<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>
+
+	at com.quickpm.ProjectServiceSpec.test getProjectXMLString(ProjectServiceSpec.groovy:2630)
+2014-12-23 02:53:22,858 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result == ""
+|      |
+|      false
+|      762 differences (0% similarity)
+|      (<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>)
+|      (------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------)
+<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>
+
+	at com.quickpm.ProjectServiceSpec.test getProjectXMLString(ProjectServiceSpec.groovy:2630)
+2014-12-23 02:53:22,859 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result == ""
+|      |
+|      false
+|      762 differences (0% similarity)
+|      (<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>)
+|      (------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------)
+<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>
+
+	at com.quickpm.ProjectServiceSpec.test getProjectXMLString(ProjectServiceSpec.groovy:2630)
+2014-12-23 02:53:22,862 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result == ""
+|      |
+|      false
+|      762 differences (0% similarity)
+|      (<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>)
+|      (------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------)
+<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>
+
+	at com.quickpm.ProjectServiceSpec.test getProjectXMLString(ProjectServiceSpec.groovy:2630)
+2014-12-23 02:53:22,862 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result == ""
+|      |
+|      false
+|      762 differences (0% similarity)
+|      (<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>)
+|      (------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------)
+<project><task><pID>1001</pID><pName>Group of Tasks</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>0000ff</pColor><pLink /><pMile>0</pMile><pRes/><pComp>0</pComp><pGroup>1</pGroup><pParent>0</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>3001</pID><pName>New Task</pName><pStart>12/10/2014</pStart><pEnd>02/01/2015</pEnd><pColor>#46d6db</pColor><pLink /><pMile>0</pMile><pRes>PM User</pRes><pComp>0</pComp><pGroup>0</pGroup><pParent>1001</pParent><pOpen>1</pOpen><pDepend/></task><task><pID>2001</pID><pName>New Milestone</pName><pStart>01/10/2015</pStart><pEnd>01/10/2015</pEnd><pColor>0000ff</pColor><pLink/><pMile>1</pMile><pRes>PM User</pRes><pComp/><pGroup>0</pGroup><pParent>1001</pParent><pOpen>0</pOpen><pDepend/></task></project>
+
+	at com.quickpm.ProjectServiceSpec.test getProjectXMLString(ProjectServiceSpec.groovy:2630)
+2014-12-23 03:26:42,345 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:26:42,349 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:26:42,350 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:26:42,350 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:26:42,353 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:26:42,353 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:28:23,686 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result == true
+|      |
+false  false
+
+	at com.quickpm.UserServiceSpec.test checkEmail(UserServiceSpec.groovy:34)
+2014-12-23 03:28:23,689 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result == true
+|      |
+false  false
+
+	at com.quickpm.UserServiceSpec.test checkEmail(UserServiceSpec.groovy:34)
+2014-12-23 03:28:23,690 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result == true
+|      |
+false  false
+
+	at com.quickpm.UserServiceSpec.test checkEmail(UserServiceSpec.groovy:34)
+2014-12-23 03:28:23,690 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result == true
+|      |
+false  false
+
+	at com.quickpm.UserServiceSpec.test checkEmail(UserServiceSpec.groovy:34)
+2014-12-23 03:28:23,695 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result == true
+|      |
+false  false
+
+	at com.quickpm.UserServiceSpec.test checkEmail(UserServiceSpec.groovy:34)
+2014-12-23 03:28:23,695 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result == true
+|      |
+false  false
+
+	at com.quickpm.UserServiceSpec.test checkEmail(UserServiceSpec.groovy:34)
+2014-12-23 03:28:23,871 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:28:23,873 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:28:23,874 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:28:23,874 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:28:23,874 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:28:23,874 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:29:07,004 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:29:07,008 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:29:07,009 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:29:07,009 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:29:07,013 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:29:07,013 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User already exists with the username 'tm@test.com']
+
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:60)
+2014-12-23 03:32:08,613 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.User' on field 'lastName': rejected value [null]; codes [com.quickpm.User.lastName.nullable.error.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.error.lastName,com.quickpm.User.lastName.nullable.error.java.lang.String,com.quickpm.User.lastName.nullable.error,user.lastName.nullable.error.com.quickpm.User.lastName,user.lastName.nullable.error.lastName,user.lastName.nullable.error.java.lang.String,user.lastName.nullable.error,com.quickpm.User.lastName.nullable.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.lastName,com.quickpm.User.lastName.nullable.java.lang.String,com.quickpm.User.lastName.nullable,user.lastName.nullable.com.quickpm.User.lastName,user.lastName.nullable.lastName,user.lastName.nullable.java.lang.String,user.lastName.nullable,nullable.com.quickpm.User.lastName,nullable.lastName,nullable.java.lang.String,nullable]; arguments [lastName,class com.quickpm.User]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrConstructorNewInstance(ReflectiveInterceptor.java:1002)
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.UserService.$tt__signUp(UserService.groovy:40)
+	at com.quickpm.UserService.signUp_closure2(UserService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:58)
+2014-12-23 03:32:08,615 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.User' on field 'lastName': rejected value [null]; codes [com.quickpm.User.lastName.nullable.error.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.error.lastName,com.quickpm.User.lastName.nullable.error.java.lang.String,com.quickpm.User.lastName.nullable.error,user.lastName.nullable.error.com.quickpm.User.lastName,user.lastName.nullable.error.lastName,user.lastName.nullable.error.java.lang.String,user.lastName.nullable.error,com.quickpm.User.lastName.nullable.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.lastName,com.quickpm.User.lastName.nullable.java.lang.String,com.quickpm.User.lastName.nullable,user.lastName.nullable.com.quickpm.User.lastName,user.lastName.nullable.lastName,user.lastName.nullable.java.lang.String,user.lastName.nullable,nullable.com.quickpm.User.lastName,nullable.lastName,nullable.java.lang.String,nullable]; arguments [lastName,class com.quickpm.User]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.UserService.$tt__signUp(UserService.groovy:40)
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:58)
+2014-12-23 03:32:08,617 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.User' on field 'lastName': rejected value [null]; codes [com.quickpm.User.lastName.nullable.error.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.error.lastName,com.quickpm.User.lastName.nullable.error.java.lang.String,com.quickpm.User.lastName.nullable.error,user.lastName.nullable.error.com.quickpm.User.lastName,user.lastName.nullable.error.lastName,user.lastName.nullable.error.java.lang.String,user.lastName.nullable.error,com.quickpm.User.lastName.nullable.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.lastName,com.quickpm.User.lastName.nullable.java.lang.String,com.quickpm.User.lastName.nullable,user.lastName.nullable.com.quickpm.User.lastName,user.lastName.nullable.lastName,user.lastName.nullable.java.lang.String,user.lastName.nullable,nullable.com.quickpm.User.lastName,nullable.lastName,nullable.java.lang.String,nullable]; arguments [lastName,class com.quickpm.User]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.UserService.$tt__signUp(UserService.groovy:40)
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:58)
+2014-12-23 03:32:08,617 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.User' on field 'lastName': rejected value [null]; codes [com.quickpm.User.lastName.nullable.error.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.error.lastName,com.quickpm.User.lastName.nullable.error.java.lang.String,com.quickpm.User.lastName.nullable.error,user.lastName.nullable.error.com.quickpm.User.lastName,user.lastName.nullable.error.lastName,user.lastName.nullable.error.java.lang.String,user.lastName.nullable.error,com.quickpm.User.lastName.nullable.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.lastName,com.quickpm.User.lastName.nullable.java.lang.String,com.quickpm.User.lastName.nullable,user.lastName.nullable.com.quickpm.User.lastName,user.lastName.nullable.lastName,user.lastName.nullable.java.lang.String,user.lastName.nullable,nullable.com.quickpm.User.lastName,nullable.lastName,nullable.java.lang.String,nullable]; arguments [lastName,class com.quickpm.User]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.UserService.$tt__signUp(UserService.groovy:40)
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:58)
+2014-12-23 03:32:08,620 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.User' on field 'lastName': rejected value [null]; codes [com.quickpm.User.lastName.nullable.error.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.error.lastName,com.quickpm.User.lastName.nullable.error.java.lang.String,com.quickpm.User.lastName.nullable.error,user.lastName.nullable.error.com.quickpm.User.lastName,user.lastName.nullable.error.lastName,user.lastName.nullable.error.java.lang.String,user.lastName.nullable.error,com.quickpm.User.lastName.nullable.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.lastName,com.quickpm.User.lastName.nullable.java.lang.String,com.quickpm.User.lastName.nullable,user.lastName.nullable.com.quickpm.User.lastName,user.lastName.nullable.lastName,user.lastName.nullable.java.lang.String,user.lastName.nullable,nullable.com.quickpm.User.lastName,nullable.lastName,nullable.java.lang.String,nullable]; arguments [lastName,class com.quickpm.User]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.UserService.$tt__signUp(UserService.groovy:40)
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:58)
+2014-12-23 03:32:08,620 [main] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation error occurred during call to save():
+- Field error in object 'com.quickpm.User' on field 'lastName': rejected value [null]; codes [com.quickpm.User.lastName.nullable.error.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.error.lastName,com.quickpm.User.lastName.nullable.error.java.lang.String,com.quickpm.User.lastName.nullable.error,user.lastName.nullable.error.com.quickpm.User.lastName,user.lastName.nullable.error.lastName,user.lastName.nullable.error.java.lang.String,user.lastName.nullable.error,com.quickpm.User.lastName.nullable.com.quickpm.User.lastName,com.quickpm.User.lastName.nullable.lastName,com.quickpm.User.lastName.nullable.java.lang.String,com.quickpm.User.lastName.nullable,user.lastName.nullable.com.quickpm.User.lastName,user.lastName.nullable.lastName,user.lastName.nullable.java.lang.String,user.lastName.nullable,nullable.com.quickpm.User.lastName,nullable.lastName,nullable.java.lang.String,nullable]; arguments [lastName,class com.quickpm.User]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.grails.datastore.gorm.GormInstanceApi.doSave(GormInstanceApi.groovy:182)
+	at org.grails.datastore.gorm.GormInstanceApi.save_closure5(GormInstanceApi.groovy:162)
+	at org.grails.datastore.mapping.core.DatastoreUtils.execute(DatastoreUtils.java:302)
+	at org.grails.datastore.gorm.AbstractDatastoreApi.execute(AbstractDatastoreApi.groovy:37)
+	at org.grails.datastore.gorm.GormInstanceApi.save(GormInstanceApi.groovy:161)
+	at com.quickpm.UserService.$tt__signUp(UserService.groovy:40)
+	at com.quickpm.UserServiceSpec.test signUp(UserServiceSpec.groovy:58)
+2014-12-23 04:13:19,124 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserService.changePassword_closure5(UserService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:13:19,126 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:13:19,127 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:13:19,127 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:13:19,130 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:13:19,130 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:27:14,604 [main] ERROR StackTrace  - Full Stack Trace:
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserService.changePassword_closure5(UserService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:27:14,607 [main] ERROR StackTrace  - Full Stack Trace:
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:27:14,608 [main] ERROR StackTrace  - Full Stack Trace:
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:27:14,608 [main] ERROR StackTrace  - Full Stack Trace:
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:27:14,611 [main] ERROR StackTrace  - Full Stack Trace:
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:27:14,612 [main] ERROR StackTrace  - Full Stack Trace:
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:42:26,818 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserService.changePassword_closure5(UserService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:42:26,820 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:42:26,820 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:42:26,821 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:42:26,824 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:42:26,824 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.UnsupportedOperationException
+	at com.quickpm.UserService.$tt__changePassword(UserService.groovy:84)
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:181)
+2014-12-23 04:52:21,709 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:191)
+2014-12-23 04:52:21,713 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:191)
+2014-12-23 04:52:21,714 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:191)
+2014-12-23 04:52:21,715 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:191)
+2014-12-23 04:52:21,718 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:191)
+2014-12-23 04:52:21,718 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword(UserServiceSpec.groovy:191)
+2014-12-23 05:08:59,183 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "User with username - '${params.username}' does not exist."
+|     |           |                           |      |
+|     |           |                           |      tm@test.com
+|     |           |                           [username:tm@test.com, oldPassword:invalidPassword, password:password]
+|     |           false
+|     |           43 differences (14% similarity)
+|     |           (Inval-)i(d-) (old p)a(s----------)s(w--)o(r--)d(-------------).
+|     |           (User w)i(th) (usern)a(me - 'tm@te)s(t.c)o(m' )d(oes not exist).
+|     Invalid old password.
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword invalid user(UserServiceSpec.groovy:226)
+2014-12-23 05:08:59,188 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['message'] == "User with username - '${params.username}' does not exist."
+|     |           |                           |      |
+|     |           |                           |      tm@test.com
+|     |           |                           [username:tm@test.com, oldPassword:invalidPassword, password:password]
+|     |           false
+|     |           43 differences (14% similarity)
+|     |           (Inval-)i(d-) (old p)a(s----------)s(w--)o(r--)d(-------------).
+|     |           (User w)i(th) (usern)a(me - 'tm@te)s(t.c)o(m' )d(oes not exist).
+|     Invalid old password.
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword invalid user(UserServiceSpec.groovy:226)
+2014-12-23 05:08:59,189 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "User with username - '${params.username}' does not exist."
+|     |           |                           |      |
+|     |           |                           |      tm@test.com
+|     |           |                           [username:tm@test.com, oldPassword:invalidPassword, password:password]
+|     |           false
+|     |           43 differences (14% similarity)
+|     |           (Inval-)i(d-) (old p)a(s----------)s(w--)o(r--)d(-------------).
+|     |           (User w)i(th) (usern)a(me - 'tm@te)s(t.c)o(m' )d(oes not exist).
+|     Invalid old password.
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword invalid user(UserServiceSpec.groovy:226)
+2014-12-23 05:08:59,189 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "User with username - '${params.username}' does not exist."
+|     |           |                           |      |
+|     |           |                           |      tm@test.com
+|     |           |                           [username:tm@test.com, oldPassword:invalidPassword, password:password]
+|     |           false
+|     |           43 differences (14% similarity)
+|     |           (Inval-)i(d-) (old p)a(s----------)s(w--)o(r--)d(-------------).
+|     |           (User w)i(th) (usern)a(me - 'tm@te)s(t.c)o(m' )d(oes not exist).
+|     Invalid old password.
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword invalid user(UserServiceSpec.groovy:226)
+2014-12-23 05:08:59,193 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "User with username - '${params.username}' does not exist."
+|     |           |                           |      |
+|     |           |                           |      tm@test.com
+|     |           |                           [username:tm@test.com, oldPassword:invalidPassword, password:password]
+|     |           false
+|     |           43 differences (14% similarity)
+|     |           (Inval-)i(d-) (old p)a(s----------)s(w--)o(r--)d(-------------).
+|     |           (User w)i(th) (usern)a(me - 'tm@te)s(t.c)o(m' )d(oes not exist).
+|     Invalid old password.
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword invalid user(UserServiceSpec.groovy:226)
+2014-12-23 05:08:59,193 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['message'] == "User with username - '${params.username}' does not exist."
+|     |           |                           |      |
+|     |           |                           |      tm@test.com
+|     |           |                           [username:tm@test.com, oldPassword:invalidPassword, password:password]
+|     |           false
+|     |           43 differences (14% similarity)
+|     |           (Inval-)i(d-) (old p)a(s----------)s(w--)o(r--)d(-------------).
+|     |           (User w)i(th) (usern)a(me - 'tm@te)s(t.c)o(m' )d(oes not exist).
+|     Invalid old password.
+[code:Failure, message:Invalid old password.]
+
+	at com.quickpm.UserServiceSpec.test changePassword invalid user(UserServiceSpec.groovy:226)
+2014-12-23 05:08:59,268 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), find(), findAll()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserService.resetPassword_closure6(UserService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 05:08:59,271 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), find(), findAll()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 05:08:59,274 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), find(), findAll()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 05:08:59,275 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), find(), findAll()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 05:08:59,280 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), find(), findAll()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 05:08:59,282 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), find(), findAll()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 05:11:37,625 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), findAll(), find()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserService.resetPassword_closure6(UserService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 05:11:37,629 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), findAll(), find()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 05:11:37,633 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), findAll(), find()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 05:11:37,634 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), findAll(), find()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 05:11:37,642 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), findAll(), find()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 05:11:37,644 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: com.quickpm.User.findById() is applicable for argument types: (java.lang.String) values: [tm@test.com]
+Possible solutions: findById([Ljava.lang.Object;), find(java.lang.String), findAll(java.lang.String), findAll(), findAll(), find()
+	at org.grails.datastore.gorm.finders.DynamicFinder.createFinderInvocation(DynamicFinder.java:265)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:151)
+	at org.grails.datastore.gorm.finders.DynamicFinder.invoke(DynamicFinder.java:352)
+	at org.grails.datastore.gorm.GormStaticApi.methodMissing_closure2(GormStaticApi.groovy:102)
+	at com.quickpm.UserService.$tt__resetPassword(UserService.groovy:104)
+	at com.quickpm.UserServiceSpec.test restPassword invalid user(UserServiceSpec.groovy:256)
+2014-12-23 06:00:56,377 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: roleId for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test addUser no role setup(UserServiceSpec.groovy:314)
+2014-12-23 06:00:56,379 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: roleId for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test addUser no role setup(UserServiceSpec.groovy:314)
+2014-12-23 06:00:56,380 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: roleId for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test addUser no role setup(UserServiceSpec.groovy:314)
+2014-12-23 06:00:56,380 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: roleId for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test addUser no role setup(UserServiceSpec.groovy:314)
+2014-12-23 06:00:56,383 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: roleId for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test addUser no role setup(UserServiceSpec.groovy:314)
+2014-12-23 06:00:56,383 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: roleId for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test addUser no role setup(UserServiceSpec.groovy:314)
+2014-12-23 06:03:55,934 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User 'TM User' does not exist.]
+
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:342)
+2014-12-23 06:03:55,937 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User 'TM User' does not exist.]
+
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:342)
+2014-12-23 06:03:55,938 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User 'TM User' does not exist.]
+
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:342)
+2014-12-23 06:03:55,939 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User 'TM User' does not exist.]
+
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:342)
+2014-12-23 06:03:55,944 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User 'TM User' does not exist.]
+
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:342)
+2014-12-23 06:03:55,944 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+result['code'] == 'Success'
+|     |        |
+|     Failure  false
+|              7 differences (0% similarity)
+|              (Failure)
+|              (Success)
+[code:Failure, message:User 'TM User' does not exist.]
+
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:342)
+2014-12-23 06:05:01,369 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserService.updateUser_closure8(UserService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:340)
+2014-12-23 06:05:01,371 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:340)
+2014-12-23 06:05:01,372 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:340)
+2014-12-23 06:05:01,372 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:340)
+2014-12-23 06:05:01,375 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:340)
+2014-12-23 06:05:01,375 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:340)
+2014-12-23 06:07:23,550 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserService.updateUser_closure8(UserService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:348)
+2014-12-23 06:07:23,552 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:348)
+2014-12-23 06:07:23,553 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:348)
+2014-12-23 06:07:23,553 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:348)
+2014-12-23 06:07:23,557 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:348)
+2014-12-23 06:07:23,557 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method clear() on null object
+	at com.quickpm.UserService.$tt__updateUser(UserService.groovy:161)
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:348)
+2014-12-23 06:10:12,543 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: adminRole for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:350)
+2014-12-23 06:10:12,545 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: adminRole for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:350)
+2014-12-23 06:10:12,545 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: adminRole for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:350)
+2014-12-23 06:10:12,546 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: adminRole for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:350)
+2014-12-23 06:10:12,549 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: adminRole for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:350)
+2014-12-23 06:10:12,549 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: adminRole for class: com.quickpm.UserServiceSpec
+	at com.quickpm.UserServiceSpec.test updateUser(UserServiceSpec.groovy:350)
+2014-12-23 06:17:53,399 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Long
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserService.addUser_closure7(UserService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.UserServiceSpec.test deleteUser(UserServiceSpec.groovy:408)
+2014-12-23 06:17:53,401 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Long
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserServiceSpec.test deleteUser(UserServiceSpec.groovy:408)
+2014-12-23 06:17:53,402 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Long
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserServiceSpec.test deleteUser(UserServiceSpec.groovy:408)
+2014-12-23 06:17:53,402 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Long
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserServiceSpec.test deleteUser(UserServiceSpec.groovy:408)
+2014-12-23 06:17:53,405 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Long
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserServiceSpec.test deleteUser(UserServiceSpec.groovy:408)
+2014-12-23 06:17:53,405 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Long
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserServiceSpec.test deleteUser(UserServiceSpec.groovy:408)
+2014-12-23 06:17:53,422 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Integer
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserService.addUser_closure7(UserService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at com.quickpm.UserServiceSpec.test deleteUser invalid user(UserServiceSpec.groovy:417)
+2014-12-23 06:17:53,422 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Integer
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserServiceSpec.test deleteUser invalid user(UserServiceSpec.groovy:417)
+2014-12-23 06:17:53,423 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Integer
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserServiceSpec.test deleteUser invalid user(UserServiceSpec.groovy:417)
+2014-12-23 06:17:53,423 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Integer
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserServiceSpec.test deleteUser invalid user(UserServiceSpec.groovy:417)
+2014-12-23 06:17:53,446 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Integer
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserServiceSpec.test deleteUser invalid user(UserServiceSpec.groovy:417)
+2014-12-23 06:17:53,446 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Integer
+	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
+	at com.quickpm.UserServiceSpec.test deleteUser invalid user(UserServiceSpec.groovy:417)

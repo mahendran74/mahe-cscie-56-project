@@ -24,24 +24,30 @@ class UserService {
 		if (user) {
 			result['code'] = 'Failure'
 			result['message'] = "User already exists with the username '${params.username}'"
-		} else {
-			def newUser = new User(
-							firstName: params.firstName, 
-							lastName: params.lastName, 
-							middleInitial: params.middleInitial,
-							username: params.username,
-							passwordHash: new Sha512Hash(params.password).toHex(),
-							active: true).save(flush: true, failOnError: true)
-			def userRole =  Role.findByName('ROLE_PM')
-            newUser.addToRoles(userRole)
-            newUser.save(flush:true)
-			result['code'] = 'Success'
-			result['message'] = "User '${params.firstName} ${params.lastName}' has been added as a Project Manager"
+			return result
 		}
-		result
+		def userRole =  Role.findByName('ROLE_PM')
+		if (!userRole) {
+			result['code'] = 'Failure'
+			result['message'] = "Unable to find a role for Project Manager. Please establish a ROLE_PM role."
+			return result
+		}
+		def newUser = new User(
+						firstName: params.firstName, 
+						lastName: params.lastName, 
+						middleInitial: params.middleInitial,
+						username: params.username,
+						passwordHash: new Sha512Hash(params.password).toHex(),
+						active: true).save(flush: true, failOnError: true)
+
+        newUser.addToRoles(userRole)
+        newUser.save(flush:true)
+		result['code'] = 'Success'
+		result['message'] = "User '${params.firstName} ${params.lastName}' has been added as a Project Manager"
+		return result
 	}
 	
-	def activate(Integer id) {
+	def activate(Long id) {
 		def result = [:]
 		User user = User.findById(id)
 		if (user) {
@@ -56,7 +62,7 @@ class UserService {
 		result
 	}
 	
-	def deactivate(Integer id) {
+	def deactivate(Long id) {
 		def result = [:]
 		User user = User.findById(id)
 		if (user) {
@@ -73,10 +79,15 @@ class UserService {
 	
 	def changePassword(params) {
 		def result = [:]
+		def user = User.findByUsername(params.username)
+		if (!user) {
+			result['code'] = 'Failure'
+			result['message'] = "User with username - '${params.username}' does not exist."
+			return result
+		}
 		def authToken = new UsernamePasswordToken(params.username, params.oldPassword as String)
 		try {
 			SecurityUtils.subject.login(authToken)
-			def user = User.findByUsername(params.username)
 			user.passwordHash = new Sha512Hash(params.password).toHex()
 			user.save(flush: true)
 			result['code'] = 'Success'
@@ -84,7 +95,7 @@ class UserService {
 		} catch (AuthenticationException e) {
 			result['code'] = 'Failure'
 			result['message'] = 'Invalid old password.'
-		}
+		} 
 		result
 	}
 	
@@ -163,7 +174,7 @@ class UserService {
 		result
 	}
 	
-	def deleteUser(id) {
+	def deleteUser(Long id) {
 		def result = [:]
 		def user = User.get(id)
 		if (user) {

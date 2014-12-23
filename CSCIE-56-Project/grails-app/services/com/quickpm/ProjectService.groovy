@@ -320,7 +320,7 @@ class ProjectService {
 	def updateMilestone(params) {
 		def result = [:]
 		def milestone = Milestone.findById(params.milestoneID)
-		if (!task) {
+		if (!milestone) {
 			result['code'] = 'Failure'
 			result['message'] = "Milestone with id - '${params.milestoneID}' does not exist."
 			return result
@@ -364,7 +364,7 @@ class ProjectService {
 		milestone.save(flush: true, failOnError: true)
 
 		result['code'] = 'Success'
-		result['message'] = "The task has been updated."
+		result['message'] = "The milestone has been updated."
 		return result
 	}
 	
