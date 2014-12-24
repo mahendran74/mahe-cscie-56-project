@@ -26374,3 +26374,405 @@ groovy.lang.MissingPropertyException: No such property: username for class: java
 groovy.lang.MissingPropertyException: No such property: username for class: java.lang.Integer
 	at com.quickpm.UserService.$tt__addUser(UserService.groovy:119)
 	at com.quickpm.UserServiceSpec.test deleteUser invalid user(UserServiceSpec.groovy:417)
+2014-12-23 18:48:20,281 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+model.currentUser == tmUser
+|     |           |  |
+[:]   null        |  com.quickpm.User : 1
+                  false
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:97)
+2014-12-23 18:48:20,286 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+model.currentUser == tmUser
+|     |           |  |
+[:]   null        |  com.quickpm.User : 1
+                  false
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:97)
+2014-12-23 18:48:20,287 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.currentUser == tmUser
+|     |           |  |
+[:]   null        |  com.quickpm.User : 1
+                  false
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:97)
+2014-12-23 18:48:20,287 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.currentUser == tmUser
+|     |           |  |
+[:]   null        |  com.quickpm.User : 1
+                  false
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:97)
+2014-12-23 18:48:20,295 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.currentUser == tmUser
+|     |           |  |
+[:]   null        |  com.quickpm.User : 1
+                  false
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:97)
+2014-12-23 18:48:20,295 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.currentUser == tmUser
+|     |           |  |
+[:]   null        |  com.quickpm.User : 1
+                  false
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:97)
+2014-12-23 18:56:18,649 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+model.calendarTabActive == ''
+|     |                 |
+|     active            false
+|                       6 differences (0% similarity)
+|                       (active)
+|                       (------)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:active, tasksTabActive:, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:103)
+2014-12-23 18:56:18,656 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+model.calendarTabActive == ''
+|     |                 |
+|     active            false
+|                       6 differences (0% similarity)
+|                       (active)
+|                       (------)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:active, tasksTabActive:, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:103)
+2014-12-23 18:56:18,657 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.calendarTabActive == ''
+|     |                 |
+|     active            false
+|                       6 differences (0% similarity)
+|                       (active)
+|                       (------)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:active, tasksTabActive:, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:103)
+2014-12-23 18:56:18,658 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.calendarTabActive == ''
+|     |                 |
+|     active            false
+|                       6 differences (0% similarity)
+|                       (active)
+|                       (------)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:active, tasksTabActive:, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:103)
+2014-12-23 18:56:18,664 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.calendarTabActive == ''
+|     |                 |
+|     active            false
+|                       6 differences (0% similarity)
+|                       (active)
+|                       (------)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:active, tasksTabActive:, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:103)
+2014-12-23 18:56:18,664 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.calendarTabActive == ''
+|     |                 |
+|     active            false
+|                       6 differences (0% similarity)
+|                       (active)
+|                       (------)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:active, tasksTabActive:, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home(TMControllerSpec.groovy:103)
+2014-12-23 19:01:31,094 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+model.calendarTabActive == 'active'
+|     |                 |
+|     ""                false
+|                       6 differences (0% similarity)
+|                       (------)
+|                       (active)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:, tasksTabActive:active, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home from calendar tab (TMControllerSpec.groovy:176)
+2014-12-23 19:01:31,098 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+model.calendarTabActive == 'active'
+|     |                 |
+|     ""                false
+|                       6 differences (0% similarity)
+|                       (------)
+|                       (active)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:, tasksTabActive:active, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home from calendar tab (TMControllerSpec.groovy:176)
+2014-12-23 19:01:31,099 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.calendarTabActive == 'active'
+|     |                 |
+|     ""                false
+|                       6 differences (0% similarity)
+|                       (------)
+|                       (active)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:, tasksTabActive:active, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home from calendar tab (TMControllerSpec.groovy:176)
+2014-12-23 19:01:31,099 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.calendarTabActive == 'active'
+|     |                 |
+|     ""                false
+|                       6 differences (0% similarity)
+|                       (------)
+|                       (active)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:, tasksTabActive:active, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home from calendar tab (TMControllerSpec.groovy:176)
+2014-12-23 19:01:31,103 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.calendarTabActive == 'active'
+|     |                 |
+|     ""                false
+|                       6 differences (0% similarity)
+|                       (------)
+|                       (active)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:, tasksTabActive:active, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home from calendar tab (TMControllerSpec.groovy:176)
+2014-12-23 19:01:31,103 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+model.calendarTabActive == 'active'
+|     |                 |
+|     ""                false
+|                       6 differences (0% similarity)
+|                       (------)
+|                       (active)
+[currentUser:com.quickpm.User : 1, taskList:[com.quickpm.Task : 1], calendarTabActive:, tasksTabActive:active, tmList:[com.quickpm.User : 1], taskGroupList:[com.quickpm.TaskGroup : 1]]
+
+	at com.quickpm.TMControllerSpec.test home from calendar tab (TMControllerSpec.groovy:176)
+2014-12-23 19:09:54,734 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.TMControllerSpec
+	at com.quickpm.TMControllerSpec.test getTask(TMControllerSpec.groovy:188)
+2014-12-23 19:09:54,737 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.TMControllerSpec
+	at com.quickpm.TMControllerSpec.test getTask(TMControllerSpec.groovy:188)
+2014-12-23 19:09:54,741 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.TMControllerSpec
+	at com.quickpm.TMControllerSpec.test getTask(TMControllerSpec.groovy:188)
+2014-12-23 19:09:54,742 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.TMControllerSpec
+	at com.quickpm.TMControllerSpec.test getTask(TMControllerSpec.groovy:188)
+2014-12-23 19:09:54,751 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.TMControllerSpec
+	at com.quickpm.TMControllerSpec.test getTask(TMControllerSpec.groovy:188)
+2014-12-23 19:09:54,752 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: tmUser for class: com.quickpm.TMControllerSpec
+	at com.quickpm.TMControllerSpec.test getTask(TMControllerSpec.groovy:188)
+2014-12-23 19:18:41,117 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+response == 'Success'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@30b14998
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:18:41,120 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+response == 'Success'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@30b14998
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:18:41,121 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response == 'Success'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@30b14998
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:18:41,121 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response == 'Success'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@30b14998
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:18:41,127 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response == 'Success'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@30b14998
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:18:41,128 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response == 'Success'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@30b14998
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:21:04,322 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+response == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@396a1a1f
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:21:04,324 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+response == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@396a1a1f
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:21:04,325 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@396a1a1f
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:21:04,325 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@396a1a1f
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:21:04,329 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@396a1a1f
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:21:04,329 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |
+|        false
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@396a1a1f
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:22:24,528 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+response.contentAsString == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |               |
+|        |               false
+|        |               2 differences (98% similarity)
+|        |               ([){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(])
+|        |               (-){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(-)
+|        [{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}]
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@6c342810
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:22:24,538 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+response.contentAsString == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |               |
+|        |               false
+|        |               2 differences (98% similarity)
+|        |               ([){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(])
+|        |               (-){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(-)
+|        [{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}]
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@6c342810
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:22:24,539 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response.contentAsString == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |               |
+|        |               false
+|        |               2 differences (98% similarity)
+|        |               ([){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(])
+|        |               (-){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(-)
+|        [{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}]
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@6c342810
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:22:24,539 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response.contentAsString == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |               |
+|        |               false
+|        |               2 differences (98% similarity)
+|        |               ([){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(])
+|        |               (-){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(-)
+|        [{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}]
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@6c342810
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:22:24,542 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response.contentAsString == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |               |
+|        |               false
+|        |               2 differences (98% similarity)
+|        |               ([){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(])
+|        |               (-){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(-)
+|        [{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}]
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@6c342810
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
+2014-12-23 19:22:24,543 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+response.contentAsString == '{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}'
+|        |               |
+|        |               false
+|        |               2 differences (98% similarity)
+|        |               ([){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(])
+|        |               (-){"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}(-)
+|        [{"id":"t1","title":"New Task","start":"12/10/2014","end":"02/01/2015","url":"#","color":"#46d6db","backgroundColor":"#46d6db","textColor":"#000000"}]
+org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@6c342810
+
+	at com.quickpm.TMControllerSpec.test getTasks(TMControllerSpec.groovy:298)
