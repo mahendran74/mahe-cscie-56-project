@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="localhost" name="com.quickpm.AuthControllerSpec" tests="5" time="3.262" timestamp="2014-12-24T12:18:41">
+  <properties />
+  <testcase classname="com.quickpm.AuthControllerSpec" name="test index" time="2.63" />
+  <testcase classname="com.quickpm.AuthControllerSpec" name="test login" time="0.113" />
+  <testcase classname="com.quickpm.AuthControllerSpec" name="test signIn as Admin" time="0.2" />
+  <testcase classname="com.quickpm.AuthControllerSpec" name="test signIn as PM" time="0.132" />
+  <testcase classname="com.quickpm.AuthControllerSpec" name="test signIn as TM" time="0.148" />
+  <system-out><![CDATA[--Output from test index--
+--Output from test login--
+--Output from test signIn as Admin--
+--Output from test signIn as PM--
+--Output from test signIn as TM--
+]]></system-out>
+  <system-err><![CDATA[--Output from test index--
+--Output from test login--
+--Output from test signIn as Admin--
+--Output from test signIn as PM--
+--Output from test signIn as TM--
+]]></system-err>
+</testsuite>
