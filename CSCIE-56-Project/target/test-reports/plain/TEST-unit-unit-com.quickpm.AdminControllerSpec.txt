@@ -1,0 +1,46 @@
+Testsuite: com.quickpm.AdminControllerSpec
+Tests run: 13, Failures: 0, Errors: 0, Time elapsed: 4.53 sec
+------------- Standard Output ---------------
+--Output from test home--
+--Output from test home from the users tab--
+--Output from test changePassword--
+--Output from test activate--
+--Output from test deactivate--
+--Output from test deleteUser--
+--Output from test addUser--
+--Output from test updateUser--
+--Output from test getUser--
+--Output from test resetPassword--
+--Output from test getProject--
+--Output from test updateProject--
+--Output from test deleteProject--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from test home--
+--Output from test home from the users tab--
+--Output from test changePassword--
+--Output from test activate--
+--Output from test deactivate--
+--Output from test deleteUser--
+--Output from test addUser--
+--Output from test updateUser--
+--Output from test getUser--
+--Output from test resetPassword--
+--Output from test getProject--
+--Output from test updateProject--
+--Output from test deleteProject--
+------------- ---------------- ---------------
+
+Testcase: test home took 3.533 sec
+Testcase: test home from the users tab took 0.161 sec
+Testcase: test changePassword took 0.139 sec
+Testcase: test activate took 0.078 sec
+Testcase: test deactivate took 0.065 sec
+Testcase: test deleteUser took 0.062 sec
+Testcase: test addUser took 0.065 sec
+Testcase: test updateUser took 0.066 sec
+Testcase: test getUser took 0.068 sec
+Testcase: test resetPassword took 0.058 sec
+Testcase: test getProject took 0.079 sec
+Testcase: test updateProject took 0.059 sec
+Testcase: test deleteProject took 0.058 sec

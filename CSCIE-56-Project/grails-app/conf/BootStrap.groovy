@@ -17,19 +17,7 @@ import java.util.Date;
 class BootStrap {
     def init = { servletContext ->
 		
-//		def adminRole = new Role(roleName: RoleType.ROLE_ADMIN).save(flush: true)
-//		def userRole = new Role(roleName: RoleType.ROLE_USER).save(flush: true)
-//  
-//		def testUser = new User(firstName: 'Test', 
-//								lastName: 'User',
-//								middleIntitial: 'I',
-//								email: 'test@test.com',
-//								password: 'test',
-//								token: 'dfsdf',
-//								active: true)
-//		testUser.addToRoles(adminRole)
-//		testUser.save(flush: true)
-		
+////////////////////// Registering Custom Object Marhallers ////////////////////////////////////
 		JSON.registerObjectMarshaller(User) {
 			def output = [:]
 			output['id'] = it.id
@@ -95,7 +83,9 @@ class BootStrap {
 			output['project'] = it.project.id
 			return output;
 		}
-		// Create the roles
+		
+///////////////////////// Setting up the data ///////////////////////////////////////
+//		// Create the roles
 		def adminRole = Role.findByName('ROLE_ADMIN') ?:
 			new Role(name: 'ROLE_ADMIN', description: 'Administrator').save(flush: true, failOnError: true)
 			adminRole.addToPermissions("*:*")
@@ -109,6 +99,7 @@ class BootStrap {
 			new Role(name: 'ROLE_TM', description: 'Team Member').save(flush: true, failOnError: true)
 			tmRole.addToPermissions("tm:*")
 			tmRole.save(flush: true)
+			
 		// Create an admin user
 		def adminUser = User.findByUsername('admin@test.com') ?:
 			new User(firstName: 'Admin', 
@@ -123,20 +114,6 @@ class BootStrap {
 		assert adminUser.addToRoles(adminRole)
 				.save(flush: true, failOnError: true)
 				
-		// Create an admin user
-		def adminUser1 = User.findByUsername('admin1@test.com') ?:
-			new User(firstName: 'Admin1',
-					lastName: 'User',
-					middleInitial: 'I',
-					username: 'admin1@test.com',
-					passwordHash: new Sha512Hash("password").toHex(),
-					active: true)
-					.save(flush: true, failOnError: true)
-		
-				// Add roles to the admin user
-				assert adminUser1.addToRoles(adminRole)
-						.save(flush: true, failOnError: true)
-						
 		// Create an pm user
 		def pmUser = User.findByUsername('pm@test.com') ?:
 			new User(firstName: 'PM', 
@@ -183,44 +160,135 @@ class BootStrap {
 		def project = Project.findByProjectName('My New Project') ?:
 			new Project(projectName : 'My New Project',
 				projectDesc : 'This is the first project', 
-				startDate : new SimpleDateFormat('MM/dd/yyyy').parse('12/10/2014'),
-				endDate : new SimpleDateFormat('MM/dd/yyyy').parse('02/10/2015'),
+				startDate : new SimpleDateFormat('MM/dd/yyyy').parse('12/01/2014'),
+				endDate : new SimpleDateFormat('MM/dd/yyyy').parse('01/31/2015'),
 				status : Status.PLANNED,
 				projectManager : pmUser)
 			.save(flush: true, failOnError: true)
 			
 		//Add Task Group
-		def taskGroup = TaskGroup.findByGroupName('Group of Tasks') ?:
-			new TaskGroup(groupName : 'Group of Tasks',
-				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/10/2014'),
-				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('2/1/2015'),
+		def taskGroup1 = TaskGroup.findByGroupName('First Group of Tasks') ?:
+			new TaskGroup(groupName : 'First Group of Tasks',
+				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/01/2014'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/31/2014'),
 				percentageComplete: 0, project: project)
 			.save(flush: true, failOnError: true)
-		project.addToTaskGroups(taskGroup)
+		project.addToTaskGroups(taskGroup1)
 			.save(flush: true, failOnError: true)
 			
 		//Add Task
-		def task = new Task(taskDesc: 'New Task',
+		def task1 = new Task(taskDesc: 'Task 1',
+				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/01/2014'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/10/2014'),
+				percentageComplete: 0,
+				status : Status.PLANNED,
+				color : '#7bd148',
+				assignedTo: tmUser,
+				taskGroup: taskGroup1,
+				project: project)
+			.save(flush: true, failOnError: true)
+		taskGroup1.addToTasks(task1)
+			.save(flush: true, failOnError: true)
+
+		//Add Task
+		def task2 = new Task(taskDesc: 'Task 2',
 				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/10/2014'),
-				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('2/1/2015'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/20/2014'),
+				percentageComplete: 0,
+				status : Status.PLANNED,
+				color : '#5484ed',
+				assignedTo: pmUser,
+				taskGroup: taskGroup1,
+				project: project)
+			.save(flush: true, failOnError: true)
+		taskGroup1.addToTasks(task2)
+			.save(flush: true, failOnError: true)
+				
+		//Add Task
+		def task3 = new Task(taskDesc: 'Task 3',
+				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/20/2014'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/30/2014'),
+				percentageComplete: 0,
+				status : Status.PLANNED,
+				color : '#a4bdfc',
+				assignedTo: adminUser,
+				taskGroup: taskGroup1,
+				project: project)
+			.save(flush: true, failOnError: true)
+		taskGroup1.addToTasks(task3)
+			.save(flush: true, failOnError: true)
+
+		//Add Milestone
+		def milestone = new Milestone(milestoneDesc: 'First Milestone',
+				milestoneDate: new SimpleDateFormat('MM/dd/yyyy').parse('12/31/2014'),
+				assignedTo:pmUser,
+				taskGroup: taskGroup1,
+				project: project)
+			.save(flush: true, failOnError: true)
+		taskGroup1.addToMilestones(milestone)
+			.save(flush: true, failOnError: true)
+				
+		//Add Task Group
+		def taskGroup2 = TaskGroup.findByGroupName('Second Group of Tasks') ?:
+			new TaskGroup(groupName : 'Second Group of Tasks',
+				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/01/2015'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/31/2015'),
+				percentageComplete: 0, project: project)
+			.save(flush: true, failOnError: true)
+		project.addToTaskGroups(taskGroup2)
+			.save(flush: true, failOnError: true)
+
+		//Add Task
+		def task4 = new Task(taskDesc: 'Task 4',
+				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/01/2015'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/10/2015'),
 				percentageComplete: 0,
 				status : Status.PLANNED,
 				color : '#46d6db',
 				assignedTo: tmUser,
-				taskGroup: taskGroup,
+				taskGroup: taskGroup2,
 				project: project)
 			.save(flush: true, failOnError: true)
-		taskGroup.addToTasks(task)
+		taskGroup2.addToTasks(task4)
+			.save(flush: true, failOnError: true)
+						
+		//Add Task
+		def task5 = new Task(taskDesc: 'New Task',
+				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/10/2015'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/20/2015'),
+				percentageComplete: 0,
+				status : Status.PLANNED,
+				color : '#7ae7bf',
+				assignedTo: pmUser,
+				taskGroup: taskGroup2,
+				project: project)
+			.save(flush: true, failOnError: true)
+		taskGroup2.addToTasks(task5)
 			.save(flush: true, failOnError: true)
 
-		//Add Milestone
-		def milestone = new Milestone(milestoneDesc: 'New Milestone',
-				milestoneDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/10/2015'),
-				assignedTo:tmUser,
-				taskGroup: taskGroup,
+		//Add Task
+		def task6 = new Task(taskDesc: 'New Task',
+				startDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/20/2015'),
+				endDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/30/2015'),
+				percentageComplete: 0,
+				status : Status.PLANNED,
+				color : '#ffb878',
+				assignedTo: adminUser,
+				taskGroup: taskGroup2,
 				project: project)
 			.save(flush: true, failOnError: true)
-		taskGroup.addToMilestones(milestone)
+		taskGroup2.addToTasks(task6)
+			.save(flush: true, failOnError: true)
+							
+							
+		//Add Milestone
+		def milestone2 = new Milestone(milestoneDesc: 'Milestone 2',
+				milestoneDate: new SimpleDateFormat('MM/dd/yyyy').parse('01/31/2015'),
+				assignedTo:pmUser,
+				taskGroup: taskGroup2,
+				project: project)
+			.save(flush: true, failOnError: true)
+		taskGroup2.addToMilestones(milestone2)
 			.save(flush: true, failOnError: true)
     }
     def destroy = {

@@ -20,7 +20,12 @@ class PMController {
 		User currentUser = User.findByUsername(loggedInUsername)
 		def projectList = Project.findAllByProjectManager(currentUser)
 		def allowedRole = Role.findByName('ROLE_TM')
-		[currentUser: currentUser, projectList: projectList, allowedRole: allowedRole.id]
+		if (!allowedRole) {
+			flash.message = "PM:" + message(code: "roles.not.setup", args: ['ROLE_PM'])
+			[currentUser: currentUser, projectList: projectList, allowedRole: '']
+		} else {
+			[currentUser: currentUser, projectList: projectList, allowedRole: allowedRole.id]
+		}
 	}
 	
 	def gantt(Long id) {
@@ -30,12 +35,14 @@ class PMController {
 		def project = Project.findByIdAndProjectManager(id, currentUser)
 		if (!project)
 		{
-			redirect(action: "home") 
+			flash.message = "NO_PM:" + message(code: "no.pm")
+			redirect(action:"home")
+		} else {
+			def userList = User.list()
+			def taskList = Task.findAllByProject(project)
+			def projectXMLString = projectService.getProjectXMLString(project)
+			[currentUser: currentUser, project: project, projectXMLString: projectXMLString.toString(), tmList: userList, taskList: taskList]
 		}
-		def userList = User.list()
-		def taskList = Task.findAllByProject(project)
-		def projectXMLString = projectService.getProjectXMLString(project)
-		[currentUser: currentUser, project: project, projectXMLString: projectXMLString.toString(), tmList: userList, taskList: taskList]
 	}
 	
 	def changePassword() {

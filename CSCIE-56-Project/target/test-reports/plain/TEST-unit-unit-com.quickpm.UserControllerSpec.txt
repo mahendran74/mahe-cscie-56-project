@@ -1,0 +1,16 @@
+Testsuite: com.quickpm.UserControllerSpec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.128 sec
+------------- Standard Output ---------------
+--Output from test signUp--
+--Output from test checkEmail valid email--
+--Output from test checkEmail invalid email--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from test signUp--
+--Output from test checkEmail valid email--
+--Output from test checkEmail invalid email--
+------------- ---------------- ---------------
+
+Testcase: test signUp took 0.101 sec
+Testcase: test checkEmail valid email took 0.014 sec
+Testcase: test checkEmail invalid email took 0.008 sec

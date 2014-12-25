@@ -1,17 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="localhost" id="0" name="AuthControllerSpec" package="com.quickpm" tests="5" time="3.262" timestamp="2014-12-24T12:18:41">
+  <testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" id="0" name="AdminControllerSpec" package="com.quickpm" tests="13" time="4.53" timestamp="2014-12-25T00:48:26">
       <properties />
 
-      <testcase classname="com.quickpm.AuthControllerSpec" name="test index" time="2.63" />
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test home" time="3.533" />
 
-      <testcase classname="com.quickpm.AuthControllerSpec" name="test login" time="0.113" />
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test home from the users tab" time="0.161" />
 
-      <testcase classname="com.quickpm.AuthControllerSpec" name="test signIn as Admin" time="0.2" />
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test changePassword" time="0.139" />
 
-      <testcase classname="com.quickpm.AuthControllerSpec" name="test signIn as PM" time="0.132" />
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test activate" time="0.078" />
 
-      <testcase classname="com.quickpm.AuthControllerSpec" name="test signIn as TM" time="0.148" />
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test deactivate" time="0.065" />
+
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test deleteUser" time="0.062" />
+
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test addUser" time="0.065" />
+
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test updateUser" time="0.066" />
+
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test getUser" time="0.068" />
+
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test resetPassword" time="0.058" />
+
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test getProject" time="0.079" />
+
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test updateProject" time="0.059" />
+
+      <testcase classname="com.quickpm.AdminControllerSpec" name="test deleteProject" time="0.058" />
+
+      <system-out><![CDATA[--Output from test home--
+--Output from test home from the users tab--
+--Output from test changePassword--
+--Output from test activate--
+--Output from test deactivate--
+--Output from test deleteUser--
+--Output from test addUser--
+--Output from test updateUser--
+--Output from test getUser--
+--Output from test resetPassword--
+--Output from test getProject--
+--Output from test updateProject--
+--Output from test deleteProject--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from test home--
+--Output from test home from the users tab--
+--Output from test changePassword--
+--Output from test activate--
+--Output from test deactivate--
+--Output from test deleteUser--
+--Output from test addUser--
+--Output from test updateUser--
+--Output from test getUser--
+--Output from test resetPassword--
+--Output from test getProject--
+--Output from test updateProject--
+--Output from test deleteProject--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" id="1" name="AuthControllerSpec" package="com.quickpm" tests="5" time="0.577" timestamp="2014-12-25T00:48:36">
+      <properties />
+
+      <testcase classname="com.quickpm.AuthControllerSpec" name="test index" time="0.252" />
+
+      <testcase classname="com.quickpm.AuthControllerSpec" name="test login" time="0.053" />
+
+      <testcase classname="com.quickpm.AuthControllerSpec" name="test signIn as Admin" time="0.106" />
+
+      <testcase classname="com.quickpm.AuthControllerSpec" name="test signIn as PM" time="0.075" />
+
+      <testcase classname="com.quickpm.AuthControllerSpec" name="test signIn as TM" time="0.072" />
 
       <system-out><![CDATA[--Output from test index--
 --Output from test login--
@@ -25,6 +85,512 @@
 --Output from test signIn as Admin--
 --Output from test signIn as PM--
 --Output from test signIn as TM--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" id="2" name="PMControllerSpec" package="com.quickpm" tests="20" time="1.275" timestamp="2014-12-25T00:48:41">
+      <properties />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test home" time="0.22" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test gantt" time="0.1" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test gantt a user is logged in who is not the PM of this project" time="0.235" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test changePassword" time="0.042" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test addUser" time="0.041" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test addProject" time="0.04" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test getProject" time="0.054" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test updateProject" time="0.042" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test getGroup" time="0.041" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test addGroup" time="0.039" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test updateGroup" time="0.039" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test deleteGroup" time="0.042" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test getTask" time="0.04" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test addTask" time="0.037" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test updateTask" time="0.039" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test deleteTask" time="0.04" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test getMilestone" time="0.04" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test addMilestone" time="0.043" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test updateMilestone" time="0.041" />
+
+      <testcase classname="com.quickpm.PMControllerSpec" name="test deleteMilestone" time="0.038" />
+
+      <system-out><![CDATA[--Output from test home--
+--Output from test gantt--
+--Output from test gantt a user is logged in who is not the PM of this project--
+--Output from test changePassword--
+--Output from test addUser--
+--Output from test addProject--
+--Output from test getProject--
+--Output from test updateProject--
+--Output from test getGroup--
+--Output from test addGroup--
+--Output from test updateGroup--
+--Output from test deleteGroup--
+--Output from test getTask--
+--Output from test addTask--
+--Output from test updateTask--
+--Output from test deleteTask--
+--Output from test getMilestone--
+--Output from test addMilestone--
+--Output from test updateMilestone--
+--Output from test deleteMilestone--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from test home--
+--Output from test gantt--
+--Output from test gantt a user is logged in who is not the PM of this project--
+--Output from test changePassword--
+--Output from test addUser--
+--Output from test addProject--
+--Output from test getProject--
+--Output from test updateProject--
+--Output from test getGroup--
+--Output from test addGroup--
+--Output from test updateGroup--
+--Output from test deleteGroup--
+--Output from test getTask--
+--Output from test addTask--
+--Output from test updateTask--
+--Output from test deleteTask--
+--Output from test getMilestone--
+--Output from test addMilestone--
+--Output from test updateMilestone--
+--Output from test deleteMilestone--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" id="3" name="ProjectServiceSpec" package="com.quickpm" tests="62" time="2.624" timestamp="2014-12-25T00:48:48">
+      <properties />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addProject" time="0.15" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addProject with invalid user" time="0.032" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addProject with user who is not a PM or ADMIN" time="0.035" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addProject with invalid dates" time="0.044" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateProject" time="0.054" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateProject with invalid project" time="0.028" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateProject with invalid user" time="0.036" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateProject with valid user who is not a PM" time="0.035" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateProject with invalid dates" time="0.041" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteProject" time="0.053" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteProject with invalid project" time="0.029" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addGroup" time="0.051" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addGroup with invalid project" time="0.031" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addGroup with invalid dates" time="0.043" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addGroup with invalid start date" time="0.065" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addGroup with invalid end date" time="0.042" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup" time="0.052" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with invalid task group" time="0.026" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with invalid parent task group" time="0.042" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with the current group as its own parent task group" time="0.048" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with invalid project" time="0.044" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with invalid dates" time="0.043" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with start date before project start date" time="0.046" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with end date after project end date" time="0.046" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteGroup" time="0.049" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteGroup with invalid task group id" time="0.026" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask" time="0.051" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with invalid assignedTo ID" time="0.028" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with invalid task group" time="0.031" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with invalid dependsOn" time="0.028" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with invalid project ID" time="0.028" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with invalid dates" time="0.044" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with start date before project start date" time="0.045" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with end date after project end date" time="0.044" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask" time="0.056" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid taskID" time="0.023" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid assignedTo" time="0.042" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid task group" time="0.042" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid dependsOn" time="0.047" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid dependsOn itself" time="0.043" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid projectID" time="0.042" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with end date after project end date" time="0.042" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid dates" time="0.044" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with start date before project start date" time="0.044" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteTask" time="0.05" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteTask with invalid Id" time="0.022" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone" time="0.047" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone invalid assignedTo" time="0.023" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone invalid taskGroup" time="0.026" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone invalid project" time="0.026" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone milestone date before project start date" time="0.038" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone milestone date after project end date" time="0.057" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone" time="0.044" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone invalid milestoneID" time="0.023" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone invalid assignedTo" time="0.041" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone invalid taskGroup" time="0.037" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone invalid project" time="0.041" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone milestone date before project start date" time="0.039" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone milestone date after project end date" time="0.039" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteMilestone" time="0.043" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteMilestone invalid project ID" time="0.022" />
+
+      <testcase classname="com.quickpm.ProjectServiceSpec" name="test getProjectXMLString" time="0.068" />
+
+      <system-out><![CDATA[--Output from test addProject--
+--Output from test addProject with invalid user--
+--Output from test addProject with user who is not a PM or ADMIN--
+--Output from test addProject with invalid dates--
+--Output from test updateProject--
+--Output from test updateProject with invalid project--
+--Output from test updateProject with invalid user--
+--Output from test updateProject with valid user who is not a PM--
+--Output from test updateProject with invalid dates--
+--Output from test deleteProject--
+--Output from test deleteProject with invalid project--
+--Output from test addGroup--
+addGroup - [groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid project--
+addGroup - [groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid dates--
+addGroup - [groupName:Group of Tasks, startDate:2/1/2015, endDate:12/10/2014, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid start date--
+addGroup - [groupName:Group of Tasks, startDate:12/1/2014, endDate:12/10/2014, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid end date--
+addGroup - [groupName:Group of Tasks, startDate:2/1/2015, endDate:02/30/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with invalid task group--
+updateGroup - [groupID:2]
+--Output from test updateGroup with invalid parent task group--
+updateGroup - [groupID:1, parentGroup:23]
+--Output from test updateGroup with the current group as its own parent task group--
+updateGroup - [groupID:1, parentGroup:1]
+--Output from test updateGroup with invalid project--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:4]
+--Output from test updateGroup with invalid dates--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:2/10/2015, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with start date before project start date--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/1/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with end date after project end date--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/11/2014, endDate:2/11/2015, percentageComplete:0, projectID:1]
+--Output from test deleteGroup--
+--Output from test deleteGroup with invalid task group id--
+--Output from test addTask--
+--Output from test addTask with invalid assignedTo ID--
+--Output from test addTask with invalid task group--
+--Output from test addTask with invalid dependsOn--
+--Output from test addTask with invalid project ID--
+--Output from test addTask with invalid dates--
+--Output from test addTask with start date before project start date--
+--Output from test addTask with end date after project end date--
+--Output from test updateTask--
+--Output from test updateTask with invalid taskID--
+--Output from test updateTask with invalid assignedTo--
+--Output from test updateTask with invalid task group--
+--Output from test updateTask with invalid dependsOn--
+--Output from test updateTask with invalid dependsOn itself--
+--Output from test updateTask with invalid projectID--
+--Output from test updateTask with end date after project end date--
+--Output from test updateTask with invalid dates--
+--Output from test updateTask with start date before project start date--
+--Output from test deleteTask--
+--Output from test deleteTask with invalid Id--
+--Output from test addMilestone--
+--Output from test addMilestone invalid assignedTo--
+--Output from test addMilestone invalid taskGroup--
+--Output from test addMilestone invalid project--
+--Output from test addMilestone milestone date before project start date--
+--Output from test addMilestone milestone date after project end date--
+--Output from test updateMilestone--
+--Output from test updateMilestone invalid milestoneID--
+--Output from test updateMilestone invalid assignedTo--
+--Output from test updateMilestone invalid taskGroup--
+--Output from test updateMilestone invalid project--
+--Output from test updateMilestone milestone date before project start date--
+--Output from test updateMilestone milestone date after project end date--
+--Output from test deleteMilestone--
+--Output from test deleteMilestone invalid project ID--
+--Output from test getProjectXMLString--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from test addProject--
+--Output from test addProject with invalid user--
+--Output from test addProject with user who is not a PM or ADMIN--
+--Output from test addProject with invalid dates--
+--Output from test updateProject--
+--Output from test updateProject with invalid project--
+--Output from test updateProject with invalid user--
+--Output from test updateProject with valid user who is not a PM--
+--Output from test updateProject with invalid dates--
+--Output from test deleteProject--
+--Output from test deleteProject with invalid project--
+--Output from test addGroup--
+--Output from test addGroup with invalid project--
+--Output from test addGroup with invalid dates--
+--Output from test addGroup with invalid start date--
+--Output from test addGroup with invalid end date--
+--Output from test updateGroup--
+--Output from test updateGroup with invalid task group--
+--Output from test updateGroup with invalid parent task group--
+--Output from test updateGroup with the current group as its own parent task group--
+--Output from test updateGroup with invalid project--
+--Output from test updateGroup with invalid dates--
+--Output from test updateGroup with start date before project start date--
+--Output from test updateGroup with end date after project end date--
+--Output from test deleteGroup--
+--Output from test deleteGroup with invalid task group id--
+--Output from test addTask--
+--Output from test addTask with invalid assignedTo ID--
+--Output from test addTask with invalid task group--
+--Output from test addTask with invalid dependsOn--
+--Output from test addTask with invalid project ID--
+--Output from test addTask with invalid dates--
+--Output from test addTask with start date before project start date--
+--Output from test addTask with end date after project end date--
+--Output from test updateTask--
+--Output from test updateTask with invalid taskID--
+--Output from test updateTask with invalid assignedTo--
+--Output from test updateTask with invalid task group--
+--Output from test updateTask with invalid dependsOn--
+--Output from test updateTask with invalid dependsOn itself--
+--Output from test updateTask with invalid projectID--
+--Output from test updateTask with end date after project end date--
+--Output from test updateTask with invalid dates--
+--Output from test updateTask with start date before project start date--
+--Output from test deleteTask--
+--Output from test deleteTask with invalid Id--
+--Output from test addMilestone--
+--Output from test addMilestone invalid assignedTo--
+--Output from test addMilestone invalid taskGroup--
+--Output from test addMilestone invalid project--
+--Output from test addMilestone milestone date before project start date--
+--Output from test addMilestone milestone date after project end date--
+--Output from test updateMilestone--
+--Output from test updateMilestone invalid milestoneID--
+--Output from test updateMilestone invalid assignedTo--
+--Output from test updateMilestone invalid taskGroup--
+--Output from test updateMilestone invalid project--
+--Output from test updateMilestone milestone date before project start date--
+--Output from test updateMilestone milestone date after project end date--
+--Output from test deleteMilestone--
+--Output from test deleteMilestone invalid project ID--
+--Output from test getProjectXMLString--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" id="4" name="TMControllerSpec" package="com.quickpm" tests="6" time="0.389" timestamp="2014-12-25T00:48:55">
+      <properties />
+
+      <testcase classname="com.quickpm.TMControllerSpec" name="test home from tasks tab " time="0.179" />
+
+      <testcase classname="com.quickpm.TMControllerSpec" name="test home from calendar tab " time="0.046" />
+
+      <testcase classname="com.quickpm.TMControllerSpec" name="test getTask" time="0.049" />
+
+      <testcase classname="com.quickpm.TMControllerSpec" name="test getTasks" time="0.046" />
+
+      <testcase classname="com.quickpm.TMControllerSpec" name="test updateTask" time="0.028" />
+
+      <testcase classname="com.quickpm.TMControllerSpec" name="test changePassword" time="0.028" />
+
+      <system-out><![CDATA[--Output from test home from tasks tab --
+--Output from test home from calendar tab --
+--Output from test getTask--
+--Output from test getTasks--
+--Output from test updateTask--
+--Output from test changePassword--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from test home from tasks tab --
+--Output from test home from calendar tab --
+--Output from test getTask--
+--Output from test getTasks--
+--Output from test updateTask--
+--Output from test changePassword--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" id="5" name="UserControllerSpec" package="com.quickpm" tests="3" time="0.128" timestamp="2014-12-25T00:49:01">
+      <properties />
+
+      <testcase classname="com.quickpm.UserControllerSpec" name="test signUp" time="0.101" />
+
+      <testcase classname="com.quickpm.UserControllerSpec" name="test checkEmail valid email" time="0.014" />
+
+      <testcase classname="com.quickpm.UserControllerSpec" name="test checkEmail invalid email" time="0.008" />
+
+      <system-out><![CDATA[--Output from test signUp--
+--Output from test checkEmail valid email--
+--Output from test checkEmail invalid email--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from test signUp--
+--Output from test checkEmail valid email--
+--Output from test checkEmail invalid email--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" id="6" name="UserServiceSpec" package="com.quickpm" tests="22" time="0.393" timestamp="2014-12-25T00:49:06">
+      <properties />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test checkEmail" time="0.097" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test checkEmail invalid email" time="0.009" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test signUp" time="0.021" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test signUp existing user" time="0.012" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test signUp with no role setup" time="0.008" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test activate" time="0.018" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test activate invalid user" time="0.009" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test deactivate" time="0.017" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test deactivate invalid user" time="0.008" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test changePassword" time="0.019" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test changePassword invalid old password" time="0.017" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test changePassword invalid user" time="0.008" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test resetPassword" time="0.016" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test restPassword invalid user" time="0.008" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test addUser" time="0.02" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test addUser user already exists" time="0.017" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test addUser no role setup" time="0.011" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test updateUser" time="0.024" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test updateUser invalid user" time="0.007" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test updateUser invalid role" time="0.015" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test deleteUser" time="0.02" />
+
+      <testcase classname="com.quickpm.UserServiceSpec" name="test deleteUser invalid user" time="0.007" />
+
+      <system-out><![CDATA[--Output from test checkEmail--
+--Output from test checkEmail invalid email--
+--Output from test signUp--
+--Output from test signUp existing user--
+--Output from test signUp with no role setup--
+[code:Failure, message:Unable to find a role for Project Manager. Please establish a ROLE_PM role.]
+--Output from test activate--
+--Output from test activate invalid user--
+--Output from test deactivate--
+--Output from test deactivate invalid user--
+--Output from test changePassword--
+--Output from test changePassword invalid old password--
+--Output from test changePassword invalid user--
+--Output from test resetPassword--
+--Output from test restPassword invalid user--
+--Output from test addUser--
+--Output from test addUser user already exists--
+--Output from test addUser no role setup--
+--Output from test updateUser--
+--Output from test updateUser invalid user--
+--Output from test updateUser invalid role--
+--Output from test deleteUser--
+--Output from test deleteUser invalid user--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from test checkEmail--
+--Output from test checkEmail invalid email--
+--Output from test signUp--
+--Output from test signUp existing user--
+--Output from test signUp with no role setup--
+--Output from test activate--
+--Output from test activate invalid user--
+--Output from test deactivate--
+--Output from test deactivate invalid user--
+--Output from test changePassword--
+--Output from test changePassword invalid old password--
+--Output from test changePassword invalid user--
+--Output from test resetPassword--
+--Output from test restPassword invalid user--
+--Output from test addUser--
+--Output from test addUser user already exists--
+--Output from test addUser no role setup--
+--Output from test updateUser--
+--Output from test updateUser invalid user--
+--Output from test updateUser invalid role--
+--Output from test deleteUser--
+--Output from test deleteUser invalid user--
 ]]></system-err>
 
   </testsuite>

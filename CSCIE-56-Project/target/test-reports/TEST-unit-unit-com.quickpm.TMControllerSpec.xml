@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" name="com.quickpm.TMControllerSpec" tests="6" time="0.389" timestamp="2014-12-25T00:48:55">
+  <properties />
+  <testcase classname="com.quickpm.TMControllerSpec" name="test home from tasks tab " time="0.179" />
+  <testcase classname="com.quickpm.TMControllerSpec" name="test home from calendar tab " time="0.046" />
+  <testcase classname="com.quickpm.TMControllerSpec" name="test getTask" time="0.049" />
+  <testcase classname="com.quickpm.TMControllerSpec" name="test getTasks" time="0.046" />
+  <testcase classname="com.quickpm.TMControllerSpec" name="test updateTask" time="0.028" />
+  <testcase classname="com.quickpm.TMControllerSpec" name="test changePassword" time="0.028" />
+  <system-out><![CDATA[--Output from test home from tasks tab --
+--Output from test home from calendar tab --
+--Output from test getTask--
+--Output from test getTasks--
+--Output from test updateTask--
+--Output from test changePassword--
+]]></system-out>
+  <system-err><![CDATA[--Output from test home from tasks tab --
+--Output from test home from calendar tab --
+--Output from test getTask--
+--Output from test getTasks--
+--Output from test updateTask--
+--Output from test changePassword--
+]]></system-err>
+</testsuite>

@@ -1,0 +1,22 @@
+--Output from test checkEmail--
+--Output from test checkEmail invalid email--
+--Output from test signUp--
+--Output from test signUp existing user--
+--Output from test signUp with no role setup--
+--Output from test activate--
+--Output from test activate invalid user--
+--Output from test deactivate--
+--Output from test deactivate invalid user--
+--Output from test changePassword--
+--Output from test changePassword invalid old password--
+--Output from test changePassword invalid user--
+--Output from test resetPassword--
+--Output from test restPassword invalid user--
+--Output from test addUser--
+--Output from test addUser user already exists--
+--Output from test addUser no role setup--
+--Output from test updateUser--
+--Output from test updateUser invalid user--
+--Output from test updateUser invalid role--
+--Output from test deleteUser--
+--Output from test deleteUser invalid user--

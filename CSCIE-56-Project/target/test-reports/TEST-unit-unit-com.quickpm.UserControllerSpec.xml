@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" name="com.quickpm.UserControllerSpec" tests="3" time="0.128" timestamp="2014-12-25T00:49:01">
+  <properties />
+  <testcase classname="com.quickpm.UserControllerSpec" name="test signUp" time="0.101" />
+  <testcase classname="com.quickpm.UserControllerSpec" name="test checkEmail valid email" time="0.014" />
+  <testcase classname="com.quickpm.UserControllerSpec" name="test checkEmail invalid email" time="0.008" />
+  <system-out><![CDATA[--Output from test signUp--
+--Output from test checkEmail valid email--
+--Output from test checkEmail invalid email--
+]]></system-out>
+  <system-err><![CDATA[--Output from test signUp--
+--Output from test checkEmail valid email--
+--Output from test checkEmail invalid email--
+]]></system-err>
+</testsuite>

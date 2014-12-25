@@ -92,13 +92,14 @@
         <img class="img-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAADIAQMAAAAwS4omAAAAA1BMVEUsPlC8g8jXAAAAG0lEQVRIie3BMQEAAADCoPVPbQwfoAAAAIC3AQ+gAAEq5xQCAAAAAElFTkSuQmCC" alt="Generic placeholder image" style="width: 140px; height: 140px;"/>
         <h2>Administrator</h2>
          <p>
-            1. Add new users. <br>
-            2. Edit user details like <br>
-            	a. First name <br>
-            	b. Last name <br>
-            	c. Email address. <br>
-            2.Change user's privileges and provide users with administrator access. <br>
-            3. Activate/deactivate users. <br>
+         <h4>Login: admin@test.com/password</h4><br>
+            1. Add new users.
+            2. Edit user details like 
+            	a. First name 
+            	b. Last name 
+            	c. Email address. 
+            2.Change user's privileges and provide users with administrator access.
+            3. Activate/deactivate users.
             4. Reset passwords of users.
         </p>
       </div>
@@ -107,7 +108,8 @@
         <img class="img-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAADIAQMAAAAwS4omAAAAA1BMVEU3bmw5JKWVAAAAG0lEQVRIie3BMQEAAADCoPVPbQwfoAAAAIC3AQ+gAAEq5xQCAAAAAElFTkSuQmCC" alt="Generic placeholder image" style="width: 140px; height: 140px;"/>
         <h2>Project Manager</h2>
         <p>
-            1. Create new projects. 2. Edit projects details like a. Project Description b. Start and End date c. Project Status - Green/Yellow/Red 
+        <h4>Login: pm@test.com/password</h4><br>
+            1. Create new projects. 2. Edit projects details like a. Project Description b. Start and End date c. Project Status - Planned/In Progress/Completed 
             3. View the Gantt chart of the project 4. Add, edit and delete tasks, task groups and milestones. 5. Add team members for the projects.
         </p>
       </div>
@@ -115,12 +117,16 @@
       <div class="col-lg-4">
         <img class="img-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAADIAQMAAAAwS4omAAAAA1BMVEVuLFC3aeGqAAAAG0lEQVRIie3BMQEAAADCoPVPbQwfoAAAAIC3AQ+gAAEq5xQCAAAAAElFTkSuQmCC" alt="Generic placeholder image" style="width: 140px; height: 140px;"/>
         <h2>Team Member</h2>
-            1. View calendar 2. View task list 3. Edit task details 4. Change task status/start date and end date
+        <p>
+        <h4>Login: tm@test.com/password</h4><br>
+        <p>
+            1. View calendar 2. View task list 3. Edit task details 4. Change task status
+        </p>
       </div>
       <!-- /.col-lg-4 -->
     </div>
     <!-- /.row -->
-
+<div id="flashMessage" style="display: none;">${flash.message}</div>
     <!-- START THE LOGIN MODAL -->
 
     <!-- Login Modal -->
@@ -134,7 +140,7 @@
             </div>
             <div class="modal-body">
               <div class="alert alert-danger" id="alertLogin">
-                <strong>${flash.message}</strong>
+                <strong></strong>
               </div>
               <label for="inputEmail" class="sr-only">Email address</label>
               <input type="email" id="inputEmail" 

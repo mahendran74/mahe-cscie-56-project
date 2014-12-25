@@ -13,7 +13,7 @@ class AuthController {
     def index = { redirect(action: "login", params: params) }
 
     def login = {
-		flash.message = "Please login."
+		flash.message = 'Login:' + "Please login."
 		redirect(uri: "/")
     }
 
@@ -53,7 +53,7 @@ class AuthController {
         }
 		catch (DisabledAccountException ex) {
 			def m = [ email: params.username ]
-			flash.message = ex.message
+			flash.message = 'Login:' + ex.message
 			// Now redirect back to the login page.
 			redirect(uri:'/', params: m)
 		}
@@ -61,7 +61,7 @@ class AuthController {
             // Authentication failed, so display the appropriate message
             // on the login page.
             log.info "Authentication failure for user '${params.username}'."
-            flash.message = message(code: "login.failed")
+            flash.message = 'Login:' + message(code: "login.failed")
 
             // Keep the username and "remember me" setting so that the
             // user doesn't have to enter them again.
@@ -84,7 +84,7 @@ class AuthController {
     }
 
     def unauthorized = {
-        flash.message = "Please login."
+        flash.message = 'Login:' + "Please login."
 		redirect(uri: "/")
     }
 }

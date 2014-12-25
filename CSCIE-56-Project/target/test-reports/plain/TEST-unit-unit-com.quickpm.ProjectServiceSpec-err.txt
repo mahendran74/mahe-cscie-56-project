@@ -1,0 +1,62 @@
+--Output from test addProject--
+--Output from test addProject with invalid user--
+--Output from test addProject with user who is not a PM or ADMIN--
+--Output from test addProject with invalid dates--
+--Output from test updateProject--
+--Output from test updateProject with invalid project--
+--Output from test updateProject with invalid user--
+--Output from test updateProject with valid user who is not a PM--
+--Output from test updateProject with invalid dates--
+--Output from test deleteProject--
+--Output from test deleteProject with invalid project--
+--Output from test addGroup--
+--Output from test addGroup with invalid project--
+--Output from test addGroup with invalid dates--
+--Output from test addGroup with invalid start date--
+--Output from test addGroup with invalid end date--
+--Output from test updateGroup--
+--Output from test updateGroup with invalid task group--
+--Output from test updateGroup with invalid parent task group--
+--Output from test updateGroup with the current group as its own parent task group--
+--Output from test updateGroup with invalid project--
+--Output from test updateGroup with invalid dates--
+--Output from test updateGroup with start date before project start date--
+--Output from test updateGroup with end date after project end date--
+--Output from test deleteGroup--
+--Output from test deleteGroup with invalid task group id--
+--Output from test addTask--
+--Output from test addTask with invalid assignedTo ID--
+--Output from test addTask with invalid task group--
+--Output from test addTask with invalid dependsOn--
+--Output from test addTask with invalid project ID--
+--Output from test addTask with invalid dates--
+--Output from test addTask with start date before project start date--
+--Output from test addTask with end date after project end date--
+--Output from test updateTask--
+--Output from test updateTask with invalid taskID--
+--Output from test updateTask with invalid assignedTo--
+--Output from test updateTask with invalid task group--
+--Output from test updateTask with invalid dependsOn--
+--Output from test updateTask with invalid dependsOn itself--
+--Output from test updateTask with invalid projectID--
+--Output from test updateTask with end date after project end date--
+--Output from test updateTask with invalid dates--
+--Output from test updateTask with start date before project start date--
+--Output from test deleteTask--
+--Output from test deleteTask with invalid Id--
+--Output from test addMilestone--
+--Output from test addMilestone invalid assignedTo--
+--Output from test addMilestone invalid taskGroup--
+--Output from test addMilestone invalid project--
+--Output from test addMilestone milestone date before project start date--
+--Output from test addMilestone milestone date after project end date--
+--Output from test updateMilestone--
+--Output from test updateMilestone invalid milestoneID--
+--Output from test updateMilestone invalid assignedTo--
+--Output from test updateMilestone invalid taskGroup--
+--Output from test updateMilestone invalid project--
+--Output from test updateMilestone milestone date before project start date--
+--Output from test updateMilestone milestone date after project end date--
+--Output from test deleteMilestone--
+--Output from test deleteMilestone invalid project ID--
+--Output from test getProjectXMLString--

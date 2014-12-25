@@ -30,6 +30,7 @@ class UserService {
 		if (!userRole) {
 			result['code'] = 'Failure'
 			result['message'] = "Unable to find a role for Project Manager. Please establish a ROLE_PM role."
+			System.println result
 			return result
 		}
 		def newUser = new User(
@@ -129,9 +130,13 @@ class UserService {
 							passwordHash: new Sha512Hash(params.newUserPassword).toHex(),
 							active: true).save(flush: true, failOnError: true)
 			def roleId = params.role
-			if (!roleId)
-				roleId = 3 // Default it to Team Member
-			def userRole =  Role.findById(roleId)
+			def userRole
+			if (!roleId) {
+				userRole = Role.findByName('ROLE_TM')
+			}
+			else {
+				userRole =  Role.findById(roleId)
+			}
 			if (userRole){
 	            newUser.addToRoles(userRole)
 	            newUser.save(flush:true)

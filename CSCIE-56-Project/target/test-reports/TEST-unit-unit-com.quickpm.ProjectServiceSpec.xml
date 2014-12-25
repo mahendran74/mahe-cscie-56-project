@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" name="com.quickpm.ProjectServiceSpec" tests="62" time="2.624" timestamp="2014-12-25T00:48:48">
+  <properties />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addProject" time="0.15" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addProject with invalid user" time="0.032" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addProject with user who is not a PM or ADMIN" time="0.035" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addProject with invalid dates" time="0.044" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateProject" time="0.054" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateProject with invalid project" time="0.028" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateProject with invalid user" time="0.036" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateProject with valid user who is not a PM" time="0.035" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateProject with invalid dates" time="0.041" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteProject" time="0.053" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteProject with invalid project" time="0.029" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addGroup" time="0.051" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addGroup with invalid project" time="0.031" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addGroup with invalid dates" time="0.043" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addGroup with invalid start date" time="0.065" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addGroup with invalid end date" time="0.042" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup" time="0.052" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with invalid task group" time="0.026" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with invalid parent task group" time="0.042" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with the current group as its own parent task group" time="0.048" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with invalid project" time="0.044" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with invalid dates" time="0.043" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with start date before project start date" time="0.046" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateGroup with end date after project end date" time="0.046" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteGroup" time="0.049" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteGroup with invalid task group id" time="0.026" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask" time="0.051" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with invalid assignedTo ID" time="0.028" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with invalid task group" time="0.031" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with invalid dependsOn" time="0.028" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with invalid project ID" time="0.028" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with invalid dates" time="0.044" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with start date before project start date" time="0.045" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addTask with end date after project end date" time="0.044" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask" time="0.056" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid taskID" time="0.023" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid assignedTo" time="0.042" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid task group" time="0.042" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid dependsOn" time="0.047" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid dependsOn itself" time="0.043" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid projectID" time="0.042" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with end date after project end date" time="0.042" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with invalid dates" time="0.044" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateTask with start date before project start date" time="0.044" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteTask" time="0.05" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteTask with invalid Id" time="0.022" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone" time="0.047" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone invalid assignedTo" time="0.023" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone invalid taskGroup" time="0.026" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone invalid project" time="0.026" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone milestone date before project start date" time="0.038" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test addMilestone milestone date after project end date" time="0.057" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone" time="0.044" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone invalid milestoneID" time="0.023" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone invalid assignedTo" time="0.041" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone invalid taskGroup" time="0.037" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone invalid project" time="0.041" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone milestone date before project start date" time="0.039" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test updateMilestone milestone date after project end date" time="0.039" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteMilestone" time="0.043" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test deleteMilestone invalid project ID" time="0.022" />
+  <testcase classname="com.quickpm.ProjectServiceSpec" name="test getProjectXMLString" time="0.068" />
+  <system-out><![CDATA[--Output from test addProject--
+--Output from test addProject with invalid user--
+--Output from test addProject with user who is not a PM or ADMIN--
+--Output from test addProject with invalid dates--
+--Output from test updateProject--
+--Output from test updateProject with invalid project--
+--Output from test updateProject with invalid user--
+--Output from test updateProject with valid user who is not a PM--
+--Output from test updateProject with invalid dates--
+--Output from test deleteProject--
+--Output from test deleteProject with invalid project--
+--Output from test addGroup--
+addGroup - [groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid project--
+addGroup - [groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid dates--
+addGroup - [groupName:Group of Tasks, startDate:2/1/2015, endDate:12/10/2014, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid start date--
+addGroup - [groupName:Group of Tasks, startDate:12/1/2014, endDate:12/10/2014, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid end date--
+addGroup - [groupName:Group of Tasks, startDate:2/1/2015, endDate:02/30/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with invalid task group--
+updateGroup - [groupID:2]
+--Output from test updateGroup with invalid parent task group--
+updateGroup - [groupID:1, parentGroup:23]
+--Output from test updateGroup with the current group as its own parent task group--
+updateGroup - [groupID:1, parentGroup:1]
+--Output from test updateGroup with invalid project--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:4]
+--Output from test updateGroup with invalid dates--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:2/10/2015, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with start date before project start date--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/1/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with end date after project end date--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/11/2014, endDate:2/11/2015, percentageComplete:0, projectID:1]
+--Output from test deleteGroup--
+--Output from test deleteGroup with invalid task group id--
+--Output from test addTask--
+--Output from test addTask with invalid assignedTo ID--
+--Output from test addTask with invalid task group--
+--Output from test addTask with invalid dependsOn--
+--Output from test addTask with invalid project ID--
+--Output from test addTask with invalid dates--
+--Output from test addTask with start date before project start date--
+--Output from test addTask with end date after project end date--
+--Output from test updateTask--
+--Output from test updateTask with invalid taskID--
+--Output from test updateTask with invalid assignedTo--
+--Output from test updateTask with invalid task group--
+--Output from test updateTask with invalid dependsOn--
+--Output from test updateTask with invalid dependsOn itself--
+--Output from test updateTask with invalid projectID--
+--Output from test updateTask with end date after project end date--
+--Output from test updateTask with invalid dates--
+--Output from test updateTask with start date before project start date--
+--Output from test deleteTask--
+--Output from test deleteTask with invalid Id--
+--Output from test addMilestone--
+--Output from test addMilestone invalid assignedTo--
+--Output from test addMilestone invalid taskGroup--
+--Output from test addMilestone invalid project--
+--Output from test addMilestone milestone date before project start date--
+--Output from test addMilestone milestone date after project end date--
+--Output from test updateMilestone--
+--Output from test updateMilestone invalid milestoneID--
+--Output from test updateMilestone invalid assignedTo--
+--Output from test updateMilestone invalid taskGroup--
+--Output from test updateMilestone invalid project--
+--Output from test updateMilestone milestone date before project start date--
+--Output from test updateMilestone milestone date after project end date--
+--Output from test deleteMilestone--
+--Output from test deleteMilestone invalid project ID--
+--Output from test getProjectXMLString--
+]]></system-out>
+  <system-err><![CDATA[--Output from test addProject--
+--Output from test addProject with invalid user--
+--Output from test addProject with user who is not a PM or ADMIN--
+--Output from test addProject with invalid dates--
+--Output from test updateProject--
+--Output from test updateProject with invalid project--
+--Output from test updateProject with invalid user--
+--Output from test updateProject with valid user who is not a PM--
+--Output from test updateProject with invalid dates--
+--Output from test deleteProject--
+--Output from test deleteProject with invalid project--
+--Output from test addGroup--
+--Output from test addGroup with invalid project--
+--Output from test addGroup with invalid dates--
+--Output from test addGroup with invalid start date--
+--Output from test addGroup with invalid end date--
+--Output from test updateGroup--
+--Output from test updateGroup with invalid task group--
+--Output from test updateGroup with invalid parent task group--
+--Output from test updateGroup with the current group as its own parent task group--
+--Output from test updateGroup with invalid project--
+--Output from test updateGroup with invalid dates--
+--Output from test updateGroup with start date before project start date--
+--Output from test updateGroup with end date after project end date--
+--Output from test deleteGroup--
+--Output from test deleteGroup with invalid task group id--
+--Output from test addTask--
+--Output from test addTask with invalid assignedTo ID--
+--Output from test addTask with invalid task group--
+--Output from test addTask with invalid dependsOn--
+--Output from test addTask with invalid project ID--
+--Output from test addTask with invalid dates--
+--Output from test addTask with start date before project start date--
+--Output from test addTask with end date after project end date--
+--Output from test updateTask--
+--Output from test updateTask with invalid taskID--
+--Output from test updateTask with invalid assignedTo--
+--Output from test updateTask with invalid task group--
+--Output from test updateTask with invalid dependsOn--
+--Output from test updateTask with invalid dependsOn itself--
+--Output from test updateTask with invalid projectID--
+--Output from test updateTask with end date after project end date--
+--Output from test updateTask with invalid dates--
+--Output from test updateTask with start date before project start date--
+--Output from test deleteTask--
+--Output from test deleteTask with invalid Id--
+--Output from test addMilestone--
+--Output from test addMilestone invalid assignedTo--
+--Output from test addMilestone invalid taskGroup--
+--Output from test addMilestone invalid project--
+--Output from test addMilestone milestone date before project start date--
+--Output from test addMilestone milestone date after project end date--
+--Output from test updateMilestone--
+--Output from test updateMilestone invalid milestoneID--
+--Output from test updateMilestone invalid assignedTo--
+--Output from test updateMilestone invalid taskGroup--
+--Output from test updateMilestone invalid project--
+--Output from test updateMilestone milestone date before project start date--
+--Output from test updateMilestone milestone date after project end date--
+--Output from test deleteMilestone--
+--Output from test deleteMilestone invalid project ID--
+--Output from test getProjectXMLString--
+]]></system-err>
+</testsuite>

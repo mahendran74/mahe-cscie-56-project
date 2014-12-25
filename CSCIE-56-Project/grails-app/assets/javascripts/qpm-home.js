@@ -1,8 +1,15 @@
 $(document).ready(function(){
 //	  e.preventDefault();
-	if($.trim($('#alertLogin').text()) != "") {
+	var mesg = $.trim($('#flashMessage').text());
+	var code = mesg.split(":")[0];
+	var message = mesg.split(":")[1];
+	if(code == "Login") {
+	  $('#alertLogin').text(message);
 	  $('#alertLogin').show();
 	  $('#loginWindow').modal('show');
+	}
+	if(code == "Conf") {
+	  bootbox.alert(message);
 	}
 });
 
@@ -96,12 +103,14 @@ $("#signUpForm").validate(
           url : submit_url,
           data : formData,
           success : function(data) {
+        	  console.log (data)
+        	  console.log (data.code)
             if (data.code == 'Success') {
                 bootbox.alert(data.message, function(result) {
                 	$('#signUpWindow').modal('hide');
                 });
             } else {
-            	$('#alertSignUp').value(data.message);
+            	$('#alertSignUp').text(data.message);
             	$('#alertSignUp').show();
             }
           }

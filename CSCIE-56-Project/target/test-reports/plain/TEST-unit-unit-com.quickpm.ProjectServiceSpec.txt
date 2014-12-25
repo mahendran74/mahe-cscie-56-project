@@ -1,0 +1,206 @@
+Testsuite: com.quickpm.ProjectServiceSpec
+Tests run: 62, Failures: 0, Errors: 0, Time elapsed: 2.624 sec
+------------- Standard Output ---------------
+--Output from test addProject--
+--Output from test addProject with invalid user--
+--Output from test addProject with user who is not a PM or ADMIN--
+--Output from test addProject with invalid dates--
+--Output from test updateProject--
+--Output from test updateProject with invalid project--
+--Output from test updateProject with invalid user--
+--Output from test updateProject with valid user who is not a PM--
+--Output from test updateProject with invalid dates--
+--Output from test deleteProject--
+--Output from test deleteProject with invalid project--
+--Output from test addGroup--
+addGroup - [groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid project--
+addGroup - [groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid dates--
+addGroup - [groupName:Group of Tasks, startDate:2/1/2015, endDate:12/10/2014, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid start date--
+addGroup - [groupName:Group of Tasks, startDate:12/1/2014, endDate:12/10/2014, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid end date--
+addGroup - [groupName:Group of Tasks, startDate:2/1/2015, endDate:02/30/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with invalid task group--
+updateGroup - [groupID:2]
+--Output from test updateGroup with invalid parent task group--
+updateGroup - [groupID:1, parentGroup:23]
+--Output from test updateGroup with the current group as its own parent task group--
+updateGroup - [groupID:1, parentGroup:1]
+--Output from test updateGroup with invalid project--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:4]
+--Output from test updateGroup with invalid dates--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:2/10/2015, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with start date before project start date--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/1/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with end date after project end date--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/11/2014, endDate:2/11/2015, percentageComplete:0, projectID:1]
+--Output from test deleteGroup--
+--Output from test deleteGroup with invalid task group id--
+--Output from test addTask--
+--Output from test addTask with invalid assignedTo ID--
+--Output from test addTask with invalid task group--
+--Output from test addTask with invalid dependsOn--
+--Output from test addTask with invalid project ID--
+--Output from test addTask with invalid dates--
+--Output from test addTask with start date before project start date--
+--Output from test addTask with end date after project end date--
+--Output from test updateTask--
+--Output from test updateTask with invalid taskID--
+--Output from test updateTask with invalid assignedTo--
+--Output from test updateTask with invalid task group--
+--Output from test updateTask with invalid dependsOn--
+--Output from test updateTask with invalid dependsOn itself--
+--Output from test updateTask with invalid projectID--
+--Output from test updateTask with end date after project end date--
+--Output from test updateTask with invalid dates--
+--Output from test updateTask with start date before project start date--
+--Output from test deleteTask--
+--Output from test deleteTask with invalid Id--
+--Output from test addMilestone--
+--Output from test addMilestone invalid assignedTo--
+--Output from test addMilestone invalid taskGroup--
+--Output from test addMilestone invalid project--
+--Output from test addMilestone milestone date before project start date--
+--Output from test addMilestone milestone date after project end date--
+--Output from test updateMilestone--
+--Output from test updateMilestone invalid milestoneID--
+--Output from test updateMilestone invalid assignedTo--
+--Output from test updateMilestone invalid taskGroup--
+--Output from test updateMilestone invalid project--
+--Output from test updateMilestone milestone date before project start date--
+--Output from test updateMilestone milestone date after project end date--
+--Output from test deleteMilestone--
+--Output from test deleteMilestone invalid project ID--
+--Output from test getProjectXMLString--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from test addProject--
+--Output from test addProject with invalid user--
+--Output from test addProject with user who is not a PM or ADMIN--
+--Output from test addProject with invalid dates--
+--Output from test updateProject--
+--Output from test updateProject with invalid project--
+--Output from test updateProject with invalid user--
+--Output from test updateProject with valid user who is not a PM--
+--Output from test updateProject with invalid dates--
+--Output from test deleteProject--
+--Output from test deleteProject with invalid project--
+--Output from test addGroup--
+--Output from test addGroup with invalid project--
+--Output from test addGroup with invalid dates--
+--Output from test addGroup with invalid start date--
+--Output from test addGroup with invalid end date--
+--Output from test updateGroup--
+--Output from test updateGroup with invalid task group--
+--Output from test updateGroup with invalid parent task group--
+--Output from test updateGroup with the current group as its own parent task group--
+--Output from test updateGroup with invalid project--
+--Output from test updateGroup with invalid dates--
+--Output from test updateGroup with start date before project start date--
+--Output from test updateGroup with end date after project end date--
+--Output from test deleteGroup--
+--Output from test deleteGroup with invalid task group id--
+--Output from test addTask--
+--Output from test addTask with invalid assignedTo ID--
+--Output from test addTask with invalid task group--
+--Output from test addTask with invalid dependsOn--
+--Output from test addTask with invalid project ID--
+--Output from test addTask with invalid dates--
+--Output from test addTask with start date before project start date--
+--Output from test addTask with end date after project end date--
+--Output from test updateTask--
+--Output from test updateTask with invalid taskID--
+--Output from test updateTask with invalid assignedTo--
+--Output from test updateTask with invalid task group--
+--Output from test updateTask with invalid dependsOn--
+--Output from test updateTask with invalid dependsOn itself--
+--Output from test updateTask with invalid projectID--
+--Output from test updateTask with end date after project end date--
+--Output from test updateTask with invalid dates--
+--Output from test updateTask with start date before project start date--
+--Output from test deleteTask--
+--Output from test deleteTask with invalid Id--
+--Output from test addMilestone--
+--Output from test addMilestone invalid assignedTo--
+--Output from test addMilestone invalid taskGroup--
+--Output from test addMilestone invalid project--
+--Output from test addMilestone milestone date before project start date--
+--Output from test addMilestone milestone date after project end date--
+--Output from test updateMilestone--
+--Output from test updateMilestone invalid milestoneID--
+--Output from test updateMilestone invalid assignedTo--
+--Output from test updateMilestone invalid taskGroup--
+--Output from test updateMilestone invalid project--
+--Output from test updateMilestone milestone date before project start date--
+--Output from test updateMilestone milestone date after project end date--
+--Output from test deleteMilestone--
+--Output from test deleteMilestone invalid project ID--
+--Output from test getProjectXMLString--
+------------- ---------------- ---------------
+
+Testcase: test addProject took 0.15 sec
+Testcase: test addProject with invalid user took 0.032 sec
+Testcase: test addProject with user who is not a PM or ADMIN took 0.035 sec
+Testcase: test addProject with invalid dates took 0.044 sec
+Testcase: test updateProject took 0.054 sec
+Testcase: test updateProject with invalid project took 0.028 sec
+Testcase: test updateProject with invalid user took 0.036 sec
+Testcase: test updateProject with valid user who is not a PM took 0.035 sec
+Testcase: test updateProject with invalid dates took 0.041 sec
+Testcase: test deleteProject took 0.053 sec
+Testcase: test deleteProject with invalid project took 0.029 sec
+Testcase: test addGroup took 0.052 sec
+Testcase: test addGroup with invalid project took 0.031 sec
+Testcase: test addGroup with invalid dates took 0.043 sec
+Testcase: test addGroup with invalid start date took 0.065 sec
+Testcase: test addGroup with invalid end date took 0.042 sec
+Testcase: test updateGroup took 0.052 sec
+Testcase: test updateGroup with invalid task group took 0.026 sec
+Testcase: test updateGroup with invalid parent task group took 0.042 sec
+Testcase: test updateGroup with the current group as its own parent task group took 0.048 sec
+Testcase: test updateGroup with invalid project took 0.044 sec
+Testcase: test updateGroup with invalid dates took 0.043 sec
+Testcase: test updateGroup with start date before project start date took 0.046 sec
+Testcase: test updateGroup with end date after project end date took 0.046 sec
+Testcase: test deleteGroup took 0.049 sec
+Testcase: test deleteGroup with invalid task group id took 0.026 sec
+Testcase: test addTask took 0.051 sec
+Testcase: test addTask with invalid assignedTo ID took 0.028 sec
+Testcase: test addTask with invalid task group took 0.031 sec
+Testcase: test addTask with invalid dependsOn took 0.028 sec
+Testcase: test addTask with invalid project ID took 0.028 sec
+Testcase: test addTask with invalid dates took 0.044 sec
+Testcase: test addTask with start date before project start date took 0.045 sec
+Testcase: test addTask with end date after project end date took 0.044 sec
+Testcase: test updateTask took 0.056 sec
+Testcase: test updateTask with invalid taskID took 0.023 sec
+Testcase: test updateTask with invalid assignedTo took 0.042 sec
+Testcase: test updateTask with invalid task group took 0.042 sec
+Testcase: test updateTask with invalid dependsOn took 0.047 sec
+Testcase: test updateTask with invalid dependsOn itself took 0.043 sec
+Testcase: test updateTask with invalid projectID took 0.042 sec
+Testcase: test updateTask with end date after project end date took 0.042 sec
+Testcase: test updateTask with invalid dates took 0.044 sec
+Testcase: test updateTask with start date before project start date took 0.044 sec
+Testcase: test deleteTask took 0.05 sec
+Testcase: test deleteTask with invalid Id took 0.022 sec
+Testcase: test addMilestone took 0.047 sec
+Testcase: test addMilestone invalid assignedTo took 0.023 sec
+Testcase: test addMilestone invalid taskGroup took 0.026 sec
+Testcase: test addMilestone invalid project took 0.026 sec
+Testcase: test addMilestone milestone date before project start date took 0.038 sec
+Testcase: test addMilestone milestone date after project end date took 0.057 sec
+Testcase: test updateMilestone took 0.044 sec
+Testcase: test updateMilestone invalid milestoneID took 0.023 sec
+Testcase: test updateMilestone invalid assignedTo took 0.041 sec
+Testcase: test updateMilestone invalid taskGroup took 0.037 sec
+Testcase: test updateMilestone invalid project took 0.041 sec
+Testcase: test updateMilestone milestone date before project start date took 0.039 sec
+Testcase: test updateMilestone milestone date after project end date took 0.039 sec
+Testcase: test deleteMilestone took 0.043 sec
+Testcase: test deleteMilestone invalid project ID took 0.023 sec
+Testcase: test getProjectXMLString took 0.068 sec

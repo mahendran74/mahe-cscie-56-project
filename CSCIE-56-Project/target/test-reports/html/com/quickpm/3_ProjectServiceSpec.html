@@ -1,0 +1,959 @@
+<!DOCTYPE html><html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+                    Test - ProjectServiceSpec</title>
+<link rel="shortcut icon" href="http://grails.org/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" title="Style" href="../../stylesheet.css">
+</head>
+<body>
+<div class="container container_8" id="report">
+<div class="grid_6">
+<a title="Home" href="../../index.html">
+<div class="grailslogo"></div>
+</a>
+<h1>ProjectServiceSpec</h1>
+<h2>Package: com.quickpm</h2>
+</div>
+<div class="grid_2">
+<nav id="navigationlinks">
+<p>
+<a href="../../failed.html">
+                    Tests with failure and errors
+                </a>
+</p>
+<p>
+<a href="../../index.html">
+                    Package summary
+                </a>
+</p>
+<p>
+<a href="../../all.html">
+                    Show all tests
+                </a>
+</p>
+</nav>
+</div>
+<div class="clear"></div>
+<div class="testsuite success">
+<div class="header">
+<h2>ProjectServiceSpec</h2>
+<h3>
+                        Executed
+                        62
+                        tests
+                    
+                        without a single error or failure!
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addProject">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addProject</b>
+</p>
+<p class="summary">Executed in 0.15 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addProject with invalid user">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addProject with invalid user</b>
+</p>
+<p class="summary">Executed in 0.032 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addProject with user who is not a PM or ADMIN">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addProject with user who is not a PM or ADMIN</b>
+</p>
+<p class="summary">Executed in 0.035 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addProject with invalid dates">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addProject with invalid dates</b>
+</p>
+<p class="summary">Executed in 0.044 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateProject">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateProject</b>
+</p>
+<p class="summary">Executed in 0.054 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateProject with invalid project">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateProject with invalid project</b>
+</p>
+<p class="summary">Executed in 0.028 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateProject with invalid user">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateProject with invalid user</b>
+</p>
+<p class="summary">Executed in 0.036 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateProject with valid user who is not a PM">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateProject with valid user who is not a PM</b>
+</p>
+<p class="summary">Executed in 0.035 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateProject with invalid dates">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateProject with invalid dates</b>
+</p>
+<p class="summary">Executed in 0.041 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deleteProject">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deleteProject</b>
+</p>
+<p class="summary">Executed in 0.053 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deleteProject with invalid project">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deleteProject with invalid project</b>
+</p>
+<p class="summary">Executed in 0.029 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addGroup">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addGroup</b>
+</p>
+<p class="summary">Executed in 0.051 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addGroup with invalid project">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addGroup with invalid project</b>
+</p>
+<p class="summary">Executed in 0.031 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addGroup with invalid dates">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addGroup with invalid dates</b>
+</p>
+<p class="summary">Executed in 0.043 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addGroup with invalid start date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addGroup with invalid start date</b>
+</p>
+<p class="summary">Executed in 0.065 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addGroup with invalid end date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addGroup with invalid end date</b>
+</p>
+<p class="summary">Executed in 0.042 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateGroup">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateGroup</b>
+</p>
+<p class="summary">Executed in 0.052 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateGroup with invalid task group">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateGroup with invalid task group</b>
+</p>
+<p class="summary">Executed in 0.026 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateGroup with invalid parent task group">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateGroup with invalid parent task group</b>
+</p>
+<p class="summary">Executed in 0.042 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateGroup with the current group as its own parent task group">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateGroup with the current group as its own parent task group</b>
+</p>
+<p class="summary">Executed in 0.048 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateGroup with invalid project">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateGroup with invalid project</b>
+</p>
+<p class="summary">Executed in 0.044 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateGroup with invalid dates">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateGroup with invalid dates</b>
+</p>
+<p class="summary">Executed in 0.043 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateGroup with start date before project start date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateGroup with start date before project start date</b>
+</p>
+<p class="summary">Executed in 0.046 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateGroup with end date after project end date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateGroup with end date after project end date</b>
+</p>
+<p class="summary">Executed in 0.046 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deleteGroup">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deleteGroup</b>
+</p>
+<p class="summary">Executed in 0.049 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deleteGroup with invalid task group id">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deleteGroup with invalid task group id</b>
+</p>
+<p class="summary">Executed in 0.026 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addTask">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addTask</b>
+</p>
+<p class="summary">Executed in 0.051 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addTask with invalid assignedTo ID">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addTask with invalid assignedTo ID</b>
+</p>
+<p class="summary">Executed in 0.028 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addTask with invalid task group">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addTask with invalid task group</b>
+</p>
+<p class="summary">Executed in 0.031 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addTask with invalid dependsOn">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addTask with invalid dependsOn</b>
+</p>
+<p class="summary">Executed in 0.028 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addTask with invalid project ID">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addTask with invalid project ID</b>
+</p>
+<p class="summary">Executed in 0.028 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addTask with invalid dates">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addTask with invalid dates</b>
+</p>
+<p class="summary">Executed in 0.044 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addTask with start date before project start date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addTask with start date before project start date</b>
+</p>
+<p class="summary">Executed in 0.045 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addTask with end date after project end date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addTask with end date after project end date</b>
+</p>
+<p class="summary">Executed in 0.044 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateTask">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateTask</b>
+</p>
+<p class="summary">Executed in 0.056 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateTask with invalid taskID">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateTask with invalid taskID</b>
+</p>
+<p class="summary">Executed in 0.023 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateTask with invalid assignedTo">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateTask with invalid assignedTo</b>
+</p>
+<p class="summary">Executed in 0.042 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateTask with invalid task group">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateTask with invalid task group</b>
+</p>
+<p class="summary">Executed in 0.042 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateTask with invalid dependsOn">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateTask with invalid dependsOn</b>
+</p>
+<p class="summary">Executed in 0.047 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateTask with invalid dependsOn itself">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateTask with invalid dependsOn itself</b>
+</p>
+<p class="summary">Executed in 0.043 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateTask with invalid projectID">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateTask with invalid projectID</b>
+</p>
+<p class="summary">Executed in 0.042 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateTask with end date after project end date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateTask with end date after project end date</b>
+</p>
+<p class="summary">Executed in 0.042 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateTask with invalid dates">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateTask with invalid dates</b>
+</p>
+<p class="summary">Executed in 0.044 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateTask with start date before project start date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateTask with start date before project start date</b>
+</p>
+<p class="summary">Executed in 0.044 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deleteTask">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deleteTask</b>
+</p>
+<p class="summary">Executed in 0.05 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deleteTask with invalid Id">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deleteTask with invalid Id</b>
+</p>
+<p class="summary">Executed in 0.022 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addMilestone">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addMilestone</b>
+</p>
+<p class="summary">Executed in 0.047 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addMilestone invalid assignedTo">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addMilestone invalid assignedTo</b>
+</p>
+<p class="summary">Executed in 0.023 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addMilestone invalid taskGroup">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addMilestone invalid taskGroup</b>
+</p>
+<p class="summary">Executed in 0.026 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addMilestone invalid project">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addMilestone invalid project</b>
+</p>
+<p class="summary">Executed in 0.026 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addMilestone milestone date before project start date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addMilestone milestone date before project start date</b>
+</p>
+<p class="summary">Executed in 0.038 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addMilestone milestone date after project end date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addMilestone milestone date after project end date</b>
+</p>
+<p class="summary">Executed in 0.057 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateMilestone">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateMilestone</b>
+</p>
+<p class="summary">Executed in 0.044 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateMilestone invalid milestoneID">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateMilestone invalid milestoneID</b>
+</p>
+<p class="summary">Executed in 0.023 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateMilestone invalid assignedTo">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateMilestone invalid assignedTo</b>
+</p>
+<p class="summary">Executed in 0.041 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateMilestone invalid taskGroup">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateMilestone invalid taskGroup</b>
+</p>
+<p class="summary">Executed in 0.037 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateMilestone invalid project">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateMilestone invalid project</b>
+</p>
+<p class="summary">Executed in 0.041 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateMilestone milestone date before project start date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateMilestone milestone date before project start date</b>
+</p>
+<p class="summary">Executed in 0.039 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateMilestone milestone date after project end date">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateMilestone milestone date after project end date</b>
+</p>
+<p class="summary">Executed in 0.039 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deleteMilestone">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deleteMilestone</b>
+</p>
+<p class="summary">Executed in 0.043 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deleteMilestone invalid project ID">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deleteMilestone invalid project ID</b>
+</p>
+<p class="summary">Executed in 0.022 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test getProjectXMLString">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test getProjectXMLString</b>
+</p>
+<p class="summary">Executed in 0.068 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">--Output from test addProject--
+--Output from test addProject with invalid user--
+--Output from test addProject with user who is not a PM or ADMIN--
+--Output from test addProject with invalid dates--
+--Output from test updateProject--
+--Output from test updateProject with invalid project--
+--Output from test updateProject with invalid user--
+--Output from test updateProject with valid user who is not a PM--
+--Output from test updateProject with invalid dates--
+--Output from test deleteProject--
+--Output from test deleteProject with invalid project--
+--Output from test addGroup--
+addGroup - [groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid project--
+addGroup - [groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid dates--
+addGroup - [groupName:Group of Tasks, startDate:2/1/2015, endDate:12/10/2014, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid start date--
+addGroup - [groupName:Group of Tasks, startDate:12/1/2014, endDate:12/10/2014, percentageComplete:0, projectID:1]
+--Output from test addGroup with invalid end date--
+addGroup - [groupName:Group of Tasks, startDate:2/1/2015, endDate:02/30/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with invalid task group--
+updateGroup - [groupID:2]
+--Output from test updateGroup with invalid parent task group--
+updateGroup - [groupID:1, parentGroup:23]
+--Output from test updateGroup with the current group as its own parent task group--
+updateGroup - [groupID:1, parentGroup:1]
+--Output from test updateGroup with invalid project--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/10/2014, endDate:2/1/2015, percentageComplete:0, projectID:4]
+--Output from test updateGroup with invalid dates--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:2/10/2015, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with start date before project start date--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/1/2014, endDate:2/1/2015, percentageComplete:0, projectID:1]
+--Output from test updateGroup with end date after project end date--
+updateGroup - [groupID:1, groupName:Group of Tasks, startDate:12/11/2014, endDate:2/11/2015, percentageComplete:0, projectID:1]
+--Output from test deleteGroup--
+--Output from test deleteGroup with invalid task group id--
+--Output from test addTask--
+--Output from test addTask with invalid assignedTo ID--
+--Output from test addTask with invalid task group--
+--Output from test addTask with invalid dependsOn--
+--Output from test addTask with invalid project ID--
+--Output from test addTask with invalid dates--
+--Output from test addTask with start date before project start date--
+--Output from test addTask with end date after project end date--
+--Output from test updateTask--
+--Output from test updateTask with invalid taskID--
+--Output from test updateTask with invalid assignedTo--
+--Output from test updateTask with invalid task group--
+--Output from test updateTask with invalid dependsOn--
+--Output from test updateTask with invalid dependsOn itself--
+--Output from test updateTask with invalid projectID--
+--Output from test updateTask with end date after project end date--
+--Output from test updateTask with invalid dates--
+--Output from test updateTask with start date before project start date--
+--Output from test deleteTask--
+--Output from test deleteTask with invalid Id--
+--Output from test addMilestone--
+--Output from test addMilestone invalid assignedTo--
+--Output from test addMilestone invalid taskGroup--
+--Output from test addMilestone invalid project--
+--Output from test addMilestone milestone date before project start date--
+--Output from test addMilestone milestone date after project end date--
+--Output from test updateMilestone--
+--Output from test updateMilestone invalid milestoneID--
+--Output from test updateMilestone invalid assignedTo--
+--Output from test updateMilestone invalid taskGroup--
+--Output from test updateMilestone invalid project--
+--Output from test updateMilestone milestone date before project start date--
+--Output from test updateMilestone milestone date after project end date--
+--Output from test deleteMilestone--
+--Output from test deleteMilestone invalid project ID--
+--Output from test getProjectXMLString--
+</pre>
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">--Output from test addProject--
+--Output from test addProject with invalid user--
+--Output from test addProject with user who is not a PM or ADMIN--
+--Output from test addProject with invalid dates--
+--Output from test updateProject--
+--Output from test updateProject with invalid project--
+--Output from test updateProject with invalid user--
+--Output from test updateProject with valid user who is not a PM--
+--Output from test updateProject with invalid dates--
+--Output from test deleteProject--
+--Output from test deleteProject with invalid project--
+--Output from test addGroup--
+--Output from test addGroup with invalid project--
+--Output from test addGroup with invalid dates--
+--Output from test addGroup with invalid start date--
+--Output from test addGroup with invalid end date--
+--Output from test updateGroup--
+--Output from test updateGroup with invalid task group--
+--Output from test updateGroup with invalid parent task group--
+--Output from test updateGroup with the current group as its own parent task group--
+--Output from test updateGroup with invalid project--
+--Output from test updateGroup with invalid dates--
+--Output from test updateGroup with start date before project start date--
+--Output from test updateGroup with end date after project end date--
+--Output from test deleteGroup--
+--Output from test deleteGroup with invalid task group id--
+--Output from test addTask--
+--Output from test addTask with invalid assignedTo ID--
+--Output from test addTask with invalid task group--
+--Output from test addTask with invalid dependsOn--
+--Output from test addTask with invalid project ID--
+--Output from test addTask with invalid dates--
+--Output from test addTask with start date before project start date--
+--Output from test addTask with end date after project end date--
+--Output from test updateTask--
+--Output from test updateTask with invalid taskID--
+--Output from test updateTask with invalid assignedTo--
+--Output from test updateTask with invalid task group--
+--Output from test updateTask with invalid dependsOn--
+--Output from test updateTask with invalid dependsOn itself--
+--Output from test updateTask with invalid projectID--
+--Output from test updateTask with end date after project end date--
+--Output from test updateTask with invalid dates--
+--Output from test updateTask with start date before project start date--
+--Output from test deleteTask--
+--Output from test deleteTask with invalid Id--
+--Output from test addMilestone--
+--Output from test addMilestone invalid assignedTo--
+--Output from test addMilestone invalid taskGroup--
+--Output from test addMilestone invalid project--
+--Output from test addMilestone milestone date before project start date--
+--Output from test addMilestone milestone date after project end date--
+--Output from test updateMilestone--
+--Output from test updateMilestone invalid milestoneID--
+--Output from test updateMilestone invalid assignedTo--
+--Output from test updateMilestone invalid taskGroup--
+--Output from test updateMilestone invalid project--
+--Output from test updateMilestone milestone date before project start date--
+--Output from test updateMilestone milestone date after project end date--
+--Output from test deleteMilestone--
+--Output from test deleteMilestone invalid project ID--
+--Output from test getProjectXMLString--
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<!--
+            Parses JUnit output and associates it with the corresponding test case
+        -->
+<script language="javascript">
+
+
+/**
+ * The JUnit report format is incredibly stuipd in the
+ * sense that it accumulates output from all test methods
+ * into a single xml node.
+ */
+(function() {
+
+    var outputElements = findOutputElements();
+    for (var i in outputElements) {
+        var outputElement = outputElements[i];
+        var textOutput = outputElement.element.firstChild.nodeValue;
+        var header = outputElement.getHeader();
+        appendTestMethodOutput(textOutput, header);
+    }
+
+    function findOutputElements() {
+        var outputElements = [];
+        var preElements = document.getElementsByTagName("pre");
+        for (var i in preElements) {
+            var preElement = preElements[i];
+            var className = preElement.className || "";
+            if (className.indexOf("stdout") >= 0) {
+                var outputElement = new OutputElement(preElement, "output");
+                outputElements.push(outputElement);
+            } else if (className.indexOf("syserr") >= 0) {
+                var outputElement = new OutputElement(preElement, "error");
+                outputElements.push(outputElement);
+            }
+        }
+
+        return outputElements;
+    }
+
+    function OutputElement(element, type) {
+        this.element = element;
+        this.type = type;
+
+        this.getHeader = function() {
+            if (type === "output") {
+                return "System output";
+            } else if ("error") {
+                return "System error";
+            }
+        }
+    }
+
+    function appendTestMethodOutput(text, header) {
+        var testOutput = new TestMethodOutput(header);
+
+        var lines = text.split(/\r\n|\r|\n/);
+        for (var i in lines) {
+            var line = lines[i];
+            var matches = line.match(/^--Output from (.*)--$/);
+            if (matches !== null && matches.length == 2) {
+                testOutput.flushToDom();
+                testOutput.testName = matches[1];
+            } else {
+                testOutput.addLine(line);
+            }
+        }
+
+        testOutput.flushToDom();
+    }
+
+    function TestMethodOutput(header) {
+        this.header = header;
+        this.testName = undefined;
+        this.buffer = "";
+
+        this.addLine = function(line) {
+            this.buffer += line + "\n";
+        }
+
+        this.flushToDom = function() {
+            if (this.testName !== undefined) {
+                var domNode = getTestcaseElementByName(this.testName);
+                if (domNode !== undefined && trimString(this.buffer).length > 0) {
+                    this.appendTo(domNode);
+                }
+
+                this.reset();
+            }
+        }
+
+        this.appendTo = function(domNode) {
+            var node = document.createElement("div");
+            node.innerHTML = '<p><b class="message">' + header + '</b></p>';
+
+            var preNode = document.createElement("pre");
+            preNode.appendChild(document.createTextNode(this.buffer));
+            node.appendChild(preNode);
+
+            var outputContainer = findElementByTagClassAndParent("div", "outputinfo", domNode);
+            outputContainer.appendChild(node);
+        }
+
+        this.reset = function() {
+            this.methodName = undefined;
+            this.buffer = "";
+        }
+    }
+
+    function getTestcaseElementByName(name) {
+        var divElements = document.getElementsByTagName("div");
+        var elementCount = divElements.length;
+        for (var i=0; i<elementCount; i++) {
+            var el = divElements[i];
+            if (el.getAttribute("data-name") === name) {
+                return el;
+            }
+        }
+    }
+
+    function findElementByTagClassAndParent(tagName, className, parentNode) {
+        var elements = parentNode.getElementsByTagName(tagName);
+        for (var i in elements) {
+            var element = elements[i];
+
+            // Not 100% correct, but good enough here
+            if (element.className !== undefined && element.className.indexOf(className) >= 0) {
+                return element;
+            }
+        }
+    }
+
+    function trimString(str) {
+        return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+    }
+
+})();
+
+        </script>
+</body>
+</html>

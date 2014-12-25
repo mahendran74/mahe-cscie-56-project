@@ -1,0 +1,3 @@
+--Output from test signUp--
+--Output from test checkEmail valid email--
+--Output from test checkEmail invalid email--

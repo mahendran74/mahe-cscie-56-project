@@ -1,0 +1,67 @@
+Testsuite: com.quickpm.PMControllerSpec
+Tests run: 20, Failures: 0, Errors: 0, Time elapsed: 1.275 sec
+------------- Standard Output ---------------
+--Output from test home--
+--Output from test gantt--
+--Output from test gantt a user is logged in who is not the PM of this project--
+--Output from test changePassword--
+--Output from test addUser--
+--Output from test addProject--
+--Output from test getProject--
+--Output from test updateProject--
+--Output from test getGroup--
+--Output from test addGroup--
+--Output from test updateGroup--
+--Output from test deleteGroup--
+--Output from test getTask--
+--Output from test addTask--
+--Output from test updateTask--
+--Output from test deleteTask--
+--Output from test getMilestone--
+--Output from test addMilestone--
+--Output from test updateMilestone--
+--Output from test deleteMilestone--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from test home--
+--Output from test gantt--
+--Output from test gantt a user is logged in who is not the PM of this project--
+--Output from test changePassword--
+--Output from test addUser--
+--Output from test addProject--
+--Output from test getProject--
+--Output from test updateProject--
+--Output from test getGroup--
+--Output from test addGroup--
+--Output from test updateGroup--
+--Output from test deleteGroup--
+--Output from test getTask--
+--Output from test addTask--
+--Output from test updateTask--
+--Output from test deleteTask--
+--Output from test getMilestone--
+--Output from test addMilestone--
+--Output from test updateMilestone--
+--Output from test deleteMilestone--
+------------- ---------------- ---------------
+
+Testcase: test home took 0.221 sec
+Testcase: test gantt took 0.1 sec
+Testcase: test gantt a user is logged in who is not the PM of this project took 0.235 sec
+Testcase: test changePassword took 0.042 sec
+Testcase: test addUser took 0.041 sec
+Testcase: test addProject took 0.04 sec
+Testcase: test getProject took 0.054 sec
+Testcase: test updateProject took 0.042 sec
+Testcase: test getGroup took 0.041 sec
+Testcase: test addGroup took 0.039 sec
+Testcase: test updateGroup took 0.039 sec
+Testcase: test deleteGroup took 0.042 sec
+Testcase: test getTask took 0.04 sec
+Testcase: test addTask took 0.037 sec
+Testcase: test updateTask took 0.039 sec
+Testcase: test deleteTask took 0.041 sec
+Testcase: test getMilestone took 0.04 sec
+Testcase: test addMilestone took 0.043 sec
+Testcase: test updateMilestone took 0.041 sec
+Testcase: test deleteMilestone took 0.038 sec

@@ -1,3 +1,20 @@
+$(document).ready(function(){
+//	  e.preventDefault();
+	var mesg = $.trim($('#flashMessage').text());
+	var code = mesg.split(":")[0];
+	var message = mesg.split(":")[1];
+	if(code == "PM") {
+		bootbox.alert(message, function(data) {
+			window.location = gspVars.logoutUrl;
+		});
+	}
+	if(code == "NO_PM") {
+		bootbox.alert(message, function(data) {
+			//window.location = gspVars.pmHomeUrl;
+		});
+	}
+	
+});
 //About click
 $('#about').on('click', function(e) {
   e.preventDefault();

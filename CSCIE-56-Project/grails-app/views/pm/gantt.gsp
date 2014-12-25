@@ -568,34 +568,35 @@
   </div>
   <!-- /END NEW MILESTONE MODAL -->
   
-  
+    <div id="flashMessage" style="display: none;">${flash.message}</div>
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <asset:javascript src="application.js"/>
   <script type="text/javascript">
   var gspVars = {
-		    checkEmailUrl: '${createLink(controller:"user", action: "checkEmail")}',
-		    homeUrl: '${createLink(controller:"PM", action: "gantt")}' + '/' + '${project?.id}',
-		    altHomeUrl: '${createLink(controller:"PM", action: "gantt")}' + '/' + '${project?.id}',
-		    changePasswordUrl: '${createLink(controller:"PM", action: "changePassword")}',
-		    addUserUrl: '${createLink(controller:"PM", action: "addUser")}' ,
-		    getProjectUrl: '${createLink(controller:"PM", action: "getProject")}',
-		    getGroupUrl: '${createLink(controller:"PM", action: "getGroup")}',
-		    addGroupUrl: '${createLink(controller:"PM", action: "addGroup")}',    
-		    updateGroupUrl: '${createLink(controller:"PM", action: "updateGroup")}',
-		    deleteGroupUrl: '${createLink(controller:"PM", action: "deleteGroup")}',
-		    getTaskUrl: '${createLink(controller:"PM", action: "getTask")}',
-	      addTaskUrl: '${createLink(controller:"PM", action: "addTask")}',    
-	      updateTaskUrl: '${createLink(controller:"PM", action: "updateTask")}',
-	      deleteTaskUrl: '${createLink(controller:"PM", action: "deleteTask")}',
-	      getMilestoneUrl: '${createLink(controller:"PM", action: "getMilestone")}',
-	      addMilestoneUrl: '${createLink(controller:"PM", action: "addMilestone")}',    
-	      updateMilestoneUrl: '${createLink(controller:"PM", action: "updateMilestone")}',
-	      deleteMilestoneUrl: '${createLink(controller:"PM", action: "deleteMilestone")}',
-		    currentUserId: '${currentUser?.id}',
-        projectId: '${project?.id}'
-		    }
+	checkEmailUrl: '${createLink(controller:"user", action: "checkEmail")}',
+	pmHomeUrl: '${createLink(controller:"PM", action: "home")}',
+	homeUrl: '${createLink(controller:"PM", action: "gantt")}' + '/' + '${project?.id}',
+	altHomeUrl: '${createLink(controller:"PM", action: "gantt")}' + '/' + '${project?.id}',
+	changePasswordUrl: '${createLink(controller:"PM", action: "changePassword")}',
+	addUserUrl: '${createLink(controller:"PM", action: "addUser")}' ,
+	getProjectUrl: '${createLink(controller:"PM", action: "getProject")}',
+	getGroupUrl: '${createLink(controller:"PM", action: "getGroup")}',
+	addGroupUrl: '${createLink(controller:"PM", action: "addGroup")}',    
+	updateGroupUrl: '${createLink(controller:"PM", action: "updateGroup")}',
+	deleteGroupUrl: '${createLink(controller:"PM", action: "deleteGroup")}',
+	getTaskUrl: '${createLink(controller:"PM", action: "getTask")}',
+	addTaskUrl: '${createLink(controller:"PM", action: "addTask")}',    
+	updateTaskUrl: '${createLink(controller:"PM", action: "updateTask")}',
+	deleteTaskUrl: '${createLink(controller:"PM", action: "deleteTask")}',
+	getMilestoneUrl: '${createLink(controller:"PM", action: "getMilestone")}',
+	addMilestoneUrl: '${createLink(controller:"PM", action: "addMilestone")}',    
+	updateMilestoneUrl: '${createLink(controller:"PM", action: "updateMilestone")}',
+	deleteMilestoneUrl: '${createLink(controller:"PM", action: "deleteMilestone")}',
+	currentUserId: '${currentUser?.id}',
+	projectId: '${project?.id}'
+	}
     var d = "${raw(projectXMLString)}";
     var resList = '';
     var groupList = '';

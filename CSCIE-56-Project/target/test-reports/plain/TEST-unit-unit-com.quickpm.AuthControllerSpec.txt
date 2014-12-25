@@ -1,5 +1,5 @@
 Testsuite: com.quickpm.AuthControllerSpec
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.262 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
 ------------- Standard Output ---------------
 --Output from test index--
 --Output from test login--
@@ -15,8 +15,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.262 sec
 --Output from test signIn as TM--
 ------------- ---------------- ---------------
 
-Testcase: test index took 2.63 sec
-Testcase: test login took 0.113 sec
-Testcase: test signIn as Admin took 0.2 sec
-Testcase: test signIn as PM took 0.132 sec
-Testcase: test signIn as TM took 0.148 sec
+Testcase: test index took 0.252 sec
+Testcase: test login took 0.053 sec
+Testcase: test signIn as Admin took 0.106 sec
+Testcase: test signIn as PM took 0.075 sec
+Testcase: test signIn as TM took 0.072 sec

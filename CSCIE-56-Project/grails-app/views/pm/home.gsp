@@ -394,11 +394,13 @@
       </div>
     </div>
   </div>
+  <div id="flashMessage" style="display: none;">${flash.message}</div>
   <!-- /END THE NEW PROJECT MODAL -->
   <asset:javascript src="application.js"/>
   <script type="text/javascript">
     var gspVars = {
     checkEmailUrl: '${createLink(controller:"user", action: "checkEmail")}',
+    logoutUrl: '${createLink(controller:"auth", action: "signOut")}',
     homeUrl: '${createLink(controller:"PM", action: "home")}',
     altHomeUrl: '${createLink(controller:"PM", action: "home")}',
     changePasswordUrl: '${createLink(controller:"PM", action: "changePassword")}',

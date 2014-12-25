@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" name="com.quickpm.UserServiceSpec" tests="22" time="0.393" timestamp="2014-12-25T00:49:06">
+  <properties />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test checkEmail" time="0.097" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test checkEmail invalid email" time="0.009" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test signUp" time="0.021" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test signUp existing user" time="0.012" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test signUp with no role setup" time="0.008" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test activate" time="0.018" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test activate invalid user" time="0.009" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test deactivate" time="0.017" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test deactivate invalid user" time="0.008" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test changePassword" time="0.019" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test changePassword invalid old password" time="0.017" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test changePassword invalid user" time="0.008" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test resetPassword" time="0.016" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test restPassword invalid user" time="0.008" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test addUser" time="0.02" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test addUser user already exists" time="0.017" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test addUser no role setup" time="0.011" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test updateUser" time="0.024" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test updateUser invalid user" time="0.007" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test updateUser invalid role" time="0.015" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test deleteUser" time="0.02" />
+  <testcase classname="com.quickpm.UserServiceSpec" name="test deleteUser invalid user" time="0.007" />
+  <system-out><![CDATA[--Output from test checkEmail--
+--Output from test checkEmail invalid email--
+--Output from test signUp--
+--Output from test signUp existing user--
+--Output from test signUp with no role setup--
+[code:Failure, message:Unable to find a role for Project Manager. Please establish a ROLE_PM role.]
+--Output from test activate--
+--Output from test activate invalid user--
+--Output from test deactivate--
+--Output from test deactivate invalid user--
+--Output from test changePassword--
+--Output from test changePassword invalid old password--
+--Output from test changePassword invalid user--
+--Output from test resetPassword--
+--Output from test restPassword invalid user--
+--Output from test addUser--
+--Output from test addUser user already exists--
+--Output from test addUser no role setup--
+--Output from test updateUser--
+--Output from test updateUser invalid user--
+--Output from test updateUser invalid role--
+--Output from test deleteUser--
+--Output from test deleteUser invalid user--
+]]></system-out>
+  <system-err><![CDATA[--Output from test checkEmail--
+--Output from test checkEmail invalid email--
+--Output from test signUp--
+--Output from test signUp existing user--
+--Output from test signUp with no role setup--
+--Output from test activate--
+--Output from test activate invalid user--
+--Output from test deactivate--
+--Output from test deactivate invalid user--
+--Output from test changePassword--
+--Output from test changePassword invalid old password--
+--Output from test changePassword invalid user--
+--Output from test resetPassword--
+--Output from test restPassword invalid user--
+--Output from test addUser--
+--Output from test addUser user already exists--
+--Output from test addUser no role setup--
+--Output from test updateUser--
+--Output from test updateUser invalid user--
+--Output from test updateUser invalid role--
+--Output from test deleteUser--
+--Output from test deleteUser invalid user--
+]]></system-err>
+</testsuite>

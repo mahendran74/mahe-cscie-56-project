@@ -1,0 +1,467 @@
+<!DOCTYPE html><html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+                    Test - UserServiceSpec</title>
+<link rel="shortcut icon" href="http://grails.org/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" title="Style" href="../../stylesheet.css">
+</head>
+<body>
+<div class="container container_8" id="report">
+<div class="grid_6">
+<a title="Home" href="../../index.html">
+<div class="grailslogo"></div>
+</a>
+<h1>UserServiceSpec</h1>
+<h2>Package: com.quickpm</h2>
+</div>
+<div class="grid_2">
+<nav id="navigationlinks">
+<p>
+<a href="../../failed.html">
+                    Tests with failure and errors
+                </a>
+</p>
+<p>
+<a href="../../index.html">
+                    Package summary
+                </a>
+</p>
+<p>
+<a href="../../all.html">
+                    Show all tests
+                </a>
+</p>
+</nav>
+</div>
+<div class="clear"></div>
+<div class="testsuite success">
+<div class="header">
+<h2>UserServiceSpec</h2>
+<h3>
+                        Executed
+                        22
+                        tests
+                    
+                        without a single error or failure!
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test checkEmail">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test checkEmail</b>
+</p>
+<p class="summary">Executed in 0.097 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test checkEmail invalid email">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test checkEmail invalid email</b>
+</p>
+<p class="summary">Executed in 0.009 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test signUp">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test signUp</b>
+</p>
+<p class="summary">Executed in 0.021 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test signUp existing user">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test signUp existing user</b>
+</p>
+<p class="summary">Executed in 0.012 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test signUp with no role setup">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test signUp with no role setup</b>
+</p>
+<p class="summary">Executed in 0.008 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test activate">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test activate</b>
+</p>
+<p class="summary">Executed in 0.018 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test activate invalid user">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test activate invalid user</b>
+</p>
+<p class="summary">Executed in 0.009 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deactivate">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deactivate</b>
+</p>
+<p class="summary">Executed in 0.017 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deactivate invalid user">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deactivate invalid user</b>
+</p>
+<p class="summary">Executed in 0.008 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test changePassword">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test changePassword</b>
+</p>
+<p class="summary">Executed in 0.019 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test changePassword invalid old password">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test changePassword invalid old password</b>
+</p>
+<p class="summary">Executed in 0.017 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test changePassword invalid user">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test changePassword invalid user</b>
+</p>
+<p class="summary">Executed in 0.008 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test resetPassword">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test resetPassword</b>
+</p>
+<p class="summary">Executed in 0.016 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test restPassword invalid user">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test restPassword invalid user</b>
+</p>
+<p class="summary">Executed in 0.008 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addUser">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addUser</b>
+</p>
+<p class="summary">Executed in 0.02 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addUser user already exists">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addUser user already exists</b>
+</p>
+<p class="summary">Executed in 0.017 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test addUser no role setup">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test addUser no role setup</b>
+</p>
+<p class="summary">Executed in 0.011 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateUser">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateUser</b>
+</p>
+<p class="summary">Executed in 0.024 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateUser invalid user">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateUser invalid user</b>
+</p>
+<p class="summary">Executed in 0.007 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test updateUser invalid role">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test updateUser invalid role</b>
+</p>
+<p class="summary">Executed in 0.015 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deleteUser">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deleteUser</b>
+</p>
+<p class="summary">Executed in 0.02 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="test deleteUser invalid user">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">test deleteUser invalid user</b>
+</p>
+<p class="summary">Executed in 0.007 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">--Output from test checkEmail--
+--Output from test checkEmail invalid email--
+--Output from test signUp--
+--Output from test signUp existing user--
+--Output from test signUp with no role setup--
+[code:Failure, message:Unable to find a role for Project Manager. Please establish a ROLE_PM role.]
+--Output from test activate--
+--Output from test activate invalid user--
+--Output from test deactivate--
+--Output from test deactivate invalid user--
+--Output from test changePassword--
+--Output from test changePassword invalid old password--
+--Output from test changePassword invalid user--
+--Output from test resetPassword--
+--Output from test restPassword invalid user--
+--Output from test addUser--
+--Output from test addUser user already exists--
+--Output from test addUser no role setup--
+--Output from test updateUser--
+--Output from test updateUser invalid user--
+--Output from test updateUser invalid role--
+--Output from test deleteUser--
+--Output from test deleteUser invalid user--
+</pre>
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">--Output from test checkEmail--
+--Output from test checkEmail invalid email--
+--Output from test signUp--
+--Output from test signUp existing user--
+--Output from test signUp with no role setup--
+--Output from test activate--
+--Output from test activate invalid user--
+--Output from test deactivate--
+--Output from test deactivate invalid user--
+--Output from test changePassword--
+--Output from test changePassword invalid old password--
+--Output from test changePassword invalid user--
+--Output from test resetPassword--
+--Output from test restPassword invalid user--
+--Output from test addUser--
+--Output from test addUser user already exists--
+--Output from test addUser no role setup--
+--Output from test updateUser--
+--Output from test updateUser invalid user--
+--Output from test updateUser invalid role--
+--Output from test deleteUser--
+--Output from test deleteUser invalid user--
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<!--
+            Parses JUnit output and associates it with the corresponding test case
+        -->
+<script language="javascript">
+
+
+/**
+ * The JUnit report format is incredibly stuipd in the
+ * sense that it accumulates output from all test methods
+ * into a single xml node.
+ */
+(function() {
+
+    var outputElements = findOutputElements();
+    for (var i in outputElements) {
+        var outputElement = outputElements[i];
+        var textOutput = outputElement.element.firstChild.nodeValue;
+        var header = outputElement.getHeader();
+        appendTestMethodOutput(textOutput, header);
+    }
+
+    function findOutputElements() {
+        var outputElements = [];
+        var preElements = document.getElementsByTagName("pre");
+        for (var i in preElements) {
+            var preElement = preElements[i];
+            var className = preElement.className || "";
+            if (className.indexOf("stdout") >= 0) {
+                var outputElement = new OutputElement(preElement, "output");
+                outputElements.push(outputElement);
+            } else if (className.indexOf("syserr") >= 0) {
+                var outputElement = new OutputElement(preElement, "error");
+                outputElements.push(outputElement);
+            }
+        }
+
+        return outputElements;
+    }
+
+    function OutputElement(element, type) {
+        this.element = element;
+        this.type = type;
+
+        this.getHeader = function() {
+            if (type === "output") {
+                return "System output";
+            } else if ("error") {
+                return "System error";
+            }
+        }
+    }
+
+    function appendTestMethodOutput(text, header) {
+        var testOutput = new TestMethodOutput(header);
+
+        var lines = text.split(/\r\n|\r|\n/);
+        for (var i in lines) {
+            var line = lines[i];
+            var matches = line.match(/^--Output from (.*)--$/);
+            if (matches !== null && matches.length == 2) {
+                testOutput.flushToDom();
+                testOutput.testName = matches[1];
+            } else {
+                testOutput.addLine(line);
+            }
+        }
+
+        testOutput.flushToDom();
+    }
+
+    function TestMethodOutput(header) {
+        this.header = header;
+        this.testName = undefined;
+        this.buffer = "";
+
+        this.addLine = function(line) {
+            this.buffer += line + "\n";
+        }
+
+        this.flushToDom = function() {
+            if (this.testName !== undefined) {
+                var domNode = getTestcaseElementByName(this.testName);
+                if (domNode !== undefined && trimString(this.buffer).length > 0) {
+                    this.appendTo(domNode);
+                }
+
+                this.reset();
+            }
+        }
+
+        this.appendTo = function(domNode) {
+            var node = document.createElement("div");
+            node.innerHTML = '<p><b class="message">' + header + '</b></p>';
+
+            var preNode = document.createElement("pre");
+            preNode.appendChild(document.createTextNode(this.buffer));
+            node.appendChild(preNode);
+
+            var outputContainer = findElementByTagClassAndParent("div", "outputinfo", domNode);
+            outputContainer.appendChild(node);
+        }
+
+        this.reset = function() {
+            this.methodName = undefined;
+            this.buffer = "";
+        }
+    }
+
+    function getTestcaseElementByName(name) {
+        var divElements = document.getElementsByTagName("div");
+        var elementCount = divElements.length;
+        for (var i=0; i<elementCount; i++) {
+            var el = divElements[i];
+            if (el.getAttribute("data-name") === name) {
+                return el;
+            }
+        }
+    }
+
+    function findElementByTagClassAndParent(tagName, className, parentNode) {
+        var elements = parentNode.getElementsByTagName(tagName);
+        for (var i in elements) {
+            var element = elements[i];
+
+            // Not 100% correct, but good enough here
+            if (element.className !== undefined && element.className.indexOf(className) >= 0) {
+                return element;
+            }
+        }
+    }
+
+    function trimString(str) {
+        return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+    }
+
+})();
+
+        </script>
+</body>
+</html>

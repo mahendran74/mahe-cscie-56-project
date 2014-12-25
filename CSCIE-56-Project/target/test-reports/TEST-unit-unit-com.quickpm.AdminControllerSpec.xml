@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="Mahes-MacBook-Pro.local" name="com.quickpm.AdminControllerSpec" tests="13" time="4.53" timestamp="2014-12-25T00:48:26">
+  <properties />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test home" time="3.533" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test home from the users tab" time="0.161" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test changePassword" time="0.139" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test activate" time="0.078" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test deactivate" time="0.065" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test deleteUser" time="0.062" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test addUser" time="0.065" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test updateUser" time="0.066" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test getUser" time="0.068" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test resetPassword" time="0.058" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test getProject" time="0.079" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test updateProject" time="0.059" />
+  <testcase classname="com.quickpm.AdminControllerSpec" name="test deleteProject" time="0.058" />
+  <system-out><![CDATA[--Output from test home--
+--Output from test home from the users tab--
+--Output from test changePassword--
+--Output from test activate--
+--Output from test deactivate--
+--Output from test deleteUser--
+--Output from test addUser--
+--Output from test updateUser--
+--Output from test getUser--
+--Output from test resetPassword--
+--Output from test getProject--
+--Output from test updateProject--
+--Output from test deleteProject--
+]]></system-out>
+  <system-err><![CDATA[--Output from test home--
+--Output from test home from the users tab--
+--Output from test changePassword--
+--Output from test activate--
+--Output from test deactivate--
+--Output from test deleteUser--
+--Output from test addUser--
+--Output from test updateUser--
+--Output from test getUser--
+--Output from test resetPassword--
+--Output from test getProject--
+--Output from test updateProject--
+--Output from test deleteProject--
+]]></system-err>
+</testsuite>
