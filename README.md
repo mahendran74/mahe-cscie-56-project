@@ -18,12 +18,14 @@ has the Project Manager access. But the Admin can create Team Member users and o
 admins. The admin can also provide and revoke admin access to other users. Admin can
 work as a Project Manager and a Team Member. The admin user either has to be inserted
 directly using the database. The Bootstrap config creates the following users.<br>
+
 | Name | User name | Password | Role | Status |
 |------|-----------|----------|------|--------|
 | Admin User | admin@test.com | password | Administrator | Active |
 | PM User | pm@test.com | password | Project Manager | Active |
 | TM User | tm@test.com | password | Team Member | Active |
 | TM UserDisabled | tmd@test.com | password | Team Member | Inactive |
+
 ##Team Member Interface<br>
 This is interface allows users to<br>
 1. View task list
